@@ -26,7 +26,7 @@ recommend.jsp
 <p>
 <a href="/air/viewHot.do">핫!</a><p>
 <a href="/air/viewStar.do">스톼~</a><p>
-<a href="/air/generateDestination.do">생성해보자</a>
+
 
  나이<input type="text" name="age" id="age"/><p>
     성별<input type="text" name="sex" id="sex" /><p>

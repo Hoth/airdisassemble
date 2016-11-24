@@ -38,9 +38,6 @@
 <body>
  여행지를 찾아서!<p>
 <a href= "/air/main.do">추천여행지</a><p>
-<a href= "/air/viewReviewList.do">리뷰보기</a><p>
-<a href= "/air/viewReviewListAdmin.do">관리자 리뷰보기</a><p>
-<a href= "/air/viewExchangeRate.do">환율</a>
 
 
 <div id="example3" class="slider-pro">

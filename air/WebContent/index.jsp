@@ -1,6 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
@@ -8,10 +6,13 @@
 
 
 </head>
-<body>
-	가짜
-	<%
-    response.sendRedirect("/air/start.do");
- 	%>
-</body>
+
+ 	
+ 	
+ 	
+ 	<frameset rows="40,*" framespacing="0" border="0" frameborder="0"> 
+ 	<frame src="top.jsp" name="menu" frameborder="no" border="0" framespacing="0" scrolling="no" marginwidth="10" marginheight="0"> 
+ 	<frame src="intro.jsp" name="main" scrolling="auto" marginwidth="10" marginheight="10"> </frameset>
+ 	
+ 	
 </html>

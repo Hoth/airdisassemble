@@ -10,7 +10,7 @@ public class Review {
 	String r_Star;
 	String r_Gender;
 	String r_Image;
-	String r_context;
+	String r_Context;
 	String r_Tdate;
 	public int getR_Num() {
 		return r_Num;
@@ -60,11 +60,11 @@ public class Review {
 	public void setR_Image(String r_Image) {
 		this.r_Image = r_Image;
 	}
-	public String getR_context() {
-		return r_context;
+	public String getR_Context() {
+		return r_Context;
 	}
-	public void setR_context(String r_context) {
-		this.r_context = r_context;
+	public void setR_Context(String r_Context) {
+		this.r_Context = r_Context;
 	}
 	public String getR_Tdate() {
 		return r_Tdate;

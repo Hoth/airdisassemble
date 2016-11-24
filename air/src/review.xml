@@ -13,7 +13,7 @@
 		<result column="r_Star" property="r_Star"/>
 		<result column="r_Gender" property="r_Gender"/>
 		<result column="r_Image" property="r_Image"/>
-		<result column="r_context" property="r_context"/>
+		<result column="r_Context" property="r_Context"/>
 		<result column="r_Tdate" property="r_Tdate"/>
 	</resultMap>
 	
@@ -28,6 +28,22 @@
 		select * from A_review where r_Num = #{r_Num}
 	]]>
 	</select>
+	
+	<insert id="insertReview" parameterType="Review">
+	<![CDATA[
+		insert into A_review (r_Title,c_Location,r_Img,r_Context,r_Star,r_Tdate)
+		values (#{r_Title},#{c_Location},#{r_Img},#{r_Context},#{r_Star},#{r_Tdate})  
+	]]>
+	</insert>
+	
+	<update id="updateReview" parameterType="int">
+	<![CDATA[
+		 update shop_Good set gName=#{gName},
+		 gPrice=#{gPrice},gMainImg=#{gMainImg},gMainDetail=#{gMainDetail},
+		 gImg=#{gImg},gDetail=#{gDetail},gStock=#{gStock}
+		 where mNum=#{mNum}  
+	]]>
+	</update>
 	
 	<delete id="deleteReview" parameterType="int">
 	<![CDATA[

@@ -2,6 +2,7 @@
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
+<%@ page import="java.util.*, java.text.*"  %>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Enroll Review</title>
@@ -13,17 +14,24 @@
 <body>
 <form name="upload" method="post"  action="/www/AddGood.do" onSubmit="return submitContents(this)" enctype="multipart/form-data" > 
 
-제목 : <input type="text" name="gName"><br>
-가격 : <input type="text" name="gPrice">원.<br>
-대표파일 : <input type="file" name="file"><br>
-대표설명 : <input type="text" name="gMainDetail"><br>
+제목 : <input type="text" name="r_Title"><br>
+장소 : <input type="text" name="c_Location">원.<br>
+썸네일 : <input type="file" name="r_Image"><br>
 	<!-- Smart Editor -->
-<textarea style="width: 100%" rows="50" name="gDetail" id="textAreaContent" cols="80"></textarea>
+<textarea style="width: 100%" rows="50" name="r_Context" id="textAreaContent" cols="80"></textarea>
+별점주기 : <input type="radio" name="r_Star" value="5"><input type="radio" name="r_Star" value="4">
+<input type="radio" name="r_Star" value="3"><input type="radio" name="r_Star" value="2"><input type="radio" name="r_Star" value="1">
+여행 출발일 :<input type="date">
 
+<%
+ java.text.SimpleDateFormat formatter = new java.text.SimpleDateFormat("yyyyMMddHHmmss");
+ String today = formatter.format(new java.util.Date());
+ out.println(today);
+%>
  <input type="submit" value="올리기" ><br>
  </form>
   <script type="text/javascript">
- 
+
 var oEditors = [];
 nhn.husky.EZCreator.createInIFrame({
     oAppRef: oEditors,

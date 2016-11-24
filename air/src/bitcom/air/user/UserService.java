@@ -11,7 +11,7 @@ public class UserService {
 		ModelAndView mav = new ModelAndView();
 		//mav.setViewName("/user/recommend.jsp");
 		// 수정해야되
-		System.out.println("why");
+		
 		return mav;
 	}
 	@RequestMapping(value="/generateDestination.do")
@@ -19,7 +19,7 @@ public class UserService {
 		ModelAndView mav = new ModelAndView();
 		//mav.setViewName("/user/recommend.jsp");
 		// 수정해야되 
-		System.out.println("why");
+		
 		return mav;
 	}
 	
@@ -35,7 +35,7 @@ public class UserService {
 	public ModelAndView viewMain() throws Exception{
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName("/user/recommend.jsp");
-		System.out.println("why");
+		
 		return mav;
 	}
 }

@@ -6,7 +6,7 @@ public class User {
 	String length;
 	String cost;
 	String company;
-	String seasean;
+	String season;
 	String continent;
 	public String getAge() {
 		return age;
@@ -38,11 +38,11 @@ public class User {
 	public void setCompany(String company) {
 		this.company = company;
 	}
-	public String getSeasean() {
-		return seasean;
+	public String getSeaon() {
+		return season;
 	}
-	public void setSeasean(String seasean) {
-		this.seasean = seasean;
+	public void setSeason(String season) {
+		this.season = season;
 	}
 	public String getContinent() {
 		return continent;

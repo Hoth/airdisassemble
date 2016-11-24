@@ -18,27 +18,33 @@ window.open("/air/UserInfoForm.jsp", "popup", "width=300, height=300");
 <title>Insert title here</title>
 </head>
 <body>
-<input type="button" value="추우우우천" onclick="popup_win1()">
 
 
 
-recommend.jsp
+<input type="button" value="자신의 정보입력" onclick="popup_win1()">
+
+
+
+
+
+
+${dest}
+
+
 <p>
 <a href="/air/viewHot.do">핫!</a><p>
 <a href="/air/viewStar.do">스톼~</a><p>
-<a href="/air/generateDestination.do">생성해보자</a>
-
- 나이<input type="text" name="age" id="age"/><p>
-    성별<input type="text" name="sex" id="sex" /><p>
-    여행기간<input type="text" name="length" id="length"/><p>
-    예상경비<input type="text" name="cost" id="cost"/><p>
- 동행<input type="text" name="company" id="company"/><p>
- 계절<input type="text" name="season" id="season" /><p>
- 대륙<input type="hidden" name="continent" id="continent"/><p>
- 
- 
- 
- 
+<!-- <a href="/air/generateDestination.do">생성해보자</a> -->
+<form action="/air/generateDestination.do" method="post">
+ <input type="hidden" name="age" id="age"/><p>
+ <input type="hidden" name="sex" id="sex" /><p>
+ <input type="hidden" name="length" id="length"/><p>
+ <input type="hidden" name="cost" id="cost"/><p>
+ <input type="hidden" name="company" id="company"/><p>
+ <input type="hidden" name="season" id="season" /><p>
+ <input type="hidden" name="continent" id="continent"/><p>
+ <input type="submit" value="조회!">
+ </form>
  
 </body>
 </html>

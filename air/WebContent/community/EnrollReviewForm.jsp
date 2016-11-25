@@ -15,12 +15,13 @@
 <table>
 <tr><td>제목 : <input type="text" name="r_Title"></td></tr>
 <tr><td>장소 : <input type="text" name="c_Location"></td></tr>
+<tr><td>여행 출발일 :<select name="r_Tdate"><option value="spring">봄(3월~5월)<option value="summer">여름(6월~8월)<option value="fall">가을(9월~11월)<option value="winter">겨울(11월~2월) </td></tr>
 <tr><td>썸네일 : <input type="file" name="r_Image"></td></tr>
    <!-- Smart Editor -->
 <tr><td><textarea style="width: 90%" rows="50" name="r_Context" id="textAreaContent" cols="80"></textarea></td></tr>
 <tr><td>별점주기 : <input type="radio" name="r_Star" value="1"><input type="radio" name="r_Star" value="2">
 <input type="radio" name="r_Star" value="3"><input type="radio" name="r_Star" value="4"><input type="radio" name="r_Star" value="5">/5</td></tr>
-<tr><td>여행 출발일 :<select name="r_Tdate"><option value="봄"><option value="여름"><option value="가을"><option value="겨울"> </td></tr>
+
 </table>
 
 <%

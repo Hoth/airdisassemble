@@ -21,7 +21,7 @@ $(document).ready(
 		$("#frame").load("/air/start.do");
 		
 		$("a").on("click",function(){
-			alert("클릭했음");
+			alert("클릭했음요");
 			var target=$(this).attr("href");
 			$("#frame").load(target);
 			event.preventDefault();

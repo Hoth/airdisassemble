@@ -16,18 +16,7 @@ response.setHeader("cache-control","no-cache");
 <head>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script type="text/javascript">
-$(document).ready(
-	function(){
-		$("a").click(
-			function(event){
-				var target=$(this).attr("href");
-				$("#frame").load(target);
-				event.preventDefault();
-			}		
-		);
-	}		
-);
+
 </script>
 
 

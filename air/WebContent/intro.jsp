@@ -5,22 +5,6 @@
 <head>
 
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script type="text/javascript">
-$(document).ready(
-	function(){
-		$("a").click(
-			function(event){
-				var target=$(this).attr("href");
-				$("#frame").load(target);
-				event.preventDefault();
-			}		
-		);
-	}		
-);
-</script>
-
-
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
 
@@ -28,27 +12,15 @@ $(document).ready(
 <link rel="stylesheet" type="text/css" href="/air/dist/css/slider-pro.min.css" media="screen"/>
 <link rel="stylesheet" type="text/css" href="/air/dist/css/examples.css" media="screen"/>
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
-
+<link href="/air/css/default.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/air/css/fonts.css" rel="stylesheet" type="text/css" media="all" />
 <script type="text/javascript" src="/air/libs/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="/air/dist/js/jquery.sliderPro.min.js"></script>
 
 <script type="text/javascript">
-	$( document ).ready(function( $ ) {
-		$( '#example3' ).sliderPro({
-			width: 960,
-			height: 500,
-			fade: true,
-			arrows: true,
-			buttons: false,
-			fullScreen: true,
-			shuffle: true,
-			smallSize: 500,
-			mediumSize: 1000,
-			largeSize: 3000,
-			thumbnailArrows: true,
-			autoplay: false
-		});
-	});
+
+
+	
 </script>
 
 </head>
@@ -130,6 +102,25 @@ $(document).ready(
 			<img class="sp-thumbnail" src="/air/photo/k5.jpg"/>
 		</div>
     </div>
+    
+    <script>
+    
+	$( '#example3' ).sliderPro({
+		width: 960,
+		height: 500,
+		fade: true,
+		arrows: true,
+		buttons: false,
+		fullScreen: true,
+		shuffle: true,
+		smallSize: 500,
+		mediumSize: 1000,
+		largeSize: 3000,
+		thumbnailArrows: true,
+		autoplay: false
+	});
+    
+    </script>
 
 
 </body>

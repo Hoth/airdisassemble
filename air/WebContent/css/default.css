@@ -5,7 +5,7 @@ html, body {
 body {
 	margin: 0px;
 	padding: 0px;
-	background: #16a085;
+	background: #005eb5;
 	font-family: 'Raleway', sans-serif;
 	font-size: 11pt;
 	font-weight: 400;
@@ -186,7 +186,7 @@ hr {
 	{
 		font-weight: 400;
 		font-size: 2em;
-		color: #16a085;
+		color: #005eb5;
 	}
 	
 	.title .byline
@@ -272,7 +272,7 @@ hr {
 	#logo a 
 	{
 		text-decoration: none;
-		color: #FFF;
+		color: #dfefff;
 	}
 
 /*********************************************************************************/
@@ -296,7 +296,7 @@ hr {
 
 #menu-wrapper
 {
-	background: #16a085;
+	background: #005eb5;
 }
 
 #menu {
@@ -498,7 +498,7 @@ hr {
 		display: inline-block;
 		margin-top: 1.5em;
 		padding: 1.50em 3em 1.50em 3em;
-		background: #16a085;
+		background: #005eb5;
 		text-decoration: none;
 		text-transform: uppercase;
 		font-weight: 400;

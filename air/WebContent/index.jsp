@@ -1,3 +1,7 @@
+
+    <%
+response.setHeader("cache-control","no-cache"); 
+%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <html>
@@ -15,13 +19,13 @@
 $(document).ready(
 	function(){
 		$("#frame").load("/air/start.do");
-		$("a").click(
-			function(event){
-				var target=$(this).attr("href");
-				$("#frame").load(target);
-				event.preventDefault();
-			}		
-		);
+		
+		$("a").on("click",function(){
+			alert("클릭했음");
+			var target=$(this).attr("href");
+			$("#frame").load(target);
+			event.preventDefault();
+		});
 	}		
 );
 </script>

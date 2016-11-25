@@ -11,13 +11,72 @@
 <form name="pop">
        <form name="popup">
      
-    나이<input type="text" name="age" id="age"/><p>
-    성별<input type="text" name="sex" id="sex" /><p>
-    여행기간<input type="text" name="length" id="length"/><p>
-    예상경비<input type="text" name="cost" id="cost"/><p>
- 동행<input type="text" name="company" id="company"/><p>
- 계절<input type="text" name="season" id="season" /><p>
- 대륙<input type="hidden" name="continent" id="continent"/><p>
+    나이<p>
+      <select name="age">
+<option value="10">10대 및 이하</option>
+<option value="20-23">20~23</option>
+<option value="24-26">24~26</option>
+<option value="27-29">27~29</option>
+<option value="30-35">30~35</option>
+<option value="36-39">36~39</option>
+<option value="40">40대</option>
+<option value="50">50대 이상</option>
+</select><p>
+
+    
+    성별
+<input type="radio" name="sex" value="man">남
+<input type="radio" name="sex" value="woman">여<p>
+
+ 여행기간<p>
+   <select name="length">
+ <option value="1">당일치기</option>
+<option value="1-2">1박2일 ~2박3일</option>
+<option value="3-5">3박4일~5박6일</option>
+<option value="7">일주일</option>
+<option value="14">이주일</option>
+<option value="-30">한달이내</option>
+<option value="30-">한달이상</option>
+<option value="50">50대 이상</option>
+</select><p>
+ 
+    예상경비(1인당)<p>
+<input type="radio" name="cost" value="50">50만원이하<p>
+<input type="radio" name="cost" value="50-100">50만원 이상~100만원 미만<p>
+<input type="radio" name="cost" value="100-200">100만원 이상~200만원 미만<p>
+<input type="radio" name="cost" value="200">200만원 이상<p>
+    
+ 동행<p>
+    <select name="company">
+ <option value="1">혼자</option>
+<option value="F1">친구1명</option>
+<option value="F2">친구 2명 이상</option>
+<option value="Family">가족</option>
+<option value="com">동료</option>
+<option value="travel">여행사 패키지</option>
+<option value="love">연인</option>
+</select><p>
+ 
+ 계절<p>
+
+    <select name="season">
+ <option value="spring">봄(3월~5월)</option>
+<option value="summer">여름(6월~8월)</option>
+<option value="fall">가을(9월~11월)</option>
+<option value="winter">겨울(11월~2월)</option>
+</select><p>
+
+ 대륙<p>
+  <select name="continent">
+ <option value="Europe">유럽</option>
+<option value="Asia">아시아</option>
+<option value="SouthAmerica">남아메리카</option>
+<option value="NorthAmerica">북아메리카</option>
+<option value="Africa">아프리카</option>
+<option value="Oceania">오세아니아</option>
+</select><p>
+ 
+
     </form>
  
     <a href="javascript:sendData();"><button>부모창전송</button></a>

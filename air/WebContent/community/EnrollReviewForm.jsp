@@ -2,32 +2,39 @@
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page import="java.util.*, java.text.*"  %>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Enroll Review</title>
 <script type="text/javascript" src="/www/se2/js/HuskyEZCreator.js" charset="utf-8"></script>
 <script type="text/javascript" src="/www/se2/photo_uploader/plugin/hp_SE2M_AttachQuickPhoto.js" charset="utf-8"></script>
+ <link rel="stylesheet" href="<c:url value="/webjars/jquery-ui/1.11.4/jquery-ui.min.css"/>" type="text/css"/>
+  <script src="<c:url value="/webjars/jquery/2.2.1/jquery.min.js"/>"></script>
+  <script src="<c:url value="/webjars/jquery-ui/1.11.4/jquery-ui.min.js"/>"></script>
+
+
 
 </head>
 
 <body>
 <form name="upload" method="post"  action="/www/AddGood.do" onSubmit="return submitContents(this)" enctype="multipart/form-data" > 
-
-제목 : <input type="text" name="r_Title"><br>
-장소 : <input type="text" name="c_Location">원.<br>
-썸네일 : <input type="file" name="r_Image"><br>
+<table>
+<tr><td>제목 : <input type="text" name="r_Title"></td></tr>
+<tr><td>장소 : <input type="text" name="c_Location"></td></tr>
+<tr><td>썸네일 : <input type="file" name="r_Image"></td></tr>
 	<!-- Smart Editor -->
-<textarea style="width: 100%" rows="50" name="r_Context" id="textAreaContent" cols="80"></textarea>
-별점주기 : <input type="radio" name="r_Star" value="5"><input type="radio" name="r_Star" value="4">
-<input type="radio" name="r_Star" value="3"><input type="radio" name="r_Star" value="2"><input type="radio" name="r_Star" value="1">
-여행 출발일 :<input type="date">
+<tr><td><textarea style="width: 90%" rows="50" name="r_Context" id="textAreaContent" cols="80"></textarea></td></tr>
+<tr><td>별점주기 : <input type="radio" name="r_Star" value="1"><input type="radio" name="r_Star" value="2">
+<input type="radio" name="r_Star" value="3"><input type="radio" name="r_Star" value="4"><input type="radio" name="r_Star" value="5">/5</td></tr>
+<tr><td>여행 출발일 :<input type="text"  name="r_Tdate" onClick="datePicker(event,'date')"/></td></tr>
+</table>
 
 <%
  java.text.SimpleDateFormat formatter = new java.text.SimpleDateFormat("yyyyMMddHHmmss");
  String today = formatter.format(new java.util.Date());
- out.println(today);
 %>
+<input type="hidden" name="r_Wdate" value="${today}">
  <input type="submit" value="올리기" ><br>
  </form>
   <script type="text/javascript">

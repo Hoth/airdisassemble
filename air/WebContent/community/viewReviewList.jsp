@@ -27,5 +27,6 @@ response.setHeader("cache-control","no-cache");
 			</c:forEach>
 			</ul>
     </div>
+   <a href= "/air/enrollReview.do" >리뷰 등록하기</a>
 </body>
 </html>

@@ -7,13 +7,6 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Enroll Review</title>
-<script type="text/javascript" src="/www/se2/js/HuskyEZCreator.js" charset="utf-8"></script>
-<script type="text/javascript" src="/www/se2/photo_uploader/plugin/hp_SE2M_AttachQuickPhoto.js" charset="utf-8"></script>
- <link rel="stylesheet" href="<c:url value="/webjars/jquery-ui/1.11.4/jquery-ui.min.css"/>" type="text/css"/>
-  <script src="<c:url value="/webjars/jquery/2.2.1/jquery.min.js"/>"></script>
-  <script src="<c:url value="/webjars/jquery-ui/1.11.4/jquery-ui.min.js"/>"></script>
-
-
 
 </head>
 
@@ -23,11 +16,11 @@
 <tr><td>제목 : <input type="text" name="r_Title"></td></tr>
 <tr><td>장소 : <input type="text" name="c_Location"></td></tr>
 <tr><td>썸네일 : <input type="file" name="r_Image"></td></tr>
-	<!-- Smart Editor -->
+   <!-- Smart Editor -->
 <tr><td><textarea style="width: 90%" rows="50" name="r_Context" id="textAreaContent" cols="80"></textarea></td></tr>
 <tr><td>별점주기 : <input type="radio" name="r_Star" value="1"><input type="radio" name="r_Star" value="2">
 <input type="radio" name="r_Star" value="3"><input type="radio" name="r_Star" value="4"><input type="radio" name="r_Star" value="5">/5</td></tr>
-<tr><td>여행 출발일 :<input type="text"  name="r_Tdate" onClick="datePicker(event,'date')"/></td></tr>
+<tr><td>여행 출발일 :<select name="r_Tdate"><option value="봄"><option value="여름"><option value="가을"><option value="겨울"> </td></tr>
 </table>
 
 <%
@@ -47,11 +40,11 @@ nhn.husky.EZCreator.createInIFrame({
     fCreator: "createSEditor2"
 });
  
+ 
 //‘저장’ 버튼을 누르는 등 저장을 위한 액션을 했을 때 submitContents가 호출된다고 가정한다.
 function submitContents(elClickedObj) {
     // 에디터의 내용이 textarea에 적용된다.
     oEditors.getById["textAreaContent"].exec("UPDATE_CONTENTS_FIELD", [ ]);
- 
     // 에디터의 내용에 대한 값 검증은 이곳에서
     // document.getElementById("textAreaContent").value를 이용해서 처리한다.
   
@@ -67,7 +60,7 @@ function pasteHTML(filepath){
     var sHTML = '<img src="/www/photo/'+filepath+'">';
     oEditors.getById["textAreaContent"].exec("PASTE_HTML", [sHTML]);
 }
- 	
+    
 </script>
 </body>
 </html>

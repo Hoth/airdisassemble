@@ -17,9 +17,6 @@ $(document).ready(
 		$("#frame").load("/air/start.do");
 		$("a").click(
 			function(event){
-				alert("클릭");
-				alert($("#frame"));
-				alert($(this).attr("href"));
 				var target=$(this).attr("href");
 				$("#frame").load(target);
 				event.preventDefault();
@@ -35,10 +32,11 @@ $(document).ready(
 		<div id="menu" class="container">
 			<ul>
 				<li class="current_page_item" ><a href="/air/start.do" >홈으로</a></li>
-				<li><a href="#">이번</a></li>
-				<li><a href="#">삼번</a></li>
-				<li><a href="#">Portfolio</a></li>
-				<li><a href="#">Contact</a></li>
+				<li><a href="/air/main.do">추천 여행지</a></li>
+				<li><a href="/air/viewReviewList.do">리뷰 </a></li>
+				<li><a href="/air/viewExchangeRate.do">환율보기</a></li>
+				<li><a href="#">나라정보검색</a></li>
+				<li><a href="/air/viewReviewListAdmin.do">관리자 리뷰보기</a></li>
 			</ul>
 		</div>
 		<!-- end #menu --> 
@@ -50,11 +48,12 @@ $(document).ready(
 			</div>
 		</div>
 	</div>
-	</div>
 	<div id="frame" >
 		
 	
 	</div>
+	</div>
+	
 </div>
  	
  	

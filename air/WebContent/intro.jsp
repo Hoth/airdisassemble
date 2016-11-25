@@ -3,11 +3,28 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(
+	function(){
+		$("a").click(
+			function(event){
+				var target=$(this).attr("href");
+				$("#frame").load(target);
+				event.preventDefault();
+			}		
+		);
+	}		
+);
+</script>
+
+
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
 
 <title>Slider Pro</title>
-
 <link rel="stylesheet" type="text/css" href="/air/dist/css/slider-pro.min.css" media="screen"/>
 <link rel="stylesheet" type="text/css" href="/air/dist/css/examples.css" media="screen"/>
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
@@ -36,8 +53,8 @@
 
 </head>
 <body>
+적용이 늦어
  여행지를 찾아서!<p>
-<a href= "/air/main.do">추천여행지</a><p>
 
 
 <div id="example3" class="slider-pro">

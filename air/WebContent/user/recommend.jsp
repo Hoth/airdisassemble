@@ -5,6 +5,8 @@
 <script type="text/javascript">
 
 
+
+
 function popup_win1() { //크기 width400 height300 팝업창
 	
 
@@ -14,6 +16,23 @@ window.open("/air/UserInfoForm.jsp", "popup", "width=300, height=300");
 </script>
 <html>
 <head>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(
+	function(){
+		$("a").click(
+			function(event){
+				var target=$(this).attr("href");
+				$("#frame").load(target);
+				event.preventDefault();
+			}		
+		);
+	}		
+);
+</script>
+
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 </head>

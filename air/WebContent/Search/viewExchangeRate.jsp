@@ -3,6 +3,16 @@
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>    
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script type="text/javascript">
 
@@ -15,33 +25,22 @@ function popup_win1() { //크기 width400 height300 팝업창
 window.open("/air/ERForm.jsp", "popup", "width=300, height=300");
 }
 
-
-$(document).ready(
-	function(){
-		
-		$("submit").click(function(){
-			
-			//alert("클릭했음요");
-			var target=$(this).attr("href");
-			$("#frame").load(target);
-			event.preventDefault();
-		});
-			
-	}		
-);
 </script>
 
+<script type="text/javascript">
+	$(document).ready(
+	 function(){
+		 $("form").submit(function(){
+			 alert("서브밋");
+			 alert($("#exchangerate").val());
+			 var target="/air/viewExchange.do?exchangerate="+$("#exchangerate").val();
+				$("#frame").load(target);
+			 event.preventDefault();
+		 });
+	 }		
+	);
 
-
-<html>
-<head>
-
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-
-
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+</script>
 </head>
 <body>
 
@@ -52,7 +51,7 @@ $(document).ready(
 <c:choose>
 	<c:when test="${exarr.get(0)==null}">
 	<input type="button" value="나라선택" onclick="popup_win1()">		
-		<form action="/air/viewExchange.do" method="post">
+		<form action="/air/viewExchange.do" method="post" id="form">
  <input type="text" name="exchangerate" id="exchangerate"/><p>
 
  	
@@ -63,8 +62,15 @@ $(document).ready(
 	</c:when>
 	
 	<c:otherwise>
-	${exarr.get(0)} 는<p>
+	${exarr.get(0)} 는 현찰일때<p>
 	살때 ${exarr.get(1)}, 팔때 ${exarr.get(2)}원 입니다.
+	<p>
+	${exarr.get(3)} 는 송급할떄<p>
+	살때 ${exarr.get(4)}, 팔때 ${exarr.get(5)}원 입니다.
+	<p>
+	${exarr.get(6)} 는 매매일때<p>
+	살때 ${exarr.get(7)}, 환살율은 ${exarr.get(8)} 입니다.
+	
 	</c:otherwise>
 </c:choose>
 

@@ -20,8 +20,10 @@ $(document).ready(
 	function(){
 		$("#frame").load("/air/start.do");
 		
-		$("a").on("click",function(){
-			alert("클릭했음요");
+	
+		$("a").click(function(){
+			
+			//alert("클릭했음요");
 			var target=$(this).attr("href");
 			$("#frame").load(target);
 			event.preventDefault();

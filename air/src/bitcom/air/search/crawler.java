@@ -5,12 +5,15 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class crawler {
 		
-	public static void main(String[] args) {
-        try{
+	public static ArrayList<String> exchange(String inputtext) {
+		ArrayList<String> arr= new ArrayList<String>();
+		try{
+        
           //example.com은 연습으로 사용하기 위한 페이지이다. 간단한 페이지로 소스코드의 양도 적다.
             String urlstr = "http://fx.kebhana.com/fxportal/jsp/RS/DEPLOY_EXRATE/23559_0.html";
             //URL 문자열을 처리하기 위해 URL클래스를 이용한다.
@@ -37,8 +40,7 @@ public class crawler {
             String nation;
             String sell;
             String buy;
-            Scanner scan = new Scanner(System.in);
-            String input = scan.nextLine();
+            String input = inputtext;
             String buyTag = "<td class='buy'>";
             String sellTag = "<td class='sell'>";
             
@@ -52,19 +54,22 @@ public class crawler {
             end = end + 4;
                         
             nation = html.substring(start, end);
-            System.out.println(nation);
+            arr.add(nation);
+            //System.out.println(nation);
             
             html = html.substring(end+4, html.length()-1);
             
             buy= html.substring(html.indexOf(buyTag)+buyTag.length(), html.indexOf("</td>"));
-            System.out.println("buy = " + buy);
-            
+            //System.out.println("buy = " + buy);
+            arr.add(buy);
             html = html.substring(html.indexOf("</td>")+4, html.length()-1);
                        
             sell = html.substring(html.indexOf(sellTag)+sellTag.length(), html.indexOf("</td>"));
-            System.out.println("sell = " + sell); // 
-            
+            //System.out.println("sell = " + sell); // 
+            arr.add(sell);
             html = html.substring(end,html.length()-1);
+            
+            
             
             }
            
@@ -75,6 +80,7 @@ public class crawler {
         }catch(Exception e){
             System.out.println(e.getMessage());
         }
+        return arr;
     }
 
 	

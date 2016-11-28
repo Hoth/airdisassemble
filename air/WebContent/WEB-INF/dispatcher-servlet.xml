@@ -24,8 +24,15 @@
 <!-- @Controller가 붙은 클래스들의 설정을 읽어서 기억하고 있어라 -->	 
 	 <context:include-filter type="annotation"
  expression="org.springframework.stereotype.Controller"/>
-	</context:component-scan>
 	
+	<context:include-filter type="annotation"
+ expression="org.springframework.stereotype.Component"/>
+ 
+	</context:component-scan>
+
+	
+	<aop:aspectj-autoproxy proxy-target-class="false" 
+	expose-proxy="true"/>
 
 	<bean id="viewResolver"
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
@@ -33,7 +40,7 @@
 		<property name="suffix" value="" />
 	</bean>
 	
-	
+
 	
  	<!-- Multipart Resolver -->
  	<bean id="multipartResolver"
@@ -46,7 +53,9 @@
  	      value="100000000"/>
  	</bean>        
  	
-
+	<bean id="mav" class="org.springframework.web.servlet.ModelAndView" scope="request">
+  	<aop:scoped-proxy/>
+	</bean>
 
 
 

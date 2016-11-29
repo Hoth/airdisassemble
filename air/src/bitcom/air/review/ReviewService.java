@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
 
@@ -33,7 +34,7 @@ public class ReviewService {
 		return mav;
 	}
 	@RequestMapping(value="/addReview.do")
-	public ModelAndView addReview(@RequestParam(value="Review")Review review)throws Exception{
+	public ModelAndView addReview(Review review,@RequestParam(value="file") MultipartFile file)throws Exception{
 		ModelAndView mav=new ModelAndView();
 		if(review.r_Title==null){
 			mav.addObject("ERROR","제목을 입력하세요.");

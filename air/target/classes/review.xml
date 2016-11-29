@@ -31,8 +31,8 @@
 	
 	<insert id="insertReview" parameterType="Review">
 	<![CDATA[
-		insert into A_review (r_Name,r_Title,c_Location,r_Img,r_Context,r_Star,r_Tdate)
-		values (#{r_Name},#{r_Title},#{c_Location},#{r_Img},#{r_Context},#{r_Star},#{r_Tdate})  
+		insert into A_review (r_Name,r_Title,c_Location,r_Img,r_Context,r_Star,r_Tdate,r_Wdate)
+		values (#{r_Name},#{r_Title},#{c_Location},#{r_Img},#{r_Context},#{r_Star},#{r_Tdate},#{r_Wdate)  
 	]]>
 	</insert>
 	

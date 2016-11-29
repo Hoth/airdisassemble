@@ -11,13 +11,13 @@
 </head>
 
 <body>
-<form name="upload" method="post"  action="/www/AddReview.do" onSubmit="return submitContents(this)" enctype="multipart/form-data" > 
+<form name="upload" method="post"  action="/air/addReview.do"  enctype="multipart/form-data" > 
 <table>
 <tr><td>이름 : <input type="text" name="r_Name"></td></tr>
 <tr><td>제목 : <input type="text" name="r_Title"></td></tr>
 <tr><td>장소 : <input type="text" name="c_Location"></td></tr>
 <tr><td>여행 출발일 :<select name="r_Tdate"><option value="spring">봄(3월~5월)<option value="summer">여름(6월~8월)<option value="fall">가을(9월~11월)<option value="winter">겨울(11월~2월) </td></tr>
-<tr><td>썸네일 : <input type="file" name="r_Image"></td></tr>
+<tr><td>썸네일 : <input type="file" name="file"></td></tr>
    <!-- Smart Editor -->
 <tr><td><textarea style="width: 90%" rows="50" name="r_Context" id="textAreaContent" cols="80"></textarea></td></tr>
 <tr><td>별점주기 : <input type="radio" name="r_Star" value="1"><input type="radio" name="r_Star" value="2">
@@ -27,7 +27,7 @@
  String today = formatter.format(new java.util.Date());
 %>
 <input type="hidden" name="r_Wdate" value="${today}">
-<tr><td><input type="submit" value="올리기" ></td></tr>
+<tr><td><button>올리기</button></td></tr>
 </table>
  </form>
   <script type="text/javascript">

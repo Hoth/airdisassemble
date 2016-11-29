@@ -50,7 +50,7 @@ $(document).ready(
 		<div id="header" class="container">
 			<div id="logo">
 				<h1><a href="#">공 중 분 해</a></h1>
-				<p>Design by J.W.Cho</a></p>
+				<p>다슬이최고</a></p>
 			</div>
 		</div>
 	</div>

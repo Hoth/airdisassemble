@@ -11,7 +11,7 @@
 </head>
 
 <body>
-<form name="upload" method="post"  action="/www/AddGood.do" onSubmit="return submitContents(this)" enctype="multipart/form-data" > 
+<form name="upload" method="post"  action="/www/AddReview.do" onSubmit="return submitContents(this)" enctype="multipart/form-data" > 
 <table>
 <tr><td>이름 : <input type="text" name="r_Name"></td></tr>
 <tr><td>제목 : <input type="text" name="r_Title"></td></tr>

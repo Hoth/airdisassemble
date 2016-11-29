@@ -27,10 +27,8 @@
  String today = formatter.format(new java.util.Date());
 %>
 <input type="hidden" name="r_Wdate" value="${today}">
- <input type="submit" value="올리기" ><br>
+<tr><td><input type="submit" value="올리기" ></td></tr>
 </table>
-
-
  </form>
   <script type="text/javascript">
 

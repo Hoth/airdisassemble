@@ -1,15 +1,16 @@
-package bitcom.air.community;
+package bitcom.air.user;
 
 
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URL;
-import java.util.Scanner;
+import java.util.ArrayList;
 
 public class bestlist_crawler {
 		
-	public static void main(String[] args) {
+	public static ArrayList<String> top() {
+		
+		ArrayList<String> topN = new ArrayList<String>();
         try{
           //example.com은 연습으로 사용하기 위한 페이지이다. 간단한 페이지로 소스코드의 양도 적다.
             String urlstr = "https://www.tripadvisor.co.kr/";
@@ -62,13 +63,15 @@ public class bestlist_crawler {
 //            
             String nation=html.substring(0,aIndex);
            System.out.println(count+"."+nation);
-           
+           topN.add(count+"."+nation);
             }
             
         }catch(Exception e){
             System.out.println(e.getMessage());
         }
-    }
-
+    
+        return topN;
+	}
+	
 	
 }

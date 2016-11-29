@@ -13,6 +13,28 @@ body {
 }
 
 
+table { 
+    width: 750px; 
+    border-collapse: collapse; 
+    margin:50px auto;
+    }
+/* Zebra striping */
+tr:nth-of-type(odd) { 
+    background: pink; 
+    }
+th { 
+    background: pink; 
+    color: white; 
+    font-weight: bold; 
+    }
+td, th { 
+    padding: 10px; 
+    border: 1px solid pink; 
+    text-align: left; 
+    font-size: 18px;
+    }
+
+
 h1, h2, h3 {
 	margin: 0;
 	padding: 0;
@@ -435,6 +457,11 @@ hr {
 		font-size: 1.2em;
 		color: #6F6F6F;
 	}
+
+
+
+
+
 
 /*********************************************************************************/
 /* Portfolio                                                                     */

@@ -39,9 +39,9 @@
 	<update id="updateReview" parameterType="int">
 	<![CDATA[
 		 update shop_Good set r_Title=#{r_Title},
-		 gPrice=#{gPrice},gMainImg=#{gMainImg},gMainDetail=#{gMainDetail},
-		 gImg=#{gImg},gDetail=#{gDetail},gStock=#{gStock}
-		 where mNum=#{mNum}  
+		 c_Location=#{c_Location},r_Image=#{r_Image},r_Context=#{r_Context},
+		 r_Star=#{r_Star},r_Tdate=#{r_Tdate},r_Wdate=#{r_Wdate}
+		 where r_Num=#{r_Num}  
 	]]>
 	</update>
 	

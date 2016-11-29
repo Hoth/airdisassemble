@@ -28,25 +28,22 @@
 <body>
 적용이 늦어
  여행지를 찾아서!<p>
+ 
 <div data-role="content">
-		<ul data-role="listview">
-	<c:forEach items="${top}"
+		<table>
+		<tr><th>순위</th><th>도시</th></tr>
+	<c:forEach items="${top}" varStatus="status"
 			   var="top">
-			   <li>
-			   	  
-					${top}
-					<!-- /home/hosting_users/feelk22/photo -->
-			   	  </a>
-			   	</li>  	 
+			   <tr>
+			   		<td>${status.count}</td>
+			   	  	
+					<td>${top}</td>
+				
+			   
+			     	</tr> 
 			</c:forEach>
-			</ul>
+			</table>
     </div>
-
- <table>
- <tr><th>등수</th><th>위치</th></tr>
- <tr><td>1</td><td>지옥</td></tr>
-<tr><td>2</td><td>천국</td></tr>
-</table>
 
 <div id="example3" class="slider-pro">
 		<div class="sp-slides">

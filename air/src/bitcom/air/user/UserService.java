@@ -3,6 +3,7 @@ package bitcom.air.user;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 
 import org.apache.commons.io.FileUtils;
 import org.springframework.stereotype.Controller;
@@ -53,6 +54,10 @@ public class UserService {
 	@RequestMapping(value="/start.do")
 	public ModelAndView goindex() throws Exception{
 		ModelAndView mav = new ModelAndView();
+		
+		ArrayList<String> topN=bestlist_crawler.top();
+		mav.addObject("top",topN);
+		
 		mav.setViewName("/intro.jsp");
 		return mav;
 	}

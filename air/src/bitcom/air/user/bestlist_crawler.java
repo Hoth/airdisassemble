@@ -63,7 +63,7 @@ public class bestlist_crawler {
 //            
             String nation=html.substring(0,aIndex);
            System.out.println(count+"."+nation);
-           topN.add(count+"."+nation);
+           topN.add(nation);
             }
             
         }catch(Exception e){

@@ -1,0 +1,10 @@
+@RELATION 'travel-data'
+
+@ATTRIBUTE 'sex' {'man','woman'}
+@ATTRIBUTE 'age' {'10','20~23','24~26','27~29','30~35','36~39','40','50'}
+@ATTRIBUTE 'length' {'1','3','7','14','-30','30'}
+@ATTRIBUTE 'cost' {'50','50-100','100-200','200'}
+@ATTRIBUTE 'with' {'1','1f','2f','fam','c','p','l'}
+@ATTRIBUTE 'month' {'1','2','3','4','5','6','7','8','9','10','11','12'}
+@ATTRIBUTE 'class' {'eu','oce','na','sa','af','asia'}
+@DATA

@@ -25,30 +25,29 @@ public class UserService {
 	public ModelAndView generateDestination(User user) throws Exception{
 		ModelAndView mav = new ModelAndView();
 
-		String text = "\'"+user.sex+"\',"+"\'"+user.age+"\',"+"\'"+user.length+"\',"+"\'"+user.cost+"\',"+"\'"+user.company+"\',"+"\'"+user.season+"\',"+"?";
+		String base = "\'"+user.gender+"\',"+"\'"+user.age+"\',"+"\'"+user.season+"\',"+"\'"+user.cost+"\',"+"\'"+user.day+"\',"+"\'"+user.whom+"\',";
+		String text=base+" ?";
 		System.out.println(text);
-		PrintWriter  fw=new PrintWriter(new FileWriter("c:/data/newperson.arff",true));
+		PrintWriter  fw=new PrintWriter(new FileWriter("/newperson.arff",true));
 		fw.print(text);
 		fw.close();
 		
-		
-		
+	
 		WekaService service=new WekaService();
 		String dest = service.wekaRun();
 		System.out.println(dest);
 		
-		String text2 = "\'"+user.sex+"\',"+"\'"+user.age+"\',"+"\'"+user.length+"\',"+"\'"+user.cost+"\',"+"\'"+user.company+"\',"+"\'"+user.season+"\',"+"\'"+dest+"\'";
-		PrintWriter  fw2=new PrintWriter(new FileWriter("c:/data/research.arff",true));
+		String text2 = base+"\'"+dest+"\'";
+		PrintWriter  fw2=new PrintWriter(new FileWriter("/data3.arff",true));
 		fw2.println();
 		fw2.print(text2);
 		fw2.close();
 		
-		FileUtils.copyFile(new File("c:/data/spec.arff"),new File("c:/data/newperson.arff"));
+		FileUtils.copyFile(new File("/spec.arff"),new File("/newperson.arff"));
 		mav.addObject("dest", dest);
 		mav.setViewName("/user/recommend.jsp"); 
 		return mav;
 	}
-	
 	
 	
 	@RequestMapping(value="/start.do")

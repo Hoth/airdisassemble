@@ -2,53 +2,53 @@ package bitcom.air.user;
 
 public class User {
 	String age;
-	String sex;
-	String length;
+	String gender;
+	String day;
 	String cost;
-	String company;
 	String season;
-	String continent;
+	String whom;
+	public String getDay() {
+		return day;
+	}
+	public void setDay(String day) {
+		this.day = day;
+	}
+	public String getWhom() {
+		return whom;
+	}
+	public void setWhom(String whom) {
+		this.whom = whom;
+	}
 	public String getAge() {
 		return age;
 	}
 	public void setAge(String age) {
 		this.age = age;
 	}
-	public String getSex() {
-		return sex;
+	
+	public String getGender() {
+		return gender;
 	}
-	public void setSex(String sex) {
-		this.sex = sex;
+	public void setGender(String gender) {
+		this.gender = gender;
 	}
-	public String getLength() {
-		return length;
+	public String getSeason() {
+		return season;
 	}
-	public void setLength(String length) {
-		this.length = length;
-	}
+
 	public String getCost() {
 		return cost;
 	}
 	public void setCost(String cost) {
 		this.cost = cost;
 	}
-	public String getCompany() {
-		return company;
-	}
-	public void setCompany(String company) {
-		this.company = company;
-	}
+
 	public String getSeaon() {
 		return season;
 	}
 	public void setSeason(String season) {
 		this.season = season;
 	}
-	public String getContinent() {
-		return continent;
-	}
-	public void setContinent(String continent) {
-		this.continent = continent;
-	}
+	
 	
 }

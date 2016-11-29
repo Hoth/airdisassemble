@@ -28,7 +28,7 @@ public class UserService {
 		String base = "\'"+user.gender+"\',"+"\'"+user.age+"\',"+"\'"+user.season+"\',"+"\'"+user.cost+"\',"+"\'"+user.day+"\',"+"\'"+user.whom+"\',";
 		String text=base+" ?";
 		System.out.println(text);
-		PrintWriter  fw=new PrintWriter(new FileWriter("C:\\Users\\bit-user\\git\\airdisassemble\\air\\newperson.arff",true));
+		PrintWriter  fw=new PrintWriter(new FileWriter("C:/data/newperson.arff",true));
 		fw.print(text);
 		fw.close();
 		
@@ -38,12 +38,12 @@ public class UserService {
 		System.out.println(dest);
 		
 		String text2 = base+"\'"+dest+"\'";
-		PrintWriter  fw2=new PrintWriter(new FileWriter("C:\\Users\\bit-user\\git\\airdisassemble\\air\\data3.arff",true));
+		PrintWriter  fw2=new PrintWriter(new FileWriter("C:/data/data3.arff",true));
 		fw2.println();
 		fw2.print(text2);
 		fw2.close();
 		
-		FileUtils.copyFile(new File("C:\\Users\\bit-user\\git\\airdisassemble\\air\\spec.arff"),new File("C:\\Users\\bit-user\\git\\airdisassemble\\air\\newperson.arff"));
+		FileUtils.copyFile(new File("C:/data/spec.arff"),new File("C:/data/newperson.arff"));
 		mav.addObject("dest", dest);
 		mav.setViewName("/user/recommend.jsp"); 
 		return mav;

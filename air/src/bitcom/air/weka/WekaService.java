@@ -12,12 +12,12 @@ import weka.core.Instances;
 public class WekaService {
 	public String wekaRun()throws Exception{
 		  Classifier j48tree = new J48();
-          Instances train = new Instances(new BufferedReader(new FileReader("C:\\Users\\bit-user\\git\\airdisassemble\\air\\data3.arff")));
+          Instances train = new Instances(new BufferedReader(new FileReader("C:/data/data3.arff")));
           int lastIndex = train.numAttributes() - 1;
           
           train.setClassIndex(lastIndex);
           
-          Instances test = new Instances(new BufferedReader(new FileReader("C:\\Users\\bit-user\\git\\airdisassemble\\air\\newperson.arff")));
+          Instances test = new Instances(new BufferedReader(new FileReader("C:/data/newperson.arff")));
           test.setClassIndex(lastIndex);
           
           j48tree.buildClassifier(train);

@@ -73,12 +73,11 @@ ${dest}
 <!-- <a href="/air/generateDestination.do">생성해보자</a> -->
 <form action="/air/generateDestination.do" method="post">
  <input type="hidden" name="age" id="age"/><p>
- <input type="hidden" name="sex" id="sex" /><p>
- <input type="hidden" name="length" id="length"/><p>
+ <input type="hidden" name="gender" id="gender" /><p>
+ <input type="hidden" name="day" id="day"/><p>
  <input type="hidden" name="cost" id="cost"/><p>
- <input type="hidden" name="company" id="company"/><p>
+ <input type="hidden" name="whom" id="whom"/><p>
  <input type="hidden" name="season" id="season" /><p>
- <input type="hidden" name="continent" id="continent"/><p>
  <input type="submit" value="조회!">
  </form>
  

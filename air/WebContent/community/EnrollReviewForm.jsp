@@ -11,7 +11,7 @@
 </head>
 
 <body>
-<form name="upload" method="post"  action="/www/AddGood.do" onSubmit="return submitContents(this)" enctype="multipart/form-data" > 
+<form name="upload" method="post"  action="/www/AddReview.do" onSubmit="return submitContents(this)" enctype="multipart/form-data" > 
 <table>
 <tr><td>제목 : <input type="text" name="r_Title"></td></tr>
 <tr><td>장소 : <input type="text" name="c_Location"></td></tr>
@@ -21,15 +21,15 @@
 <tr><td><textarea style="width: 90%" rows="50" name="r_Context" id="textAreaContent" cols="80"></textarea></td></tr>
 <tr><td>별점주기 : <input type="radio" name="r_Star" value="1"><input type="radio" name="r_Star" value="2">
 <input type="radio" name="r_Star" value="3"><input type="radio" name="r_Star" value="4"><input type="radio" name="r_Star" value="5">/5</td></tr>
-
-</table>
-
 <%
  java.text.SimpleDateFormat formatter = new java.text.SimpleDateFormat("yyyyMMddHHmmss");
  String today = formatter.format(new java.util.Date());
 %>
 <input type="hidden" name="r_Wdate" value="${today}">
- <input type="submit" value="올리기" ><br>
+<tr><td><input type="submit" value="올리기" ></td></tr>
+</table>
+
+
  </form>
   <script type="text/javascript">
 

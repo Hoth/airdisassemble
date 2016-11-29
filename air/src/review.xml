@@ -31,14 +31,14 @@
 	
 	<insert id="insertReview" parameterType="Review">
 	<![CDATA[
-		insert into A_review (r_Name,r_Title,c_Location,r_Img,r_Context,r_Star,r_Tdate,r_Wdate)
-		values (#{r_Name},#{r_Title},#{c_Location},#{r_Img},#{r_Context},#{r_Star},#{r_Tdate},#{r_Wdate)  
+		insert into A_review (r_Name,r_Title,c_Location,r_Image,r_Context,r_Star,r_Tdate,r_Wdate)
+		values (#{r_Name},#{r_Title},#{c_Location},#{r_Image},#{r_Context},#{r_Star},#{r_Tdate},#{r_Wdate)  
 	]]>
 	</insert>
 	
 	<update id="updateReview" parameterType="int">
 	<![CDATA[
-		 update shop_Good set gName=#{gName},
+		 update shop_Good set r_Title=#{r_Title},
 		 gPrice=#{gPrice},gMainImg=#{gMainImg},gMainDetail=#{gMainDetail},
 		 gImg=#{gImg},gDetail=#{gDetail},gStock=#{gStock}
 		 where mNum=#{mNum}  

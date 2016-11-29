@@ -14,6 +14,7 @@
 <form name="upload" method="post"  action="/www/AddReview.do" onSubmit="return submitContents(this)" enctype="multipart/form-data" > 
 <table>
 <tr><td>제목 : <input type="text" name="r_Title"></td></tr>
+<tr><td>작성자 : <input type="text" name="r_Name"></td></tr>
 <tr><td>장소 : <input type="text" name="c_Location"></td></tr>
 <tr><td>여행 출발일 :<select name="r_Tdate"><option value="spring">봄(3월~5월)<option value="summer">여름(6월~8월)<option value="fall">가을(9월~11월)<option value="winter">겨울(11월~2월) </td></tr>
 <tr><td>썸네일 : <input type="file" name="r_Image"></td></tr>

@@ -1,4 +1,4 @@
-package bitcom.air.community;
+package bitcom.air.review;
 
 public class Review {
 	

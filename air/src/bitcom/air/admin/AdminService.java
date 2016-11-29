@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import bitcom.air.community.ReviewDAO;
-import bitcom.air.community.Review;
+import bitcom.air.review.Review;
+import bitcom.air.review.ReviewDAO;
 @Controller
 public class AdminService {
 

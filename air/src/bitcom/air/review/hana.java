@@ -1,4 +1,4 @@
-package bitcom.air.community;
+package bitcom.air.review;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -34,7 +34,8 @@ public class hana {
             String div="<div class=\"recommandPlace\">";
             int divIndex=html.indexOf(div);
             html=html.substring(divIndex);
-            System.out.println("html:"+html);
+            //
+            //System.out.println("html:"+html);
             		
             while(true){
             	int ccIndex=html.indexOf(startTag);
@@ -49,6 +50,7 @@ public class hana {
                 
                 String nation=html.substring(0,aIndex);
                 System.out.println(nation);
+                System.out.println();
                 
                 String img="<img src=\"";
                 int imgIndex=html.indexOf(img);

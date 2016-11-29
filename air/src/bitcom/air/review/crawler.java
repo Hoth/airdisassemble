@@ -1,4 +1,4 @@
-package bitcom.air.community;
+package bitcom.air.review;
 
 
 import java.io.BufferedReader;

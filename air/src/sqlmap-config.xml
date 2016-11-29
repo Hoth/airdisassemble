@@ -11,7 +11,7 @@
   <setting name="jdbcTypeForNull" value="VARCHAR"/>
 </settings>
 <typeAliases>
-     <typeAlias alias="Review" type="bitcom.air.community.Review"/>
+     <typeAlias alias="Review" type="bitcom.air.review.Review"/>
     
 </typeAliases>
 <!-- 환경설정:

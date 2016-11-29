@@ -9,7 +9,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
-public class CommunityDAO {
+public class ReviewDAO {
 	private  static String resource= "sqlmap-config.xml";
 	private static Reader sqlReader=null;
 	static{
@@ -30,6 +30,12 @@ public class CommunityDAO {
 		reviewList = (ArrayList)sqlSession.selectList("selectReviewList");
 		sqlSession.close();
 		return reviewList;
+	}
+	
+	public static void insertReview(Review review) throws Exception{
+		SqlSession sqlSession = sqlMapper.openSession(true);
+		sqlSession.insert("insertReview", review);
+		sqlSession.close();
 	}
 	
 	public static Review selectReview(int r_Num) throws Exception{

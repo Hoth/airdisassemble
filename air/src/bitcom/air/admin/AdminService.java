@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import bitcom.air.community.CommunityDAO;
+import bitcom.air.community.ReviewDAO;
 import bitcom.air.community.Review;
 @Controller
 public class AdminService {
@@ -15,7 +15,7 @@ public class AdminService {
 	@RequestMapping(value="/viewReviewListAdmin.do")
 	public ModelAndView viewReviewListAdmin() throws Exception{
 		ModelAndView mav = new ModelAndView();
-		ArrayList<Review> reviewList = CommunityDAO.selectReviewList();
+		ArrayList<Review> reviewList = ReviewDAO.selectReviewList();
 		mav.addObject("rv",reviewList);
 		mav.setViewName("/admin/viewReviewListAdmin.jsp");
 		return mav;
@@ -24,7 +24,7 @@ public class AdminService {
 	@RequestMapping(value="/viewReviewAdmin.do")
 	public ModelAndView viewReviewAdmin(@RequestParam(value="r_Num")int r_Num) throws Exception{
 		ModelAndView mav = new ModelAndView();
-		Review r = CommunityDAO.selectReview(r_Num);
+		Review r = ReviewDAO.selectReview(r_Num);
 		mav.addObject("r",r);
 		mav.setViewName("/admin/viewReviewAdmin.jsp");
 		return mav;
@@ -34,7 +34,7 @@ public class AdminService {
 	public ModelAndView deleteReview(@RequestParam(value="r_Num")int r_Num) throws Exception{
 		ModelAndView mav = new ModelAndView();
 		// 삭제
-		CommunityDAO.deleteReview(r_Num);
+		ReviewDAO.deleteReview(r_Num);
 		mav.setViewName("/admin/viewReviewListAdmin.do");
 		return mav;
 	}

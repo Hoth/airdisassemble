@@ -47,6 +47,10 @@ public class ReviewService {
 	@RequestMapping(value="/viewHot.do")
 	public ModelAndView viewHot() throws Exception{
 		ModelAndView mav = new ModelAndView();
+		
+		ArrayList best = hana.run();
+		mav.addObject("best",best);
+		
 		mav.setViewName("/review/viewHot.jsp");
 		return mav;
 	}

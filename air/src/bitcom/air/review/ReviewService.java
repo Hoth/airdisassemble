@@ -23,13 +23,13 @@ public class ReviewService {
 		ModelAndView mav = new ModelAndView();
 		Review r = ReviewDAO.selectReview(r_Num);
 		mav.addObject("r",r);
-		mav.setViewName("/community/viewReview.jsp");
+		mav.setViewName("/review/viewReview.jsp");
 		return mav;
 	}
 	@RequestMapping(value="/addReviewForm.do")
 	public ModelAndView addReviewForm() throws Exception{
 		ModelAndView mav = new ModelAndView();
-		mav.setViewName("/community/addReviewForm.jsp");
+		mav.setViewName("/review/addReviewForm.jsp");
 		return mav;
 	}
 	@RequestMapping(value="/addReview.do")
@@ -47,13 +47,13 @@ public class ReviewService {
 	@RequestMapping(value="/viewHot.do")
 	public ModelAndView viewHot() throws Exception{
 		ModelAndView mav = new ModelAndView();
-		mav.setViewName("/community/viewHot.jsp");
+		mav.setViewName("/review/viewHot.jsp");
 		return mav;
 	}
 	@RequestMapping(value="/viewStar.do")
 	public ModelAndView viewStar() throws Exception{
 		ModelAndView mav = new ModelAndView();
-		mav.setViewName("/community/viewStar.jsp");
+		mav.setViewName("/review/viewStar.jsp");
 		return mav;
 	}
 

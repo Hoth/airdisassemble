@@ -21,7 +21,7 @@ public class hana {
            
             
             
-            bf = new BufferedReader(new InputStreamReader(url.openStream(),"euc-kr"));
+            bf = new BufferedReader(new InputStreamReader(url.openStream(),"utf-8"));
             
             while((line = bf.readLine())!=null){
             	html+=line;

@@ -33,13 +33,14 @@
 
   float: left;
   width: 20%;
-  
+  padding:1px;
   
 }
 .right-box {
 
   float: left;
-    width: 20%;
+    width: 80%;
+    padding-left:200px;
 
 }
 </style>

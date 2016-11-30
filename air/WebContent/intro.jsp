@@ -28,8 +28,24 @@
 <body>
 적용이 늦어
  여행지를 찾아서!<p>
+  <style>
+.left-box {
+
+  float: left;
+  width: 20%;
+  
+  
+}
+.right-box {
+
+  float: left;
+    width: 20%;
+
+}
+</style>
+  
  
-<div data-role="content">
+<div class='left-box' data-role="content">
 		<table>
 		<tr><th>순위</th><th>도시</th></tr>
 	<c:forEach items="${top}" varStatus="status"
@@ -45,7 +61,7 @@
 			</table>
     </div>
 
-<div id="example3" class="slider-pro">
+<div class='right-box' id="example3" class="slider-pro">
 		<div class="sp-slides">
 			<div class="sp-slide">
 				<img class="sp-image" src="/air/dist/css/images/blank.gif" 

@@ -41,7 +41,7 @@ $(document).ready(
 				<li><a href="/air/main.do">추천 여행지</a></li>
 				<li><a href="/air/viewReviewList.do">리뷰 </a></li>
 				<li><a href="/air/viewExchangeRate.do">환율보기</a></li>
-				<li><a href="#">나라정보검색</a></li>
+				<li><a href="/air/getCountryBasicListForm.do">나라정보검색</a></li>
 				<li><a href="/air/viewReviewListAdmin.do">관리자 리뷰보기</a></li>
 			</ul>
 		</div>

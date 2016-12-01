@@ -26,8 +26,7 @@
 
 </head>
 <body>
-적용이 늦어
- 여행지를 찾아서!<p>
+<p>
   <style>
 .left-box {
 

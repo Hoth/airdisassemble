@@ -1,4 +1,4 @@
-package bitcom.air.info.controller;
+package bitcom.air.blog.controller;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -13,28 +13,28 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import bitcom.air.info.Item;
+import bitcom.air.blog.Item;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 @Controller
-public class Naver {
+public class NaverBlog {
 	@Resource
 	ModelAndView mav;
-	@RequestMapping("/getNewsListForm.do")
-	public ModelAndView getNewsListForm(){
-		mav.setViewName("/news/viewNewsList.jsp");
+	@RequestMapping("/getBlogListForm.do")
+	public ModelAndView getBlogListForm(){
+		mav.setViewName("/blog/viewBlogList.jsp");
 		return mav;
 		}
-	@RequestMapping("/getNewsList.do")
-	public ModelAndView getNewsList() throws Exception {
+	@RequestMapping("/getBlogList.do")
+	public ModelAndView getBlogList(String keyword) throws Exception {
 		// TODO Auto-generated method stub
 		 String clientId = "eHYOfpZR4LeJ0nWtLYfl";//���ø����̼� Ŭ���̾�Ʈ ���̵�";
 	        String clientSecret = "k6Ku9x8l_O";//���ø����̼� Ŭ���̾�Ʈ ��ũ����";
 	        
-	            String text = URLEncoder.encode("트럼프","UTF-8");
-	            String apiURL = "https://openapi.naver.com/v1/search/news.json?query="+ text;
+	            String text = URLEncoder.encode(keyword+"여행","UTF-8");
+	            String apiURL = "https://openapi.naver.com/v1/search/blog.json?query="+text+"&display=100";
 	            URL url = new URL(apiURL);
 	            HttpURLConnection con = (HttpURLConnection)url.openConnection();
 	            con.setRequestMethod("GET");
@@ -68,10 +68,8 @@ public class Naver {
 			   }
 			   
 			   mav.addObject("ITEM",itemList);
-			   mav.setViewName("/news/viewNewsList.jsp");
+			   mav.setViewName("/user/recommend3.jsp");
 			   return mav;
 	        } 
 
-	}
-
-
+}

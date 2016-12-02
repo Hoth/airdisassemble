@@ -232,7 +232,8 @@ hr {
 }
 
 .container {
-	width: 1200px;
+	overflow: auto;
+	width: 1500px;
 	margin: 0px auto;
 }
 
@@ -322,11 +323,12 @@ hr {
 }
 
 #menu {
-	overflow: hidden;
+	overflow:auto;
 	height: 100px;
 }
 
 #menu ul {
+	overflow: auto;
 	margin: 0;
 	padding: 0px 0px 0px 0px;
 	list-style: none;

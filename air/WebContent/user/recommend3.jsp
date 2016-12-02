@@ -26,14 +26,6 @@ $(document).ready(
 <script type="text/javascript">
 
 
-
-
-function popup_win1() { //크기 width400 height300 팝업창
-	
-
-window.open("/air/UserInfoForm.jsp", "popup", "width=300, height=300");
-}
-
 </script>
 <html>
 <head>
@@ -47,67 +39,7 @@ window.open("/air/UserInfoForm.jsp", "popup", "width=300, height=300");
 </head>
 <body>
 
-  <style>
-.left-box {
-
-  float: left;
-  width: 50%;
-  padding:1px;
-  
-}
-.right-box {
-
-  float: right;
-    width: 50%;
-    padding-left:1px;
-     padding-top:1px;
-    
-
-}
-</style>
-  
-<div class='left-box'>
-<input type="button" value="자신의 정보입력" onclick="popup_win1()">
-
-<c:choose>
-	<c:when test="${dest==null}">
-		값이 없음.	
-	</c:when>
-	
-	<c:otherwise>
-	${dest} 입니다
-	</c:otherwise>
-</c:choose>
-
-
-
-
-${dest}
-
-
-<p>
-<a href="/air/viewHot.do">핫!</a><p>
-<a href="/air/viewStar.do">스톼~</a><p>
-<!-- <a href="/air/generateDestination.do">생성해보자</a> -->
-<form action="/air/generateDestination.do" method="post">
- <input type="hidden" name="age" id="age"/><p>
- <input type="hidden" name="gender" id="gender" /><p>
- <input type="hidden" name="day" id="day"/><p>
- <input type="hidden" name="cost" id="cost"/><p>
- <input type="hidden" name="whom" id="whom"/><p>
- <input type="hidden" name="season" id="season" /><p>
- <input type="submit" value="조회!">
- </form>
- </div>
  
- <div class='right-box'>
- 
- <h2>블로그 여행후기 검색</h2>
-<h1>국가검색</h1>
-	<form action="/air/getBlogList.do" method="post">
-		검색어<input type="text"  name="keyword"/>
-		<input type="submit"  value="검색"/>
-	</form>
 	
 	<c:choose>
 		<c:when test="${ITEM!=null}">
@@ -150,8 +82,7 @@ ${dest}
 			검색 결과가 없습니다.
 		</c:otherwise>
 	</c:choose>
- 
- </div>
+
  
 </body>
 </html>

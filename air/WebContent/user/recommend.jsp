@@ -16,7 +16,7 @@ $(document).ready(
 			$("#frame").load(target);
 			event.preventDefault();
 		});
-			
+			 
 	}		
 );
 </script>

@@ -1,5 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page import="java.util.ArrayList" %>    
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%
+ArrayList<String> best=(ArrayList)request.getAttribute("best");
+
+%>    
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
     <head>
@@ -22,17 +28,14 @@
         <div class="container">
 		
 			<!-- Codrops top bar -->
-            <div class="codrops-top">
-                <a href="http://tympanus.net/Tutorials/ModernBlockQuoteStyles/">
-                    <strong>&laquo; Previous Demo: </strong>Modern Block Quote Styles
-                </a>
+           
                 <div class="clr"></div>
-            </div><!--/ Codrops top bar -->
+            <!--/ Codrops top bar -->
 			
 			<header>
 			
-				<h1>Photo Booth Strips</h1>
-				<h2>김수진 똥멍청이 <br> <strong>Scroll with your mousewheel or finger</strong></h2>
+				<h1>kim su jin mae rong</h1>
+				<h2>김수진 똥멍청이 <br> <strong>스크롤해보세욘!</strong></h2>
 				
 				<div class="support-note"><!-- let's check browser support with modernizr -->
 					<!--span class="no-cssanimations">CSS animations are not supported in your browser</span-->
@@ -50,16 +53,11 @@
 				<div class="pb-wrapper pb-wrapper-1">
 					<div class="pb-scroll">
 						<ul class="pb-strip">
-							<li><a href="images/large/1.jpg" rel="lightbox[album1]" title="Spring"><img src="images/small/1.jpg" /></a></li>
-							<li><a href="images/large/2.jpg" rel="lightbox[album1]" title="Sunshine"><img src="images/small/2.jpg" /></a></li>
-							<li><a href="images/large/3.jpg" rel="lightbox[album1]" title="Summer"><img src="images/small/3.jpg" /></a></li>
-							<li><a href="images/large/4.jpg" rel="lightbox[album1]" title="Delicious"><img src="images/small/4.jpg" /></a></li>
-							<li><a href="images/large/5.jpg" rel="lightbox[album1]" title="Softness"><img src="images/small/5.jpg" /></a></li>
-							<li><a href="images/large/6.jpg" rel="lightbox[album1]" title="Bliss"><img src="images/small/6.jpg" /></a></li>
-							<li><a href="images/large/7.jpg" rel="lightbox[album1]" title="Adorable"><img src="images/small/7.jpg" /></a></li>
-							<li><a href="images/large/8.jpg" rel="lightbox[album1]" title="Forever"><img src="images/small/8.jpg" /></a></li>
-							<li><a href="images/large/9.jpg" rel="lightbox[album1]" title="Silence"><img src="images/small/9.jpg" /></a></li>
-							<li><a href="images/large/10.jpg" rel="lightbox[album1]" title="Love"><img src="images/small/10.jpg" /></a></li>
+							<%for (int i=0;i<10;i=i+2){ %>		
+							<li><a href=<%=best.get(i+1) %> 
+							    rel="lightbox[album1]" title=<%=best.get(i)%>>
+							    <img src=<%=best.get(i+1)%> width=140 /></a></li>
+						  <%} %>
 						</ul>
 					</div>
 					<h3 class="pb-title">You only live once, but if you do it right, once is enough.</h3>
@@ -68,16 +66,11 @@
 				<div class="pb-wrapper pb-wrapper-2">
 					<div class="pb-scroll">
 						<ul class="pb-strip">
-							<li><a href="images/large/11.jpg" rel="lightbox[album2]" title="Serenity"><img src="images/small/11.jpg" /></a></li>
-							<li><a href="images/large/12.jpg" rel="lightbox[album2]" title="Color"><img src="images/small/12.jpg" /></a></li>
-							<li><a href="images/large/13.jpg" rel="lightbox[album2]" title="Serendipity"><img src="images/small/13.jpg" /></a></li>
-							<li><a href="images/large/14.jpg" rel="lightbox[album2]" title="Sunshine"><img src="images/small/14.jpg" /></a></li>
-							<li><a href="images/large/15.jpg" rel="lightbox[album2]" title="Love"><img src="images/small/15.jpg" /></a></li>
-							<li><a href="images/large/16.jpg" rel="lightbox[album2]" title="Friendship"><img src="images/small/16.jpg" /></a></li>
-							<li><a href="images/large/17.jpg" rel="lightbox[album2]" title="Spring"><img src="images/small/17.jpg" /></a></li>
-							<li><a href="images/large/18.jpg" rel="lightbox[album2]" title="Future"><img src="images/small/18.jpg" /></a></li>
-							<li><a href="images/large/19.jpg" rel="lightbox[album2]" title="Summer"><img src="images/small/19.jpg" /></a></li>
-							<li><a href="images/large/20.jpg" rel="lightbox[album2]" title="Lightness"><img src="images/small/20.jpg" /></a></li>
+							<%for (int i=10;i<20;i=i+2){ %>		
+							<li><a href=<%=best.get(i+1) %> 
+							    rel="lightbox[album1]" title=<%=best.get(i)%>>
+							    <img src=<%=best.get(i+1)%> width=140 /></a></li>
+						  <%} %>
 						</ul>
 					</div>	
 					<h3 class="pb-title">A good reason, is not necessarily a relevant one.</h3>
@@ -86,16 +79,12 @@
 				<div class="pb-wrapper pb-wrapper-3">
 					<div class="pb-scroll">
 						<ul class="pb-strip">
-							<li><a href="images/large/20.jpg" rel="lightbox[album3]" title="Spring"><img src="images/small/20.jpg" /></a></li>
-							<li><a href="images/large/10.jpg" rel="lightbox[album3]" title="Sunshine"><img src="images/small/10.jpg" /></a></li>
-							<li><a href="images/large/9.jpg" rel="lightbox[album3]" title="Summer"><img src="images/small/9.jpg" /></a></li>
-							<li><a href="images/large/19.jpg" rel="lightbox[album3]" title="Delicious"><img src="images/small/19.jpg" /></a></li>
-							<li><a href="images/large/8.jpg" rel="lightbox[album3]" title="Softness"><img src="images/small/8.jpg" /></a></li>
-							<li><a href="images/large/18.jpg" rel="lightbox[album3]" title="Bliss"><img src="images/small/18.jpg" /></a></li>
-							<li><a href="images/large/4.jpg" rel="lightbox[album3]" title="Adorable"><img src="images/small/4.jpg" /></a></li>
-							<li><a href="images/large/6.jpg" rel="lightbox[album3]" title="Forever"><img src="images/small/6.jpg" /></a></li>
-							<li><a href="images/large/7.jpg" rel="lightbox[album3]" title="Silence"><img src="images/small/7.jpg" /></a></li>
-							<li><a href="images/large/11.jpg" rel="lightbox[album3]" title="Love"><img src="images/small/11.jpg" /></a></li>
+						<%for (int i=20;i<30;i=i+2){ %>		
+							<li><a href=<%=best.get(i+1) %> 
+							    rel="lightbox[album1]" title=<%=best.get(i)%>>
+							    <img src=<%=best.get(i+1)%> width=140 /></a></li>
+						  <%} %>	
+							
 						</ul>
 					</div>
 					<h3 class="pb-title">Images &copy; Sherman Geronimo-Tan</h3>
@@ -104,16 +93,12 @@
 				<div class="pb-wrapper pb-wrapper-4">
 					<div class="pb-scroll">
 						<ul class="pb-strip">
-							<li><a href="images/large/18.jpg" rel="lightbox[album4]" title="Spring"><img src="images/small/18.jpg" /></a></li>
-							<li><a href="images/large/16.jpg" rel="lightbox[album4]" title="Sunshine"><img src="images/small/16.jpg" /></a></li>
-							<li><a href="images/large/8.jpg" rel="lightbox[album4]" title="Summer"><img src="images/small/8.jpg" /></a></li>
-							<li><a href="images/large/18.jpg" rel="lightbox[album4]" title="Delicious"><img src="images/small/18.jpg" /></a></li>
-							<li><a href="images/large/19.jpg" rel="lightbox[album4]" title="Softness"><img src="images/small/19.jpg" /></a></li>
-							<li><a href="images/large/20.jpg" rel="lightbox[album4]" title="Bliss"><img src="images/small/20.jpg" /></a></li>
-							<li><a href="images/large/1.jpg" rel="lightbox[album4]" title="Adorable"><img src="images/small/1.jpg" /></a></li>
-							<li><a href="images/large/5.jpg" rel="lightbox[album4]" title="Forever"><img src="images/small/5.jpg" /></a></li>
-							<li><a href="images/large/3.jpg" rel="lightbox[album4]" title="Silence"><img src="images/small/3.jpg" /></a></li>
-							<li><a href="images/large/6.jpg" rel="lightbox[album4]" title="Love"><img src="images/small/6.jpg" /></a></li>
+						<%for (int i=30;i<40;i=i+2){ %>		
+							<li><a href=<%=best.get(i+1) %> 
+							    rel="lightbox[album1]" title=<%=best.get(i)%>>
+							    <img src=<%=best.get(i+1)%> width=140 /></a></li>
+						  <%} %>	
+							
 						</ul>
 					</div>
 					<h3 class="pb-title">Happiness is a direction, not a destination.</h3>

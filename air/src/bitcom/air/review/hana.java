@@ -1,6 +1,7 @@
 package bitcom.air.review;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.io.UnsupportedEncodingException;
 import java.net.URL;
 import java.util.ArrayList;
 
@@ -8,9 +9,14 @@ public class hana {
 		
 	public static ArrayList<String> run() {
         ArrayList<String> best = new ArrayList<String>();
-		try{
+		
+      
+        
+        
+        try{
           //example.com은 연습으로 사용하기 위한 페이지이다. 간단한 페이지로 소스코드의 양도 적다.
-            String urlstr = "http://www.hanatour.com/asp/contents/vote_tour/index.html?hanacode=main_vote_tour";
+            
+			String urlstr = "http://www.hanatour.com/asp/contents/vote_tour/index.html?hanacode=main_vote_tour";
             //URL 문자열을 처리하기 위해 URL클래스를 이용한다.
             URL url = new URL(urlstr);
             
@@ -21,7 +27,7 @@ public class hana {
            
             
             
-            bf = new BufferedReader(new InputStreamReader(url.openStream(),"utf-8"));
+            bf = new BufferedReader(new InputStreamReader(url.openStream(),"UTF-8"));
             
             while((line = bf.readLine())!=null){
             	html+=line;

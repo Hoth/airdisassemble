@@ -47,8 +47,9 @@ window.open("/air/UserInfoForm.jsp", "popup", "width=300, height=300");
 .left-box {
 
   float: left;
-  width: 50%;
+  width: 25%;
   padding:1px;
+   padding-top:0px;
   
 }
 .right-box {
@@ -62,6 +63,7 @@ window.open("/air/UserInfoForm.jsp", "popup", "width=300, height=300");
 }
 </style>
 <div class='left-box'>
+
 <h1>국가 안전정보검색</h1>
 	<form action="/air/getCountrySafetyList.do" method="post">
 		검색어<input type="text"  name="keyword"/>

@@ -12,7 +12,7 @@
        <form name="popup">
      
     나이<p>
-      <select name="age">
+      <select name="age" id="age">
 <option value="10">10대 및 이하</option>
 <option value="20">20~23</option>
 <option value="25">24~26</option>
@@ -24,11 +24,11 @@
 
     
     성별
-<input type="radio" name="gender" value="man">남
-<input type="radio" name="gender" value="woman">여<p>
+<input type="radio" name="gender" id="gender" value="man">남
+<input type="radio" name="gender" id="gender" value="woman">여<p>
 
  여행기간<p>
-<select name="day">
+<select name="day" id="day">
 <option value="551">당일치기~2박3일</option>
 <option value="552">~5박6일</option>
 <option value="553">일주일</option>
@@ -39,13 +39,13 @@
 </select><p>
  
     예상경비(1인당)<p>
-<input type="radio" name="cost" value="49">50만원이하<p>
-<input type="radio" name="cost" value="50-99">50만원 이상~100만원 미만<p>
-<input type="radio" name="cost" value="100-199">100만원 이상~200만원 미만<p>
-<input type="radio" name="cost" value="200">200만원 이상<p>
+<input type="radio" name="cost" id="cost" value="49">50만원이하<p>
+<input type="radio" name="cost" id="cost" value="50-99">50만원 이상~100만원 미만<p>
+<input type="radio" name="cost" id="cost" value="100-199">100만원 이상~200만원 미만<p>
+<input type="radio" name="cost" id="cost" value="200">200만원 이상<p>
     
  동행<p>
-    <select name="whom">
+    <select name="whom" id ="whom">
  <option value="771">가족</option>
 <option value="772">동료</option>
 <option value="773">연인</option>
@@ -57,7 +57,7 @@
  
  계절<p>
 
-<select name="season">
+<select name="season" id ="season">
 <option value="881">봄(3월~5월)</option>
 <option value="882">여름(6월~8월)</option>
 <option value="883">가을(9월~11월)</option>
@@ -97,17 +97,18 @@
             var ageval=$("#age").val(); // 팝업의 벨루값을 가져와서
             $("#age",opener.document).val(ageval); // 부모에게 전달
             
-            var sexval=$("#sex").val(); 
-            $("#sex",opener.document).val(sexval);
             
-            var lengthval=$("#length").val();
-            $("#length",opener.document).val(lengthval);
+            var genderval=$("#gender").val();
+            $("#gender",opener.document).val(genderval);
+            
+            var dayval=$("#day").val();
+            $("#day",opener.document).val(dayval);
             
             var costval=$("#cost").val();
             $("#cost",opener.document).val(costval);
             
-            var companyval=$("#company").val();
-            $("#company",opener.document).val(companyval);
+            var whomval=$("#whom").val();
+            $("#whom",opener.document).val(whomval);
             
             var seasonval=$("#season").val(); // 팝업의 벨루값을 가져와서
             $("#season",opener.document).val(seasonval); // 부모에게 전달

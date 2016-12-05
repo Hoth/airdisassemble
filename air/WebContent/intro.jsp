@@ -19,47 +19,42 @@
 <script type="text/javascript" src="/air/dist/js/jquery.sliderPro.min.js"></script>
 
 <script type="text/javascript">
-
-
-	
 </script>
-
-</head>
-<body>
-<p>
-  <style>
+<style type = "text/css">
 .left-box {
-
   float: left;
   width: 20%;
   padding:1px;
-  
 }
 .right-box {
-
   float: left;
     width: 80%;
     padding-left:200px;
-
 }
 </style>
+</head>
+
+
+
+<body>
+<p>
+  
   
  
 <div class='left-box' data-role="content">
-		<table>
-		<tr><th>순위</th><th>도시</th></tr>
-	<c:forEach items="${top}" varStatus="status"
-			   var="top">
-			   <tr>
-			   		<td>${status.count}</td>
-			   	  	
+		<table class="type01">
+			<tr>
+					<th>순위</th><th>도시</th>
+			</tr>
+			
+					<c:forEach items="${top}" varStatus="status"  var="top">
+			 <tr>
+			  		<td>${status.count}</td>
 					<td>${top}</td>
-				
-			   
-			     	</tr> 
-			</c:forEach>
-			</table>
-    </div>
+			 </tr>
+					</c:forEach>
+		</table>
+</div>
 
 <div class='right-box' id="example3" class="slider-pro">
 		<div class="sp-slides">

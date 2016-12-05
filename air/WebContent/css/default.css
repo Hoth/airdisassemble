@@ -5,31 +5,50 @@ html, body {
 body {
 	margin: 0px;
 	padding: 0px;
-	background: #005eb5;
+	background: #ffdde5;	
 	font-family: 'Raleway', sans-serif;
 	font-size: 11pt;
 	font-weight: 400;
 	color: #363636;
 }
+table.type11 {
+    border-collapse: separate;
+    border-spacing: 1px;
+    text-align: center;
+    line-height: 1.5;
+    margin: 20px 10px;
+}
+table.type11 th {
+    padding: 10px;
+    font-weight: bold;
+    vertical-align: top;
+    color: white;
+    background: ccbbdd ;
+}
+table.type11 td {
+    padding: 10px;
+    vertical-align: top;
+    border-bottom: 1px solid #ccc;
+    background: ddddff;
+}
 
-
-table { 
+table.type01 { 
     width: 300px; 
     border-collapse: collapse; 
     margin:50px auto;
     }
 /* Zebra striping */
-tr:nth-of-type(odd) { 
-    background: pink; 
+table.type01 tr:nth-of-type(odd) { 
+    background: ccbbdd; 
     }
-th { 
-    background: pink; 
+table.type01 th { 
+    background: ccbbdd; 
     color: white; 
     font-weight: bold; 
     }
-td, th { 
+table.type01 td, th { 
     padding: 10px; 
-    border: 1px solid pink; 
+    border: 1px solid ccbbdd; 
     text-align: left; 
     font-size: 18px;
     }
@@ -208,7 +227,7 @@ hr {
 	{
 		font-weight: 400;
 		font-size: 2em;
-		color: #005eb5;
+		color: #ffdde5;
 	}
 	
 	.title .byline
@@ -319,7 +338,7 @@ hr {
 
 #menu-wrapper
 {
-	background: #005eb5;
+	background: #ffdde5;
 }
 
 #menu {
@@ -527,7 +546,7 @@ hr {
 		display: inline-block;
 		margin-top: 1.5em;
 		padding: 1.50em 3em 1.50em 3em;
-		background: #005eb5;
+		background: #ffdde5;
 		text-decoration: none;
 		text-transform: uppercase;
 		font-weight: 400;

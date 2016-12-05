@@ -1,7 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>    
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+  
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
 <html>
@@ -50,12 +51,12 @@ window.open("/air/ERForm.jsp", "popup", "width=300, height=300");
 
 <c:choose>
 	<c:when test="${exarr.get(0)==null}">
-	<input type="button" value="나라선택" onclick="popup_win1()">		
+	<input type="button" class="myButton" value="나라선택" onclick="popup_win1()" >		
 		<form action="/air/viewExchange.do" method="post" id="form">
  <input type="text" name="exchangerate" id="exchangerate"/><p>
 
  	
- <input type="submit" value="조회!">
+ <input type="submit" class="myButton" value="조회!">
  </form>
 		
 		

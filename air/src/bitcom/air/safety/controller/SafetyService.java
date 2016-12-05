@@ -37,11 +37,12 @@ public class SafetyService {
 	public ModelAndView getCountrySafetyList(String keyword)throws Exception{
 		String change = URLEncoder.encode(keyword,"UTF-8");
 		URL url = new URL("http://apis.data.go.kr/1262000/CountrySafetyService/getCountrySafetyList?ServiceKey=4Ms%2Fb80vhu9ll1bRY4SbEPzUD4nmB0pOTDjqu%2BSQHfzfzRkgPZBXyfz5%2F0SEtR%2B5j9Sx5W71vchAkJ9lQwPQKw%3D%3D&_type=json&title="+change+"&output=json");
-		
+		System.out.println(change);
 		InputStream in = url.openConnection().getInputStream();
-		 BufferedReader br=new BufferedReader(new InputStreamReader(in,"UTF-8"));
+		 
+		BufferedReader br=new BufferedReader(new InputStreamReader(in,"UTF-8"));
 		 StringBuffer xml=new StringBuffer();
-		
+		 System.out.println("1");
 		 
 		   String line;
 		   while(true){
@@ -54,14 +55,14 @@ public class SafetyService {
 		   }
 		   
 		// System.out.println(xml);
-		   
+		   System.out.println("2");
 		   JsonObject root = new JsonParser().parse(xml.toString()).getAsJsonObject();
 		   JsonObject response=root.getAsJsonObject("response");
 		   JsonObject body=response.getAsJsonObject("body");
 		   JsonObject items=body.getAsJsonObject("items");
 		   //JsonObject item=items.getAsJsonObject("item");
 		   JsonArray subnode=items.getAsJsonArray("item");
-		   
+		   System.out.println("3");
 		   Gson gson = new Gson();
 		   ArrayList <Item>itemList=new ArrayList<Item>();
 		   for(int i=0;i<subnode.size();i++){

@@ -75,6 +75,7 @@ window.open("/air/UserInfoForm.jsp", "popup", "width=300, height=600");
 <div class='left-box'>
 <input type="button" value="자신의 정보입력" onclick="popup_win1()">
 
+
 <c:choose>
 	<c:when test="${dest==null}">
 		값이 없음.	

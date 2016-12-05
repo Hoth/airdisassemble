@@ -15,6 +15,20 @@ $(document).ready(
 			$("#frame").load(target);
 			event.preventDefault();
 		});
+		 $("form").submit(function(){
+			 alert("서브밋");
+			 alert($("#keyword").val());
+			 var target="/air/getCountrySafetyList.do?keyword="+$("#keyword").val();
+				$("#frame").load(target);
+			 event.preventDefault();
+		 });
+		 $("form2").submit(function(){
+			 alert("서브밋");
+			 alert($("#keyword1").val());
+			 var target="/air/getAccidentList.do?keyword1="+$("#keyword1").val();
+				$("#frame").load(target);
+			 event.preventDefault();
+		 });
 			
 	}		
 );
@@ -65,8 +79,8 @@ window.open("/air/UserInfoForm.jsp", "popup", "width=300, height=300");
 <div class='left-box'>
 
 <h1>국가 안전정보검색</h1>
-	<form action="/air/getCountrySafetyList.do" method="post">
-		검색어<input type="text"  name="keyword"/>
+	<form action="/air/getCountrySafetyList.do" method="post" id="form">
+		검색어<input type="text"  name="keyword" id = "keyword"/>
 		<input type="submit"  value="검색"/>
 	</form>
 
@@ -118,12 +132,49 @@ window.open("/air/UserInfoForm.jsp", "popup", "width=300, height=300");
 	<div class='right-box'>
 	
 	<h1>국가 사고/유의사항 검색</h1>
-	<form action="/air/getAccidentList.do" method="post">
-		검색어<input type="text"  name="keyword"/>
+	<form action="/air/getAccidentList.do" method="post" id="form2">
+		검색어<input type="text"  name="keyword1" id="keyword1"/>
 		<input type="submit"  value="검색"/>
 	</form>
-	
-	
+	<c:choose>
+	<c:when test="${ITEM!=null}">
+			<table align="center" border="1">
+				<tr>
+					<td>번호</td>
+					<td>대륙</td>
+					<td>영문이름</td>
+					<td>아이디</td>
+					<td>이미지 URL</td>
+					<td>국가이름</td>
+				
+					<td>사건사고</td>
+					<td>날짜</td>
+					
+				</tr>
+				
+				 <tr>
+				 	<td>1</td>
+				 	<td>${ITEM.continent}</td>
+				 	<td>${ITEM.ename}</td>
+				 	<td>${ITEM.id}</td>
+				 	<td>
+				 	
+				 	<img src="${ITEM.imgUrl}"/>
+				 	
+				 	</td>
+				 	<td>${ITEM.name}</td>
+				 	<td>${ITEM.news}</td>
+				 		<td>${ITEM.wrtDt}</td>
+				 </tr>	
+				 
+				 
+				 	
+			</table>
+		</c:when>
+		<c:otherwise>
+			검색 결과가 없습니다.
+		</c:otherwise>
+	</c:choose>
 	
 	</div>
 	

@@ -43,8 +43,7 @@ $(document).ready(
 				<li><a href="/air/viewExchangeRate.do">환율보기</a></li>
 				<li><a href="/air/getCountryBasicListForm.do">나라정보검색</a></li>
 				<li><a href="/air/viewReviewListAdmin.do">관리자 리뷰보기</a></li>
-				<li><a href="/air/getCountrySafetyListForm.do">국가안전정보검색</a></li>
-					
+				<li><a href="/air/getCountrySafetyListForm.do">국가안전정보검색</a></li>					
 				<li><a href="/air/getNewsList.do">국제뉴스</a></li>		
 				
 				

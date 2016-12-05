@@ -9,45 +9,39 @@
 </head>
 <body>
 
-<h1>국가 검색</h1>
-	<form action="/blog/getBlogList.do" method="post">
-		검색어<input type="text"  name="keyword"/>
-		<input type="submit"  value="검색"/>
-	</form>
+<c:choose>
+		
 	
-	<c:choose>
 		<c:when test="${ITEM!=null}">
 			<table align="center" border="1">
 				<tr>
 					<td>번호</td>
-					<td>제목</td>
-					<td>링크</td>
-					<td>설명</td>
-					<td>블로거이름</td>
-					<td>블로그링크</td>
+					<td>대륙</td>
+					<td>영문이름</td>
+					<td>아이디</td>
+					<td>이미지 URL</td>
+					<td>국가이름</td>
 				
+					<td>사건사고</td>
+					<td>날짜</td>
 					
 				</tr>
 				
-				<c:forEach items="${ITEM}" var="item" 
-				 varStatus="i">
 				 <tr>
-				 	<td>${i.count}</td>
-				 	<td>${item.title}</td>
-				 	<td><a href="${item.link}">자세히보기1112</a></td>
-				 	
-				 	
-				 	<td>${item.description}</td>
+				 	<td>1</td>
+				 	<td>${ITEM.continent}</td>
+				 	<td>${ITEM.ename}</td>
+				 	<td>${ITEM.id}</td>
 				 	<td>
 				 	
-				 	${item.bloggername}
+				 	<img src="${ITEM.imgUrl}"/>
 				 	
 				 	</td>
-				 	<td>${item.bloggerlink}</td>
-				 	
-				 		
+				 	<td>${ITEM.name}</td>
+				 	<td>${ITEM.news}</td>
+				 		<td>${ITEM.wrtDt}</td>
 				 </tr>	
-				 </c:forEach>	
+				 
 				 
 				 	
 			</table>

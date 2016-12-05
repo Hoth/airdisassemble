@@ -69,7 +69,7 @@ $(document).ready(
 				 	${item.bloggername}
 				 	
 				 	</td>
-				 	<td>${item.bloggerlink}</td>
+				 	<td><a href="${item.bloggerlink}">${item.bloggerlink}</a></td>
 				 	
 				 		
 				 </tr>	

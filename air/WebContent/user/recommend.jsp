@@ -40,7 +40,13 @@ window.open("/air/UserInfoForm.jsp", "popup", "width=300, height=600");
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-
+	<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v2.8";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
@@ -51,7 +57,7 @@ window.open("/air/UserInfoForm.jsp", "popup", "width=300, height=600");
 .left-box {
 
   float: left;
-  width: 50%;
+  width: 3%;
   padding:1px;
   
 }
@@ -59,7 +65,7 @@ window.open("/air/UserInfoForm.jsp", "popup", "width=300, height=600");
 
   float: right;
     width: 50%;
-    padding-left:1px;
+    padding-left:200px;
      padding-top:1px;
     
 
@@ -147,9 +153,14 @@ ${dest}
 			</table>
 		</c:when>
 		<c:otherwise>
-			검색 결과가 없습니다.
+			
 		</c:otherwise>
 	</c:choose>
+
+
+
+	<div><a href="#" onClick="window.open('http://www.hanatour.com');return false"><img src="img/hana.jpg" ></a></div>
+<div class="fb-like" style="top:515px;   position : absolute; margin:0px; padding:0px;" data-href="https://www.facebook.com/HanaTour.fb/?fref=ts" data-width="269px" data-layout="standard" data-action="like"  data-size="small" data-show-faces="true" data-share="true"></div>
  
  </div>
  

@@ -53,10 +53,10 @@ ArrayList<String> best=(ArrayList)request.getAttribute("best");
 				<div class="pb-wrapper pb-wrapper-1">
 					<div class="pb-scroll">
 						<ul class="pb-strip">
-							<%for (int i=0;i<10;i=i+2){ %>		
-							<li><a href=<%=best.get(i+1) %> 
-							    rel="lightbox[album1]" title=<%=best.get(i)%>>
-							    <img src=<%=best.get(i+1)%> width=140 /></a></li>
+							<%for (int i=1;i<13;i=i+2){ %>		
+							<li><a href=<%=best.get(i) %> 
+							    rel="lightbox[album1]" title=<%=best.get(i+1)%>>
+							    <img src=<%=best.get(i)%> width=140 /></a></li>
 						  <%} %>
 						</ul>
 					</div>
@@ -66,10 +66,10 @@ ArrayList<String> best=(ArrayList)request.getAttribute("best");
 				<div class="pb-wrapper pb-wrapper-2">
 					<div class="pb-scroll">
 						<ul class="pb-strip">
-							<%for (int i=10;i<20;i=i+2){ %>		
-							<li><a href=<%=best.get(i+1) %> 
-							    rel="lightbox[album1]" title=<%=best.get(i)%>>
-							    <img src=<%=best.get(i+1)%> width=140 /></a></li>
+							<%for (int i=13;i<25;i=i+2){ %>		
+							<li><a href=<%=best.get(i) %> 
+							    rel="lightbox[album1]" title=<%=best.get(i+1)%>>
+							    <img src=<%=best.get(i)%> width=140 /></a></li>
 						  <%} %>
 						</ul>
 					</div>	
@@ -79,10 +79,10 @@ ArrayList<String> best=(ArrayList)request.getAttribute("best");
 				<div class="pb-wrapper pb-wrapper-3">
 					<div class="pb-scroll">
 						<ul class="pb-strip">
-						<%for (int i=20;i<30;i=i+2){ %>		
-							<li><a href=<%=best.get(i+1) %> 
-							    rel="lightbox[album1]" title=<%=best.get(i)%>>
-							    <img src=<%=best.get(i+1)%> width=140 /></a></li>
+						<%for (int i=25;i<37;i=i+2){ %>		
+							<li><a href=<%=best.get(i) %> 
+							    rel="lightbox[album1]" title=<%=best.get(i+1)%>>
+							    <img src=<%=best.get(i)%> width=140 /></a></li>
 						  <%} %>	
 							
 						</ul>
@@ -93,10 +93,10 @@ ArrayList<String> best=(ArrayList)request.getAttribute("best");
 				<div class="pb-wrapper pb-wrapper-4">
 					<div class="pb-scroll">
 						<ul class="pb-strip">
-						<%for (int i=30;i<40;i=i+2){ %>		
-							<li><a href=<%=best.get(i+1) %> 
-							    rel="lightbox[album1]" title=<%=best.get(i)%>>
-							    <img src=<%=best.get(i+1)%> width=140 /></a></li>
+						<%for (int i=37;i<49;i=i+2){ %>		
+							<li><a href=<%=best.get(i) %> 
+							    rel="lightbox[album1]" title=<%=best.get(i+1)%>>
+							    <img src=<%=best.get(i)%> width=140 /></a></li>
 						  <%} %>	
 							
 						</ul>

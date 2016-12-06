@@ -51,7 +51,9 @@ window.open("/air/ERForm.jsp", "popup", "width=300, height=300");
 
 <c:choose>
 	<c:when test="${exarr.get(0)==null}">
-	<input type="button" class="myButton" value="나라선택" onclick="popup_win1()" >		
+
+	
+	<input type="button" class="btn" value="나라선택" onclick="popup_win1()" >		
 		<form action="/air/viewExchange.do" method="post" id="form">
  <input type="text" name="exchangerate" id="exchangerate"/><p>
 

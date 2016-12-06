@@ -10,7 +10,29 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 </head>
+<style type="text/css">
+
+$('#radios').radiosToSlider({
+    animation: true,
+});
+</style>
 <body>
-별점랭킹순!
+별점랭킹
+<div id="radios">
+    <input id="option1" name="options" type="radio">
+    <label for="option1">1 year</label>
+    <input id="option2" name="options" type="radio">
+    <label for="option2">2 years</label>
+    <input id="option3" name="options" type="radio" checked>
+    <label for="option3">3 years</label>
+    <input id="option4" name="options" type="radio">
+    <label for="option4">4 years</label>
+    <input id="option5" name="options" type="radio">
+    <label for="option5">5+ years</label>
+</div>
+
+
+
+
 </body>
 </html>

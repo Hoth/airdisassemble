@@ -20,12 +20,13 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h3><font color="white">
+<h3><font color="black">
+<h1 align=center>후 기<p>
 ${r.r_Num}번<p>
 ${r.r_Name}(은)는 ${r.c_Location}에 갔다와서<p>
 ${r.r_Context}(이)라고 말했다<p>
 
-<input type="button" id="button1" value="리스트로" onclick="button1_click()"/>
+<input type="button" class="myButton" value="리스트로" onclick="button1_click()"/>
 </font></h3>
 
 </body>

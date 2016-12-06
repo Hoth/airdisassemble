@@ -40,7 +40,7 @@ $(document).ready(
 	<p>리뷰리스트.</p>
 	<div data-role="content">
 		
-		<table class=type11 align="center" border="1">
+		<table class=type01 align="center" border="1">
 		<tr><th scope="cols">제목</th>
 		<th scope="cols">작성자</th></tr>
 		<c:forEach items="${rv}" var="item">

@@ -74,7 +74,8 @@ window.open("/air/UserInfoForm.jsp", "popup", "width=600, height=1000, scrollbar
 </style>
   
 <div class='left-box'>
-<input type="button" value="자신의 정보입력" onclick="popup_win1()">
+
+<input type="button" class="myButton" value="자신의 정보입력" onclick="popup_win1()">
 
 
 <c:choose>
@@ -104,7 +105,8 @@ ${dest}
  <input type="hidden" name="cost" id="cost"/><p>
  <input type="hidden" name="whom" id="whom"/><p>
  <input type="hidden" name="season" id="season" /><p>
- <input type="submit" value="조회!">
+ <input type="submit" class="myButton" value="조회!">
+
  </form>
  </div>
  
@@ -114,8 +116,8 @@ ${dest}
 <h1>국가검색</h1>
 	<form action="/air/getBlogList.do" method="post">
 		검색어<input type="text"  name="keyword"/>
-		<input type="submit"  value="검색"/>
-	</form>
+		<input type="submit" class="myButton" value="검색"/>
+		  	</form>
 	
 	<c:choose>
 		<c:when test="${ITEM!=null}">

@@ -18,7 +18,7 @@ window.open("/air/UserInfoForm.jsp", "popup", "width=300, height=300");
 <title>Insert title here</title>
 </head>
 <body>
-<input type="button" value="추우우우천" onclick="popup_win1()">
+<input type="button" class="myButton" value="추우우우천" onclick="popup_win1()">
 
 
 

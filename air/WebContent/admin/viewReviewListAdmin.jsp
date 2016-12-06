@@ -20,15 +20,21 @@ response.setHeader("cache-control","no-cache");
 <body>
 	리뷰리스트.<p>
 	<div data-role="content">
-		<ul data-role="listview">
-	<c:forEach items="${rv}"
-			   var="rv">
-			   <li>
-			   	  <a href="viewReviewAdmin.do?r_Num=${rv.r_Num}">
-					${rv.r_Title}    
+			<table class=type01 align="center" border="1">
+			<tr><th scope="cols">글번호</th>
+			<th scope="cols">제목</th>
+			<th scope="cols">삭제</th></tr>
+	
+	
+	<c:forEach items="${rv}"  var="rv">
+	<tr>		
+			   
+			   	  <td><a href="viewReviewAdmin.do?r_Num=${rv.r_Num}">${rv.r_Num }</a></td>
+					<td>${rv.r_Title}</td>    
 					<!-- /home/hosting_users/feelk22/photo -->
-			   	  </a>    띄어쓰기     <a href="deleteReview.do?r_Num=${rv.r_Num}">삭제</a>
-			   	</li>  	 
+			   	   <td>    <a href="deleteReview.do?r_Num=${rv.r_Num}">삭제</a>
+			 	 </td>
+			 	 </tr>
 			</c:forEach>
 			</ul>
     </div>

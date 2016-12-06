@@ -12,9 +12,41 @@ body {
 	font-weight: 400;
 	color: black;
 }
+/*********************************************************************************/
+/*textfrom                                                                       */
+/*********************************************************************************/
 
+form.form1 {
+  transform-origin: left center;
+  color: #ff4a56;
+  font-weight: 100;
+  letter-spacing: 0.01em;
+  font-size: 17px;
+  box-sizing: border-box;
+  padding: 10px 15px;
+  display: block;
+  position: absolute;
+  margin-top: -40px;
+  z-index: 2;
+  pointer-events: none;
+}
 
-
+form text {
+  margin-top: 35px;
+  background-color: white;
+  border: 1px solid #ff4a56;
+  line-height: 0;
+  font-size: 17px;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 20px 15px;
+  border-radius: 60px;
+  color: #ff4a56;
+  font-weight: 100;
+  letter-spacing: 0.01em;
+  position: relative;
+  z-index: 1;
+}
 
 
 /*********************************************************************************/
@@ -677,68 +709,57 @@ hr {
 	}
 	
 
+
+
+
 /*********************************************************************************/
-/* myButton Style                                                          */
+/* Button Style                 test                                                  */
 /*********************************************************************************/
 
-.myButton {
-	font-weight:bold;
-	text-decoration:none;
-	font-family:굴림체;
-	box-shadow:inset #ffffff 0px 5px 8px -1px,#de97ae 1px 5px 2px;
-	o-box-shadow:inset #ffffff 0px 5px 8px -1px,#de97ae 1px 5px 2px;
-	-moz-box-shadow:inset #ffffff 0px 5px 8px -1px,#de97ae 1px 5px 2px;
-	-webkit-box-shadow:inset #ffffff 0px 5px 8px -1px,#de97ae 1px 5px 2px;
-	background:#ffe0eb;
-	background:-o-linear-gradient(90deg, #ffe0eb, #ddbbbb);
-	background:-moz-linear-gradient( center top, #ffe0eb 5%, #ddbbbb 100% );
-	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ffe0eb), color-stop(1, #ddbbbb) );
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffe0eb', endColorstr='#ddbbbb');
-	background:-webkit-linear-gradient(#ffe0eb, #ddbbbb);
-	background:-ms-linear-gradient(#ffe0eb, #ddbbbb);
-	background:linear-gradient(#ffe0eb, #ddbbbb);
-	text-indent:0px;
-	line-height:12px;
-	-moz-border-radius:14px;
-	-webkit-border-radius:14px;
-	border-radius:14px;
-	text-align:center;
-	vertical-align:middle;
-	display:inline-block;
-	font-size:17px;
-	color:#6f6f6f;
-	width:100px;
-	height:12px;
-	padding:13px;
-	text-shadow:#ffcfe0 -1px -1px 0px;
-	border-color:#6f6f6f;
-	border-width:1px;
-	border-style:solid;
+	.form1 {
+  margin-top: 35px;
+  background-color: white;
+  border: 1px solid #ff4a56;
+  line-height: 0;
+  font-size: 10px;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 10px 10px;
+  border-radius: 60px;
+  color: #ff4a56;
+  font-weight: 100;
+  letter-spacing: 0.01em;
+  position: relative;
+  z-index: 1;
 }
 
-.myButton:active {
-	box-shadow:inset #ffffff 0px 5px 8px -1px,#de97ae 1px 0 2px;
-	o-box-shadow:inset #ffffff 0px 5px 8px -1px,#de97ae 1px 0 2px;
-	-moz-box-shadow:inset #ffffff 0px 5px 8px -1px,#de97ae 1px 0 2px;
-	-webkit-box-shadow:inset #ffffff 0px 5px 8px -1px,#de97ae 1px 0 2px;
-	position:relative;
-	top:5px
+	.myButton {
+  margin-top: 35px;
+  background-color: white;
+  border: 1px solid #ff4a56;
+  line-height: 0;
+  font-size: 15px;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 15px 15px;
+  border-radius: 60px;
+  color: #ff4a56;
+  font-weight: 100;
+  letter-spacing: 0.01em;
+  position: relative;
+  z-index: 1;
+}
+	.myButton:hover, form button:focus {
+  color: white;
+  background-color: #ff4a56;
 }
 
-.myButton:hover {
-	background:#ddbbbb;
-	background:-o-linear-gradient(90deg, #ddbbbb, #ffe0eb);
-	background:-moz-linear-gradient( center top, #ddbbbb 5%, #ffe0eb 100% );
-	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ddbbbb), color-stop(1, #ffe0eb) );
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ddbbbb', endColorstr='#ffe0eb');
-	background:-webkit-linear-gradient(#ddbbbb, #ffe0eb);
-	background:-ms-linear-gradient(#ddbbbb, #ffe0eb);
-	background:linear-gradient(#ddbbbb, #ffe0eb);
-}
 </style>
 /*********************************************************************************/
 /* Button Style                                                                  */
 /*********************************************************************************/
+
+
 
 	.button
 	{

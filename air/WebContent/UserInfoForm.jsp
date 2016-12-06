@@ -193,7 +193,7 @@ $(document).ready(
    <div class="question">
    
     
-    <input type="text" id="txtAge" required/ value="나이">
+    <input type="text" id="txtAge" required/ value="나이"><p>
     
 			<input type="radio" name="age" class="age" value="10">10대 및 이하<p>
 			<input type="radio" name="age" class="age" value="20">20~23<p>
@@ -206,14 +206,14 @@ $(document).ready(
  	 </div>
   
     <div class="question">
-   	 <input type="text" id="txtgender" required/value="성별">
+   	 <input type="text" id="txtgender" required/value="성별"><p>
 
     	<input type="radio" name="gender" class="gender" value="man">남
 		<input type="radio" name="gender" class="gender" value="woman">여<p>
  	 </div>
   
     <div class="question">
-    	<input type="text" id="txtday" required/value="여행기간">
+    	<input type="text" id="txtday" required/value="여행기간"><p>
 
 			<input type="radio" name="day" class="day" value="551">당일치기~2박3일<p>
 			<input type="radio" name="day" class="day" value="552">~5박6일<p>
@@ -224,7 +224,7 @@ $(document).ready(
   	</div>
   
    <div class="question">
-   	<input type="text" id="txtcost" required/value="예상경비(1인당)">
+   	<input type="text" id="txtcost" required/value="예상경비(1인당)"><p>
    	
 		<input type="radio" name="cost" class="cost" value="49">50만원이하<p>
 		<input type="radio" name="cost" class="cost" value="50-99">50만원 이상~100만원 미만<p>
@@ -233,7 +233,7 @@ $(document).ready(
   	</div>
   
     <div class="question">
-    <input type="text" id="txtwhom" required/value="동행">
+    <input type="text" id="txtwhom" required/value="동행"><p>
    
 		<input type="radio" name="whom" class ="whom" value="771">가족<p>
 		<input type="radio" name="whom" class ="whom" value="772">동료<p>
@@ -244,7 +244,7 @@ $(document).ready(
  	</div>
   
     <div class="question">
-        <input type="text" id="txtseason" required/value="계절">
+        <input type="text" id="txtseason" required/value="계절"><p>
 			<input type="radio" name="season" class ="season" value="881">봄(3월~5월)<p>
 			<input type="radio" name="season" class ="season" value="882">여름(6월~8월)<p>
 			<input type="radio" name="season" class ="season" value="883">가을(9월~11월)<p>

@@ -11,8 +11,8 @@
 
 <h1>국가 검색</h1>
 	<form action="/blog/getBlogList.do" method="post">
-		검색어<input type="text"  name="keyword"/>
-		<input type="submit"  value="검색"/>
+		검색어<input type="text" class="form1" name="keyword"/>
+		<input type="submit" class="myButton" value="검색"/>
 	</form>
 	
 	<c:choose>

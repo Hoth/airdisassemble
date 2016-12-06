@@ -19,15 +19,15 @@ $(document).ready(
 			 alert("서브밋");
 			 alert($("#keyword").val());
 			 var target="/air/getCountrySafetyList.do?keyword="+$("#keyword").val();
-				$("#frame").load(target);
+				$("#left-box").load(target);
 			 event.preventDefault();
 		 });
 		 $("form2").submit(function(){
 			 alert("서브밋");
 			 alert($("#keyword1").val());
 			 var target="/air/getAccidentList.do?keyword1="+$("#keyword1").val();
-				$("#frame").load(target);
-			 event.preventDefault();
+				$("#right-box").load(target);
+			 //event.preventDefault();
 		 });
 			
 	}		
@@ -76,7 +76,7 @@ window.open("/air/UserInfoForm.jsp", "popup", "width=300, height=300");
 
 }
 </style>
-<div class='left-box'>
+<div class='left-box' id = "left-box">
 
 <h1>국가 안전정보검색</h1>
 	<form action="/air/getCountrySafetyList.do" method="post" id="form">
@@ -129,7 +129,7 @@ window.open("/air/UserInfoForm.jsp", "popup", "width=300, height=300");
 	</c:choose>
 	</div>
 	
-	<div class='right-box'>
+	<div class='right-box' id = "right-box">
 	
 	<h1>국가 사고/유의사항 검색</h1>
 	<form action="/air/getAccidentList.do" method="post" id="form2">

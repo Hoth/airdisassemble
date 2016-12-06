@@ -2,6 +2,24 @@
     pageEncoding="UTF-8"%>
     <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(
+	 function(){
+		 $("form").submit(function(){
+			// alert("서브밋");
+			// alert($("#keyword").val());
+			 var target="/air/getCountryBasicList.do?keyword="+$("#keyword").val();
+				$("#frame").load(target);
+			 event.preventDefault();
+		 });
+	 }		
+	);
+
+</script>
+
+
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -10,21 +28,21 @@
 <body>
 <h1>국가 검색</h1>
 	<form action="/air/getCountryBasicList.do" method="post">
-		검색어<input type="text"  name="keyword"/>
+		검색어<input type="text" id="keyword"  name="keyword"/>
 		<input type="submit"  value="검색"/>
 	</form>
 	
 	<c:choose>
 
 		<c:when test="${ITEM!=null}">
-			<table align="center" border="1">
+			<table class=type11 align="center" border="1">
 				<tr>
-					<td>번호</td>
-					<td>기본정보 테스트</td>
-					<td>국가</td>
-					<td>국가세부</td>
-					<td>이미지 URL</td>
-					<td>영문</td>
+					<th>번호</th>
+					<th>기본정보</th>
+					<th>국가</th>
+					<th>국가세부</th>
+					<th>이미지 URL</th>
+					<th>영문</th>
 				
 					<td>id</td>
 					<td>날짜</td>

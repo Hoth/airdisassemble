@@ -37,19 +37,20 @@ $(document).ready(
 <title>Insert title here</title>
 </head>
 <body>
-	리뷰리스트.<p>
+	<p>리뷰리스트.</p>
 	<div data-role="content">
-		<ul data-role="listview">
-	<c:forEach items="${rv}"
-			   var="rv">
-			   <li>
-			   	  <a href="viewReview.do?r_Num=${rv.r_Num}">
-					${rv.r_Title}
-					<!-- /home/hosting_users/feelk22/photo -->
-			   	  </a>
-			   	</li>  	 
-			</c:forEach>
-			</ul>
+		
+		<table class=type11 align="center" border="1">
+		<tr><th scope="cols">제목</th>
+		<th scope="cols">작성자</th></tr>
+		<c:forEach items="${rv}" var="item">
+			<tr>
+				<td><a href="viewReview.do?r_Num=${item.r_Num}">${item.r_Title}</a></td>
+				<td>${item.r_Name}</td>
+			</tr>
+		</c:forEach>
+	
+	
     </div>
    <a href= "/air/addReviewForm.do" >리뷰 등록하기</a>
 </body>

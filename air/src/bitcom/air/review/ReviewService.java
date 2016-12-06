@@ -16,6 +16,7 @@ public class ReviewService {
 		ModelAndView mav = new ModelAndView();
 		ArrayList<Review> reviewList = ReviewDAO.selectReviewList();
 		mav.addObject("rv",reviewList);
+	
 		mav.setViewName("/review/viewReviewList.jsp");
 		return mav;
 	}

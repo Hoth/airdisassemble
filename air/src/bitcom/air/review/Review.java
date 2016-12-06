@@ -72,5 +72,12 @@ public class Review {
 	public void setR_Tdate(String r_Tdate) {
 		this.r_Tdate = r_Tdate;
 	}
+	@Override
+	public String toString() {
+		return "Review [r_Num=" + r_Num + ", r_Name=" + r_Name + ", c_Location=" + c_Location + ", r_Title=" + r_Title
+				+ ", r_Wdate=" + r_Wdate + ", r_Star=" + r_Star + ", r_Gender=" + r_Gender + ", r_Image=" + r_Image
+				+ ", r_Context=" + r_Context + ", r_Tdate=" + r_Tdate + "]";
+	}
+	
 	
 }

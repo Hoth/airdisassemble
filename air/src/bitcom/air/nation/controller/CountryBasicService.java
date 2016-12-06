@@ -10,6 +10,7 @@ import javax.annotation.Resource;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import bitcom.air.nation.Item;
@@ -28,10 +29,10 @@ public class CountryBasicService {
 		return mav;
 		}
 	@RequestMapping("/getCountryBasicList.do")
-	public ModelAndView getCountryBasicList(String keyword)throws Exception{
+	public ModelAndView getCountryBasicList(@RequestParam(value="keyword")String keyword)throws Exception{
 		String change = URLEncoder.encode(keyword,"UTF-8");
 		URL url = new URL("http://apis.data.go.kr/1262000/CountryBasicService/getCountryBasicList?ServiceKey=4Ms%2Fb80vhu9ll1bRY4SbEPzUD4nmB0pOTDjqu%2BSQHfzfzRkgPZBXyfz5%2F0SEtR%2B5j9Sx5W71vchAkJ9lQwPQKw%3D%3D&_type=json&countryName="+change+"&output=json");
-		
+		//System.out.println(change);
 		InputStream in = url.openConnection().getInputStream();
 		 BufferedReader br=new BufferedReader(new InputStreamReader(in,"UTF-8"));
 		 StringBuffer xml=new StringBuffer();

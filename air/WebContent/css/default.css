@@ -676,65 +676,7 @@ hr {
 		float: right;
 	}
 	
-/*********************************************************************************/
-/* btn Style                                                          */
-/*********************************************************************************/
 
-.btn {
-	text-decoration:none;
-	font-family:Arial;
-	box-shadow:inset #10a62e 0px 5px 18px 6px,#d6d6d6 1px 3px 2px;
-	o-box-shadow:inset #10a62e 0px 5px 18px 6px,#d6d6d6 1px 3px 2px;
-	-moz-box-shadow:inset #10a62e 0px 5px 18px 6px,#d6d6d6 1px 3px 2px;
-	-webkit-box-shadow:inset #10a62e 0px 5px 18px 6px,#d6d6d6 1px 3px 2px;
-	background:#7df720;
-	background:-o-linear-gradient(90deg, #7df720, #88c700);
-	background:-moz-linear-gradient( center top, #7df720 5%, #88c700 100% );
-	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #7df720), color-stop(1, #88c700) );
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#7df720', endColorstr='#88c700');
-	background:-webkit-linear-gradient(#7df720, #88c700);
-	background:-ms-linear-gradient(#7df720, #88c700);
-	background:linear-gradient(#7df720, #88c700);
-	text-indent:0px;
-	line-height:70px;
-	-moz-border-radius:94px 0 94px 0;
-	-webkit-border-radius:94px 0 94px 0;
-	border-radius:94px 0 94px 0;
-	text-align:center;
-	vertical-align:middle;
-	display:inline-block;
-	font-size:20px;
-	color:#ffffff;
-	width:96px;
-	height:70px;
-	padding:11px;
-	text-shadow:#80b88e -1px -1px 0px;
-	border-color:#ffffff;
-	border-width:6px;
-	border-style:solid;
-}
-
-.btn:active {
-	box-shadow:inset #10a62e 0px 5px 18px 6px,#d6d6d6 1px 0 2px;
-	o-box-shadow:inset #10a62e 0px 5px 18px 6px,#d6d6d6 1px 0 2px;
-	-moz-box-shadow:inset #10a62e 0px 5px 18px 6px,#d6d6d6 1px 0 2px;
-	-webkit-box-shadow:inset #10a62e 0px 5px 18px 6px,#d6d6d6 1px 0 2px;
-	position:relative;
-	top:3px
-}
-
-.btn:hover {
-	background:#88c700;
-	background:-o-linear-gradient(90deg, #88c700, #7df720);
-	background:-moz-linear-gradient( center top, #88c700 5%, #7df720 100% );
-	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #88c700), color-stop(1, #7df720) );
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#88c700', endColorstr='#7df720');
-	background:-webkit-linear-gradient(#88c700, #7df720);
-	background:-ms-linear-gradient(#88c700, #7df720);
-	background:linear-gradient(#88c700, #7df720);
-}
-</style>
-	
 /*********************************************************************************/
 /* myButton Style                                                          */
 /*********************************************************************************/

@@ -31,7 +31,8 @@ $(document).ready(
 function popup_win1() { //크기 width400 height300 팝업창
 	
 
-window.open("/air/UserInfoForm.jsp", "popup", "width=300, height=600");
+window.open("/air/UserInfoForm.jsp", "popup", "width=600, height=1000, scrollbars=yes, toolbar=no, menubar=no, location=no");
+
 }
 
 </script>

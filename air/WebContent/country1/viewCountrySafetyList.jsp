@@ -79,9 +79,9 @@ window.open("/air/UserInfoForm.jsp", "popup", "width=300, height=300");
 <div class='left-box' id = "left-box">
 
 <h1>국가 안전정보검색</h1>
-	<form action="/air/getCountrySafetyList.do" method="post" id="form">
-		검색어<input type="text"  name="keyword" id = "keyword"/>
-		<input type="submit"  value="검색"/>
+	<form action="/air/getCountrySafetyList.do" method="post" id="form" >
+		검색어<input type="text"  name="keyword" id = "keyword" class="form1"/>
+		<input type="submit"  value="검색" class="myButton"/>
 	</form>
 
 
@@ -133,8 +133,8 @@ window.open("/air/UserInfoForm.jsp", "popup", "width=300, height=300");
 	
 	<h1>국가 사고/유의사항 검색</h1>
 	<form action="/air/getAccidentList.do" method="post" id="form2">
-		검색어<input type="text"  name="keyword1" id="keyword1"/>
-		<input type="submit"  value="검색"/>
+		검색어<input type="text"  name="keyword1" id="keyword1" class="form1"/>
+		<input type="submit"  value="검색" class="myButton"/>
 	</form>
 	<c:choose>
 	<c:when test="${ITEM!=null}">

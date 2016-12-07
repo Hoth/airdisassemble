@@ -41,22 +41,9 @@
   
   
  
-<div class='left-box' data-role="content">
-		<table class="type01">
-			<tr>
-					<th>순위</th><th>도시</th>
-			</tr>
-			
-					<c:forEach items="${top}" varStatus="status"  var="top">
-			 <tr>
-			  		<td>${status.count}</td>
-					<td>${top}</td>
-			 </tr>
-					</c:forEach>
-		</table>
-</div>
 
-<div class='right-box' id="example3" class="slider-pro">
+
+<div style="border:1px solidgold; float:left;width:50%;" class='left-box' id="example3" class="slider-pro" >
 		<div class="sp-slides">
 			<div class="sp-slide">
 				<img class="sp-image" src="/air/dist/css/images/blank.gif" 

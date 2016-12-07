@@ -55,8 +55,8 @@ public class UserService {
 	public ModelAndView goindex() throws Exception{
 		ModelAndView mav = new ModelAndView();
 		
-		ArrayList<String> topN=bestlist_crawler.top();
-		mav.addObject("top",topN);
+//		ArrayList<String> topN=bestlist_crawler.top();
+//		mav.addObject("top",topN);
 		
 		mav.setViewName("/intro.jsp");
 		return mav;

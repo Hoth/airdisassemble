@@ -1,9 +1,9 @@
 
-    <%
-response.setHeader("cache-control","no-cache"); 
-%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+    <%@ page import="java.util.ArrayList" %>
+<%@ page import="bitcom.air.user. bestlist_crawler" %>    
 <html>
 <head>
 <meta charset="utf-8">
@@ -25,7 +25,7 @@ $(document).ready(
 			
 			//alert("클릭했음요");
 			var target=$(this).attr("href");
-			$("#frame").load(target);
+			$("#example3").load(target);
 			event.preventDefault();
 		});
 	}		
@@ -57,10 +57,30 @@ $(document).ready(
 			</div>
 		</div>
 	</div>
-	<div id="frame" >
+	<div style="border:1px solidgold; float:left;width:20%;" id="frame" class='left-box' class="slider-pro"  class='right-box' data-role="content"  >
 		
 	
 	</div>
+	
+	<%
+    ArrayList<String> topN=bestlist_crawler.top();
+    request.setAttribute("top",topN);
+    %>
+    <div style="border:1px solidgold; float:right;width:20%;" class='right-box' id="rank" class="slider-pro"  class='right-box' data-role="content">
+		<table class="type01">
+			<tr>
+					<th>순위</th><th>도시</th>
+			</tr>
+			
+					<c:forEach items="${top}" varStatus="status"  var="top">
+			 <tr>
+			  		<td>${status.count}</td>
+					<td>${top}</td>
+			 </tr>
+					</c:forEach>
+		</table>
+</div>
+	
 	</div>
 	
 </div>

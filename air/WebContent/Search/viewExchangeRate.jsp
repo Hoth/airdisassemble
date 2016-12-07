@@ -46,7 +46,8 @@ window.open("/air/ERForm.jsp", "popup", "width=300, height=300");
 <body>
 
 
-
+   <h1>환율 정보</h1><br/>
+  <img src="/air/photo/ex.png" ><br/>
 
 
 <c:choose>

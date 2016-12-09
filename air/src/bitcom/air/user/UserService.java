@@ -24,10 +24,11 @@ public class UserService {
 		return mav;
 	}
 	@RequestMapping(value="/generateDestination.do")
-	public ModelAndView generateDestination(@RequestParam(value="age")String age,@RequestParam(value="gender")String gender) throws Exception{
+	public ModelAndView generateDestination(@RequestParam(value="age")String age,@RequestParam(value="gender")String gender,
+			@RequestParam(value="day")String day,@RequestParam(value="cost")String cost,@RequestParam(value="whom")String whom,@RequestParam(value="season")String season) throws Exception{
 		ModelAndView mav = new ModelAndView();
 
-		String base = "\'"+user.gender+"\',"+"\'"+user.age+"\',"+"\'"+user.season+"\',"+"\'"+user.cost+"\',"+"\'"+user.day+"\',"+"\'"+user.whom+"\',";
+		String base = "\'"+gender+"\',"+"\'"+age+"\',"+"\'"+season+"\',"+"\'"+cost+"\',"+"\'"+day+"\',"+"\'"+whom+"\',";
 		String text=base+" ?";
 		System.out.println(text);
 		PrintWriter  fw=new PrintWriter(new FileWriter("C:/data/newperson.arff",true));
@@ -46,8 +47,13 @@ public class UserService {
 		fw2.close();
 		
 		FileUtils.copyFile(new File("C:/data/spec.arff"),new File("C:/data/newperson.arff"));
-		user.dest=dest;
-		mav.addObject("USER", user);
+		mav.addObject("age", age);
+		mav.addObject("gender", gender);
+		mav.addObject("day", day);
+		mav.addObject("cost", cost);
+		mav.addObject("whom", whom);
+		mav.addObject("season", season);
+		mav.addObject("dest", dest);
 		mav.setViewName("/user/recommend.jsp"); 
 		return mav;
 	}

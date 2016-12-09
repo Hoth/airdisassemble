@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import org.apache.commons.io.FileUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import bitcom.air.weka.WekaService;
@@ -23,7 +24,7 @@ public class UserService {
 		return mav;
 	}
 	@RequestMapping(value="/generateDestination.do")
-	public ModelAndView generateDestination(User user) throws Exception{
+	public ModelAndView generateDestination(@RequestParam(value="age")String age,@RequestParam(value="gender")String gender) throws Exception{
 		ModelAndView mav = new ModelAndView();
 
 		String base = "\'"+user.gender+"\',"+"\'"+user.age+"\',"+"\'"+user.season+"\',"+"\'"+user.cost+"\',"+"\'"+user.day+"\',"+"\'"+user.whom+"\',";
@@ -45,7 +46,8 @@ public class UserService {
 		fw2.close();
 		
 		FileUtils.copyFile(new File("C:/data/spec.arff"),new File("C:/data/newperson.arff"));
-		mav.addObject("dest", dest);
+		user.dest=dest;
+		mav.addObject("USER", user);
 		mav.setViewName("/user/recommend.jsp"); 
 		return mav;
 	}

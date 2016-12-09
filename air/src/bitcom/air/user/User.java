@@ -7,6 +7,13 @@ public class User {
 	String cost;
 	String season;
 	String whom;
+	String dest;
+	public String getDest() {
+		return dest;
+	}
+	public void setDest(String dest) {
+		this.dest = dest;
+	}
 	public String getDay() {
 		return day;
 	}

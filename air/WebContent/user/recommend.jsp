@@ -125,7 +125,8 @@ window.open("/air/UserInfoForm.jsp", "popup", "width=600, height=1000, scrollbar
 	<h2>아프리카</h2>입니다.
 	</c:when>
 	</c:choose>
-	가장 인기있는 나라는 ${country}입니다.
+	가장 인기있는 도시 <h2>${country},${city}</h2> 
+	
 	</c:otherwise>
 	
 </c:choose>

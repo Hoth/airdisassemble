@@ -30,7 +30,7 @@ public class UserService {
 		String base = "\'"+gender+"\',"+"\'"+age+"\',"+"\'"+season+"\',"+"\'"+cost+"\',"+"\'"+day+"\',"+"\'"+whom+"\',";
 		String text=base+" ?";
 		System.out.println(text);
-		PrintWriter  fw=new PrintWriter(new FileWriter("C:/data/newperson.arff",true));
+		PrintWriter  fw=new PrintWriter(new FileWriter("C:/data/continent.arff",true));
 		fw.print(text);
 		fw.close();
 		
@@ -40,14 +40,15 @@ public class UserService {
 		System.out.println(dest);
 		
 		String text2 = base+"\'"+dest+"\'";
-		PrintWriter  fw2=new PrintWriter(new FileWriter("C:/data/data3.arff",true));
+		PrintWriter  fw2=new PrintWriter(new FileWriter("C:/data/data_continent.arff",true));
 		fw2.println();
 		fw2.print(text2);
 		fw2.close();
 		
 		String country=generateCountry(dest);
+		String city=generateCity(country);
 	
-		FileUtils.copyFile(new File("C:/data/spec.arff"),new File("C:/data/newperson.arff"));
+		FileUtils.copyFile(new File("C:/data/spec.arff"),new File("C:/data/continent.arff"));
 		mav.addObject("age", age);
 		mav.addObject("gender", gender);
 		mav.addObject("day", day);
@@ -56,15 +57,16 @@ public class UserService {
 		mav.addObject("season", season);
 		mav.addObject("dest", dest);
 		mav.addObject("country", country);
+		mav.addObject("city", city);
+
 		mav.setViewName("/user/recommend.jsp"); 
 		return mav;
 	}
 	
 
 	public String generateCountry(String dest) throws Exception{
-		ModelAndView mav = new ModelAndView();
 
-		String base = "\'"+dest+"\'";
+		String base = "\'"+dest+"\',";
 		String text=base+" ?";
 		System.out.println(text);
 		PrintWriter  fw=new PrintWriter(new FileWriter("C:/data/country.arff",true));
@@ -77,7 +79,7 @@ public class UserService {
 		System.out.println(country);
 		
 		String text2 = base+"\'"+country+"\'";
-		PrintWriter  fw2=new PrintWriter(new FileWriter("C:/data/data_country2.arff",true));
+		PrintWriter  fw2=new PrintWriter(new FileWriter("C:/data/data_country.arff",true));
 		fw2.println();
 		fw2.print(text2);
 		fw2.close();
@@ -88,9 +90,8 @@ public class UserService {
 	}
 	
 	public String generateCity(String country) throws Exception{
-		ModelAndView mav = new ModelAndView();
 
-		String base = "\'"+country+"\'";
+		String base = "\'"+country+"\',";
 		String text=base+" ?";
 		System.out.println(text);
 		PrintWriter  fw=new PrintWriter(new FileWriter("C:/data/city.arff",true));
@@ -102,7 +103,7 @@ public class UserService {
 		String city = service.wekaRun3();
 		System.out.println(city);
 		
-		String text2 = base+"\'"+country+"\'";
+		String text2 = base+"\'"+city+"\'";
 		PrintWriter  fw2=new PrintWriter(new FileWriter("C:/data/data_city.arff",true));
 		fw2.println();
 		fw2.print(text2);

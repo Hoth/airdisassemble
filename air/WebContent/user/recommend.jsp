@@ -80,19 +80,14 @@ window.open("/air/UserInfoForm.jsp", "popup", "width=600, height=1000, scrollbar
 
 <c:choose>
 	<c:when test="${dest==null}">
-		값이 없음.	
+	<input type="button" value="자신의 정보입력" onclick="popup_win1()">	
 	</c:when>
 	
 	<c:otherwise>
-	${dest} 입니다
+	${age}세 ${gender}이 가장 많이 여행하는 곳은
+	<h2>${dest}</h2>입니다.
 	</c:otherwise>
 </c:choose>
-
-
-
-
-${dest}
-
 
 <p>
 <a href="/air/viewHot.do">핫!</a><p>

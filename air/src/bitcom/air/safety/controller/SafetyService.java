@@ -76,7 +76,7 @@ public class SafetyService {
 		   
 		   
 		   mav.addObject("ITEM",itemList);
-		   mav.setViewName("/country1/viewCountrySafetyList.jsp");
+		   mav.setViewName("/country1/safetyList.jsp");
 		   return mav;
 		   }
 

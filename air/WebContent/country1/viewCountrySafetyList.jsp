@@ -15,13 +15,21 @@ $(document).ready(
 			$("#frame").load(target);
 			event.preventDefault();
 		});
-		 $("form").submit(function(){
-			 alert("서브밋");
-			 alert($("#keyword").val());
+		 $("#search1").click(function(){
+			
+			 alert("키워드:"+$("#keyword").val());
 			 var target="/air/getCountrySafetyList.do?keyword="+$("#keyword").val();
-				$("#left-box").load(target);
+			$("#left-box").load(target);
 			 event.preventDefault();
 		 });
+		 $("#search2").click(function(){
+				
+			 alert("키워드:"+$("#keywordd").val());
+			 var target="/air/getAccidentList.do?keyword="+$("#keywordd").val();
+			$("#right-box").load(target);
+			 event.preventDefault();
+		 });
+		 /*
 		 $("form2").submit(function(){
 			 alert("서브밋");
 			 alert($("#keyword1").val());
@@ -29,7 +37,7 @@ $(document).ready(
 				$("#right-box").load(target);
 			 //event.preventDefault();
 		 });
-			
+		*/	
 	}		
 );
 </script>
@@ -79,65 +87,27 @@ window.open("/air/UserInfoForm.jsp", "popup", "width=300, height=300");
 <div class='left-box' id = "left-box">
 
 <h1>국가 안전정보검색</h1>
-	<form action="/air/getCountrySafetyList.do" method="post" id="form" >
+	<form action="/air/getCountrySafetyList.do" method="post"  >
 		검색어<input type="text"  name="keyword" id = "keyword" class="form1"/>
-		<input type="submit"  value="검색" class="myButton"/>
+		<input type="button" id="search1" value="검색" class="myButton"/>
 	</form>
 
 
 	
-	<c:choose>
-		<c:when test="${ITEM!=null}">
-			<table align="center" border="1">
-				<tr>
-					<td>번호</td>
-					<td>국가이름</td>
-					<td>국가영문</td>
-					<td>내용</td>
-					<td>ID</td>
-					<td>제목</td>
-				
-					<td>날짜</td>
-					
-					
-				</tr>
-				<c:forEach items="${ITEM}" var="item" 
-				 varStatus="i">
-				 <tr>
-				 	<td>${i.count}</td>
-				 	<td>${item.countryName}</td>
-				 	<td>${item.countryEnName}</td>
-				 	<td>${item.content}</td>
-				 	<td>
-				 	
-				 	${item.id}
-				 	
-				 	</td>
-				 	<td>${item.title}</td>
-				 	<td>${item.wrtDt}</td>
-				 		
-				 </tr>	
-				 </c:forEach>	
-				 
-				 
-				 	
-			</table>
-		</c:when>		
-		<c:otherwise>
-			검색 결과가 없습니다.
-		</c:otherwise>
-	</c:choose>
+	
 	</div>
 	
 	<div class='right-box' id = "right-box">
 	
 	<h1>국가 사고/유의사항 검색</h1>
 	<form action="/air/getAccidentList.do" method="post" id="form2">
-		검색어<input type="text"  name="keyword1" id="keyword1" class="form1"/>
-		<input type="submit"  value="검색" class="myButton"/>
+		검색어<input type="text"  name="keywordd" id="keywordd" class="form1"/>
+	<input type="button" id="search2" value="검색" class="myButton"/>
 	</form>
+	
+	<%--
 	<c:choose>
-	<c:when test="${ITEM!=null}">
+	<c:when test="${ACCIDENT!=null}">
 			<table align="center" border="1">
 				<tr>
 					<td>번호</td>
@@ -174,7 +144,7 @@ window.open("/air/UserInfoForm.jsp", "popup", "width=300, height=300");
 		<c:otherwise>
 			검색 결과가 없습니다.
 		</c:otherwise>
-	</c:choose>
+	</c:choose> --%>
 	
 	</div>
 	

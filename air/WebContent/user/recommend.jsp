@@ -58,7 +58,7 @@ window.open("/air/UserInfoForm.jsp", "popup", "width=600, height=1000, scrollbar
 .left-box {
 
   float: left;
-  width: 3%;
+  width: 20%;
   padding:1px;
   
 }
@@ -75,7 +75,7 @@ window.open("/air/UserInfoForm.jsp", "popup", "width=600, height=1000, scrollbar
   
 <div class='left-box'>
 
-<input type="button" class="myButton" value="자신의 정보입력" onclick="popup_win1()">
+<input type="button" class="myButton" value="자신의 정보입력" onclick="popup_win1()"><br/>
 
 
 <c:choose>
@@ -164,7 +164,7 @@ ${dest}
 
 
 	<div><a href="#" onClick="window.open('http://www.hanatour.com');return false"><img src="/air/photo/hana.jpg" ></a></div>
-<div class="fb-like" style="top:535px;   position : absolute; margin:0px; padding:0px;" data-href="https://www.facebook.com/HanaTour.fb/?fref=ts" data-width="269px" data-layout="standard" data-action="like"  data-size="small" data-show-faces="true" data-share="true"></div>
+<div class="fb-like" style="top:575px;   position : absolute; margin:0px; padding:0px;" data-href="https://www.facebook.com/HanaTour.fb/?fref=ts" data-width="269px" data-layout="standard" data-action="like"  data-size="small" data-show-faces="true" data-share="true"></div>
  
  </div>
  

@@ -57,7 +57,7 @@ $(document).ready(
 			</div>
 		</div>
 	</div>
-	<div style="border:1px solidgold; float:left;width:20%;" id="frame" class='left-box' class="slider-pro"  class='right-box' data-role="content"  >
+	<div style="border:1px solidgold; float:left;width:70%; padding-left:170px; margin:0px;" id="frame" class='left-box' class="slider-pro"  class='right-box' data-role="content"  >
 		
 	
 	</div>
@@ -66,7 +66,7 @@ $(document).ready(
     ArrayList<String> topN=bestlist_crawler.top();
     request.setAttribute("top",topN);
     %>
-    <div style="border:1px solidgold; float:right;width:20%;" class='right-box' id="rank" class="slider-pro"  class='right-box' data-role="content">
+     <div style="border:1px solidgold; float:right;width:20%;  padding:0px; margin:0px;" class='right-box' id="rank" class="slider-pro"  class='right-box' data-role="content">
 		<table class="type01">
 			<tr>
 					<th>순위</th><th>도시</th>
@@ -79,7 +79,7 @@ $(document).ready(
 			 </tr>
 					</c:forEach>
 		</table>
-</div>
+</div> 
 	
 	</div>
 	

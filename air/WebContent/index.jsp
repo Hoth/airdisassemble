@@ -57,7 +57,7 @@ $(document).ready(
 			</div>
 		</div>
 	</div>
-	<div style="border:1px solidgold; float:left;width:70%; padding-left:170px; margin:0px;" id="frame" class='left-box' class="slider-pro"  class='right-box' data-role="content"  >
+	<div style="border:1px solidgold; float:left;width:60%; padding-left:170px; margin:0px;" id="frame" class='left-box' class="slider-pro"  class='right-box' data-role="content"  >
 		
 	
 	</div>

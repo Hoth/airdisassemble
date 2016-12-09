@@ -125,12 +125,12 @@ window.open("/air/UserInfoForm.jsp", "popup", "width=600, height=1000, scrollbar
 	<h2>아프리카</h2>입니다.
 	</c:when>
 	</c:choose>
-	
+	가장 인기있는 나라는 ${country}입니다.
 	</c:otherwise>
 	
 </c:choose>
 
-<p>
+<p/>
 
 <!-- <a href="/air/generateDestination.do">생성해보자</a> -->
 <form action="/air/generateDestination.do" method="post">

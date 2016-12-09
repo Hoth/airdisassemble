@@ -44,6 +44,8 @@ public class UserService {
 		fw2.println();
 		fw2.print(text2);
 		fw2.close();
+		
+		String country=generateCountry(dest);
 	
 		FileUtils.copyFile(new File("C:/data/spec.arff"),new File("C:/data/newperson.arff"));
 		mav.addObject("age", age);
@@ -53,10 +55,63 @@ public class UserService {
 		mav.addObject("whom", whom);
 		mav.addObject("season", season);
 		mav.addObject("dest", dest);
+		mav.addObject("country", country);
 		mav.setViewName("/user/recommend.jsp"); 
 		return mav;
 	}
 	
+
+	public String generateCountry(String dest) throws Exception{
+		ModelAndView mav = new ModelAndView();
+
+		String base = "\'"+dest+"\'";
+		String text=base+" ?";
+		System.out.println(text);
+		PrintWriter  fw=new PrintWriter(new FileWriter("C:/data/country.arff",true));
+		fw.print(text);
+		fw.close();
+		
+	
+		WekaService service=new WekaService();
+		String country = service.wekaRun2();
+		System.out.println(country);
+		
+		String text2 = base+"\'"+country+"\'";
+		PrintWriter  fw2=new PrintWriter(new FileWriter("C:/data/data_country2.arff",true));
+		fw2.println();
+		fw2.print(text2);
+		fw2.close();
+	
+		FileUtils.copyFile(new File("C:/data/spec2.arff"),new File("C:/data/country.arff"));
+	
+		return country;
+	}
+	
+	public String generateCity(String country) throws Exception{
+		ModelAndView mav = new ModelAndView();
+
+		String base = "\'"+country+"\'";
+		String text=base+" ?";
+		System.out.println(text);
+		PrintWriter  fw=new PrintWriter(new FileWriter("C:/data/city.arff",true));
+		fw.print(text);
+		fw.close();
+		
+	
+		WekaService service=new WekaService();
+		String city = service.wekaRun3();
+		System.out.println(city);
+		
+		String text2 = base+"\'"+country+"\'";
+		PrintWriter  fw2=new PrintWriter(new FileWriter("C:/data/data_city.arff",true));
+		fw2.println();
+		fw2.print(text2);
+		fw2.close();
+	
+		FileUtils.copyFile(new File("C:/data/spec3.arff"),new File("C:/data/city.arff"));
+	
+		return city;
+	}
 	
 	@RequestMapping(value="/start.do")
 	public ModelAndView goindex() throws Exception{

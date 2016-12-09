@@ -28,8 +28,8 @@ public class AccidentService {
 		return mav;
 		}
 	@RequestMapping("/getAccidentList.do")
-	public ModelAndView getAccidentList(String keywordd)throws Exception{
-		String change = URLEncoder.encode(keywordd,"UTF-8");
+	public ModelAndView getAccidentList(String keyword)throws Exception{
+		String change = URLEncoder.encode(keyword,"UTF-8");
 		URL url = new URL("http://apis.data.go.kr/1262000/AccidentService/getAccidentList?ServiceKey=4Ms%2Fb80vhu9ll1bRY4SbEPzUD4nmB0pOTDjqu%2BSQHfzfzRkgPZBXyfz5%2F0SEtR%2B5j9Sx5W71vchAkJ9lQwPQKw%3D%3D&_type=json&countryName="+change+"&output=json");
 		System.out.println("http://apis.data.go.kr/1262000/AccidentService/getAccidentList?ServiceKey=4Ms%2Fb80vhu9ll1bRY4SbEPzUD4nmB0pOTDjqu%2BSQHfzfzRkgPZBXyfz5%2F0SEtR%2B5j9Sx5W71vchAkJ9lQwPQKw%3D%3D&_type=json&countryName="+change+"&output=json");
 		InputStream in = url.openConnection().getInputStream();

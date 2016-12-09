@@ -3,6 +3,13 @@
     <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
+
+
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script type="text/javascript">
 	$(document).ready(
@@ -14,23 +21,31 @@
 			$("#frame").load(target);
 			 event.preventDefault();
 		 });
+		 
+		$("#keyword").keydown(function(event) {
+			if(event.which==13){
+			  alert( "엔터 눌렀음" );
+			  alert("키워드:"+$("#keyword").val());
+				 var target="/air/getCountryBasicList.do?keyword="+$("#keyword").val();
+				$("#frame").load(target);
+			  event.preventDefault();
+			}
+			
+		});
 	 }		
 	);
 
 </script>
-
-
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
 </head>
 <body>
 <h1>국가 검색</h1>
 <img src="/air/photo/ww.png" >
+
 	<form action="/air/getCountryBasicList.do" method="post">
+
 		검색어<input type="text" class="form1"  name="keyword" id="keyword"/>
 		<input type="button" id="search" value="검색" class="myButton"/>
+		
 </form>
 
 	

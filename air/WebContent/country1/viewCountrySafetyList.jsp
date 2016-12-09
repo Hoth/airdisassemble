@@ -22,13 +22,35 @@ $(document).ready(
 			$("#left-box").load(target);
 			 event.preventDefault();
 		 });
+		 
+		 $("#keyword").keydown(function(event) {
+				if(event.which==13){
+				  alert( "엔터 눌렀음" );
+				  alert("키워드:"+$("#keyword").val());
+					 var target="/air/getCountrySafetyList.do?keyword="+$("#keyword").val();
+					$("#frame").load(target);
+				  event.preventDefault();
+				}
+				
+			});
 		 $("#search2").click(function(){
 				
 			 alert("키워드:"+$("#keywordd").val());
-			 var target="/air/getAccidentList.do?keywordd="+$("#keywordd").val();
+			 var target="/air/getAccidentList.do?keyword="+$("#keywordd").val();
 			$("#right-box").load(target);
 			 event.preventDefault();
 		 });
+		 
+		 $("#keywordd").keydown(function(event) {
+				if(event.which==13){
+				  alert( "엔터 눌렀음" );
+				  alert("키워드:"+$("#keywordd").val());
+					 var target="/air/getAccidentList.do?keyword="+$("#keywordd").val();
+					$("#frame").load(target);
+				  event.preventDefault();
+				}
+				
+			});
 		 /*
 		 $("form2").submit(function(){
 			 alert("서브밋");

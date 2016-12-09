@@ -30,6 +30,17 @@ $(document).ready(
 			$("#right-box").load(target);
 			 event.preventDefault();
 		 });
+		
+		$("#keyword1").keydown(function(event) {
+			if(event.which==13){
+			  alert( "엔터 눌렀음" );
+			  alert("키워드:"+$("#keyword1").val());
+				 var target="/air/getAccidentList.do?keyword="+$("#keyword1").val();
+				$("#frame").load(target);
+			  event.preventDefault();
+			}
+			
+		});
 		 /*
 		 $("form2").submit(function(){
 			 alert("서브밋");

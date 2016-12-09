@@ -3,11 +3,11 @@ package bitcom.air.user;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.PrintWriter;
-import java.util.ArrayList;
 
 import org.apache.commons.io.FileUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import bitcom.air.weka.WekaService;
@@ -23,10 +23,11 @@ public class UserService {
 		return mav;
 	}
 	@RequestMapping(value="/generateDestination.do")
-	public ModelAndView generateDestination(User user) throws Exception{
+	public ModelAndView generateDestination(@RequestParam(value="age")String age,@RequestParam(value="gender")String gender,
+			@RequestParam(value="day")String day,@RequestParam(value="cost")String cost,@RequestParam(value="whom")String whom,@RequestParam(value="season")String season) throws Exception{
 		ModelAndView mav = new ModelAndView();
-
-		String base = "\'"+user.gender+"\',"+"\'"+user.age+"\',"+"\'"+user.season+"\',"+"\'"+user.cost+"\',"+"\'"+user.day+"\',"+"\'"+user.whom+"\',";
+		System.out.println(gender);
+		String base = "\'"+gender+"\',"+"\'"+age+"\',"+"\'"+season+"\',"+"\'"+cost+"\',"+"\'"+day+"\',"+"\'"+whom+"\',";
 		String text=base+" ?";
 		System.out.println(text);
 		PrintWriter  fw=new PrintWriter(new FileWriter("C:/data/newperson.arff",true));
@@ -43,8 +44,14 @@ public class UserService {
 		fw2.println();
 		fw2.print(text2);
 		fw2.close();
-		
+	
 		FileUtils.copyFile(new File("C:/data/spec.arff"),new File("C:/data/newperson.arff"));
+		mav.addObject("age", age);
+		mav.addObject("gender", gender);
+		mav.addObject("day", day);
+		mav.addObject("cost", cost);
+		mav.addObject("whom", whom);
+		mav.addObject("season", season);
 		mav.addObject("dest", dest);
 		mav.setViewName("/user/recommend.jsp"); 
 		return mav;

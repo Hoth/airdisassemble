@@ -11,11 +11,23 @@ $(document).ready(
 		
 		$("a").click(function(){
 			
-			//alert("클릭했음요");
+			alert("클릭했음요");
 			var target=$(this).attr("href");
 			$("#frame").load(target);
 			event.preventDefault();
 		});
+		$("#button1").click(function(){
+			
+			 var target="/air/viewHot.do";
+			$("#frame").load(target);
+			 event.preventDefault();
+		 });
+		$("#button2").click(function(){
+			
+			 var target="/air/viewStar.do";
+			$("#frame").load(target);
+			 event.preventDefault();
+		 });
 			 
 	}		
 );
@@ -75,28 +87,51 @@ window.open("/air/UserInfoForm.jsp", "popup", "width=600, height=1000, scrollbar
   
 <div class='left-box'>
 
-<input type="button" class="myButton" value="자신의 정보입력" onclick="popup_win1()"><br/>
-
 
 <c:choose>
 	<c:when test="${dest==null}">
-		값이 없음.	
+	<input type="button" class="myButton" value="자신의 정보입력" onclick="popup_win1()">	
 	</c:when>
 	
 	<c:otherwise>
-	${dest} 입니다
+	
+	${age}세 
+	<c:choose>
+	<c:when test="${gender=='man'}">
+	<h2>남성</h2>이 가장 많이 여행하는 곳은
+	</c:when>
+	<c:when test="${gender=='woman'}">
+	<h2>여성</h2>이 가장 많이 여행하는 곳은
+	</c:when>
+	</c:choose>
+
+	<c:choose>
+	<c:when test="${dest=='991'}">
+	<h2>아시아</h2>입니다.
+	</c:when>
+	<c:when test="${dest=='992'}">
+	<h2>유럽</h2>입니다.
+	</c:when>
+	<c:when test="${dest=='993'}">
+	<h2>북아메리카</h2>입니다.
+	</c:when>
+	<c:when test="${dest=='994'}">
+	<h2>남아메리카</h2>입니다.
+	</c:when>
+	<c:when test="${dest=='995'}">
+	<h2>오세아니아</h2>입니다.
+	</c:when>
+	<c:when test="${dest=='996'}">
+	<h2>아프리카</h2>입니다.
+	</c:when>
+	</c:choose>
+	
 	</c:otherwise>
+	
 </c:choose>
 
-
-
-
-${dest}
-
-
 <p>
-<a href="/air/viewHot.do">핫!</a><p>
-<a href="/air/viewStar.do">스톼~</a><p>
+
 <!-- <a href="/air/generateDestination.do">생성해보자</a> -->
 <form action="/air/generateDestination.do" method="post">
  <input type="hidden" name="age" id="age"/><p>
@@ -105,9 +140,14 @@ ${dest}
  <input type="hidden" name="cost" id="cost"/><p>
  <input type="hidden" name="whom" id="whom"/><p>
  <input type="hidden" name="season" id="season" /><p>
- <input type="submit" class="myButton" value="조회!">
+
+ <br/>
+ <p/>
+<input type="button" id="button1" class="myButton" value="HOT" >
+<input type="button" id="button2" class="myButton" value="VIEWSTAR">		
 
  </form>
+ 
  </div>
  
  <div class='right-box'>
@@ -129,8 +169,7 @@ ${dest}
 					<td>설명</td>
 					<td>블로거이름</td>
 					<td>블로그링크</td>
-				
-					
+							
 				</tr>
 				
 				<c:forEach items="${ITEM}" var="item" 
@@ -139,11 +178,10 @@ ${dest}
 				 	<td>${i.count}</td>
 				 	<td>${item.title}</td>
 				 	<td><a href="${item.link}">자세히보기</a></td>
-				 	
-				 	
+					 	
 				 	<td>${item.description}</td>
 				 	<td>
-				 	
+		 	
 				 	${item.bloggername}
 				 	
 				 	</td>

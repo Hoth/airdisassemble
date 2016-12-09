@@ -75,12 +75,10 @@ window.open("/air/UserInfoForm.jsp", "popup", "width=600, height=1000, scrollbar
   
 <div class='left-box'>
 
-<input type="button" class="myButton" value="자신의 정보입력" onclick="popup_win1()"><br/>
-
 
 <c:choose>
 	<c:when test="${dest==null}">
-	<input type="button" value="자신의 정보입력" onclick="popup_win1()">	
+	<input type="button" class="myButton" value="자신의 정보입력" onclick="popup_win1()">	
 	</c:when>
 	
 	<c:otherwise>

@@ -7,11 +7,11 @@
 <script type="text/javascript">
 	$(document).ready(
 	 function(){
-		 $("form").submit(function(){
-			// alert("서브밋");
-			// alert($("#keyword").val());
+		 $("#search").click(function(){
+				
+			 alert("키워드:"+$("#keyword").val());
 			 var target="/air/getCountryBasicList.do?keyword="+$("#keyword").val();
-				$("#frame").load(target);
+			$("#frame").load(target);
 			 event.preventDefault();
 		 });
 	 }		
@@ -29,8 +29,8 @@
 <h1>국가 검색</h1>
 <img src="/air/photo/ww.png" >
 	<form action="/air/getCountryBasicList.do" method="post">
-		검색어<input type="text" class="form1"  name="keyword"/>
-		<input type="submit" class="myButton" value="검색"/>
+		검색어<input type="text" class="form1"  name="keyword" id="keyword"/>
+		<input type="button" id="search" value="검색" class="myButton"/>
 </form>
 
 	

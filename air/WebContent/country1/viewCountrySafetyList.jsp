@@ -25,7 +25,7 @@ $(document).ready(
 		 $("#search2").click(function(){
 				
 			 alert("키워드:"+$("#keywordd").val());
-			 var target="/air/getAccidentList.do?keyword="+$("#keywordd").val();
+			 var target="/air/getAccidentList.do?keywordd="+$("#keywordd").val();
 			$("#right-box").load(target);
 			 event.preventDefault();
 		 });

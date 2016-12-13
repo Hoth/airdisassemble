@@ -1,5 +1,6 @@
 package bitcom.air.review;
 
+import java.io.File;
 import java.util.ArrayList;
 
 import org.springframework.stereotype.Controller;
@@ -41,7 +42,14 @@ public class ReviewService {
 			mav.addObject("ERROR","제목을 입력하세요.");
 			mav.setViewName("/forward:/addReviewForm.do");
 		}
+		
+		String uploadPath = "C:/Users/bit47/git/airdisassemble/air/WebContent/photo";
+		File destFile=new File(uploadPath+"/"+file.getOriginalFilename());
+		file.transferTo(destFile);
+		review.r_Image = file.getOriginalFilename();
 		ReviewDAO.insertReview(review);
+		
+		
 		mav.setViewName("forward:/viewReviewList.do");
 		return mav;
 		

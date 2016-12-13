@@ -41,10 +41,13 @@ $(document).ready(
 	<div data-role="content">
 		
 		<table class=type01 align="center" border="1">
-		<tr><th scope="cols">제목</th>
+		<tr>
+		<th scope="cols">대표사진</th>
+		<th scope="cols">제목</th>
 		<th scope="cols">작성자</th></tr>
 		<c:forEach items="${rv}" var="item">
 			<tr>
+				<td><img src="/air/photo/${item.r_Image}" width="200"></td>
 				<td><a href="viewReview.do?r_Num=${item.r_Num}">${item.r_Title}</a></td>
 				<td>${item.r_Name}</td>
 			</tr>

@@ -15,7 +15,7 @@ ArrayList<String> best=(ArrayList)request.getAttribute("best");
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <meta name="description" content="Photo Booth Strips with Lightbox 2 Integration" />
         <meta name="keywords" content="photo booth, strips, photo strip, css3, rotation, scroll, thumbs, swipe, touch, jquery, mobile, lightbox" />
-        <meta name="author" content="Codrops" />
+        <meta name="author" content="Hoth" />
         <link rel="shortcut icon" href="../favicon.ico"> 
         <link rel="stylesheet" type="text/css" href="/air/pb/css/demo.css" />
 		<link rel="stylesheet" type="text/css" href="/air/pb/css/lightbox.css"/>
@@ -107,6 +107,6 @@ ArrayList<String> best=(ArrayList)request.getAttribute("best");
 			</section>
         </div>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-		<script src="js/lightbox.js"></script>
+		<script src="/air/pb/js/lightbox.js"></script>
     </body>
 </html>

@@ -22,6 +22,7 @@
 <body>
 <h3><font color="black">
 <h1 align=center>후 기<p>
+<img src="/air/photo/${r.r_Image}"><p>
 ${r.r_Num}번<p>
 ${r.r_Name}(은)는 ${r.c_Location}에 갔다와서<p>
 ${r.r_Context}(이)라고 말했다<p>

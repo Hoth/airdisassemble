@@ -172,8 +172,7 @@ form
 
 
 /*********************************************************************************/
-/*table 1, 2                                                           */
-/*********************************************************************************/
+/*table 1, 2          
 table.type11 {
     border-collapse: collapse;
     text-align: left;
@@ -196,8 +195,45 @@ table.type11 td {
     vertical-align: top;
     border-right: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
-}
+    
+      padding: 15px;
+    border: none;
+    border-bottom: 1px solid #DDD;
+    text-align: left;
+    vertical-align: baseline;
+}                                                 */
+/*********************************************************************************/
 
+.type11 {
+    width: 100%;
+    border: none;
+    border-collapse: separate;
+    border-spacing: 2px;
+}
+ 
+.type11  th {
+    padding: 15px;
+    border: none;
+    border-left: 5px solid #C03;
+    border-bottom: 1px solid #DDD;
+    background: #FCF0F3;
+    font-weight: normal;
+    text-align:center;
+    text-shadow: 0 1px #FFF;
+    vertical-align: middle;
+}
+ 
+.type11 td {
+    padding: 15px;
+    border: none;
+    border-left: 5px solid #C03;
+    border-bottom: 1px solid #DDD;
+    background: #FCF0F3;
+    font-weight: normal;
+    text-align:center;
+    text-shadow: 0 1px #FFF;
+    vertical-align: middle;
+}
 
 
 table.type01 { 
@@ -846,7 +882,6 @@ hr {
 		width: 344px;
 		padding-left: 40px;
 	}
-
 
 
 

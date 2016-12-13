@@ -19,7 +19,7 @@ a{
 }
 .container{
 	width: 100%;
-	position: relative;
+	left:20%;
 }
 .clr{
 	clear: both;

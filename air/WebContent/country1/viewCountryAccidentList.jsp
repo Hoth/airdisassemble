@@ -123,9 +123,14 @@ window.open("/air/UserInfoForm.jsp", "popup", "width=300, height=300");
 				 		<td>${ACCIDENT.wrtDt}</td>
 				 </tr>	
 				 
-				 
+			
 				 	
 			</table>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
 		</c:when>
 		<c:otherwise>
 			검색 결과가 없습니다.

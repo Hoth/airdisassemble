@@ -5,9 +5,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
+<link href="/air/css/default.css" rel="stylesheet" type="text/css" media="all" />
 
 <title>Insert title here</title>
+
 </head>
 
 <body>
@@ -19,7 +20,7 @@
 	
 	<c:choose>
 		<c:when test="${ITEM!=null}">
-			<table class=type11 align="center" border="1">
+			<table class="type11" align="center" border="1">
 				<tr>
 				<th scope="cols">번호</th>
         		<th scope="cols">제목</th>
@@ -46,6 +47,11 @@
 				 </tr>	
 				 </c:forEach> 	
 			</table>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
 			
 		</c:when>
 		<c:otherwise>

@@ -135,7 +135,7 @@ ul.pb-strip li img {
 
 .pb-wrapper-2 {
 	height: 85%;
-	left: 40%;
+	left: 35%;
 	-webkit-transform: rotate(-2deg);
 	-moz-transform: rotate(-2deg);
 	-o-transform: rotate(-2deg);
@@ -145,7 +145,7 @@ ul.pb-strip li img {
 
 .pb-wrapper-3 {
 	height: 95%;
-	left: 60%;
+	left: 50%;
 	-webkit-transform: rotate(1deg);
 	-moz-transform: rotate(1deg);
 	-o-transform: rotate(1deg);
@@ -155,7 +155,7 @@ ul.pb-strip li img {
 
 .pb-wrapper-4 {
 	height: 75%;
-	left: 80%;
+	left: 65%;
 }
 
 

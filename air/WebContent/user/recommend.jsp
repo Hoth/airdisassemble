@@ -28,6 +28,24 @@ $(document).ready(
 			$("#frame").load(target);
 			 event.preventDefault();
 		 });
+		 $("#search").click(function(){
+				
+			 alert("키워드:"+$("#keyword").val());
+			 var target="/air/getBlogList.do?keyword="+$("#keyword").val();
+			$("#frame").load(target);
+			 event.preventDefault();
+		 });
+		 
+		$("#keyword").keydown(function(event) {
+			if(event.which==13){
+			  alert( "엔터 눌렀음" );
+			  alert("키워드:"+$("#keyword").val());
+				 var target="/air/getBlogList.do?keyword="+$("#keyword").val();
+				$("#frame").load(target);
+			  event.preventDefault();
+			}
+			
+		});
 			 
 	}		
 );
@@ -151,61 +169,9 @@ window.open("/air/UserInfoForm.jsp", "popup", "width=600, height=1000, scrollbar
  
  </div>
  
- <div class='right-box'>
  
- <h2>블로그 여행후기 검색</h2>
-<h1>국가검색</h1>
-	<form action="/air/getBlogList.do" method="post">
-		검색어<input type="text"  name="keyword"/>
-		<input type="submit" class="myButton" value="검색"/>
-		  	</form>
-	
-	<c:choose>
-		<c:when test="${ITEM!=null}">
-			<table align="center" border="1">
-				<tr>
-					<td>번호</td>
-					<td>제목</td>
-					<td>링크</td>
-					<td>설명</td>
-					<td>블로거이름</td>
-					<td>블로그링크</td>
-							
-				</tr>
-				
-				<c:forEach items="${ITEM}" var="item" 
-				 varStatus="i">
-				 <tr>
-				 	<td>${i.count}</td>
-				 	<td>${item.title}</td>
-				 	<td><a href="${item.link}">자세히보기</a></td>
-					 	
-				 	<td>${item.description}</td>
-				 	<td>
-		 	
-				 	${item.bloggername}
-				 	
-				 	</td>
-				 	<td>${item.bloggerlink}</td>
-				 	
-				 		
-				 </tr>	
-				 </c:forEach>	
-				 
-				 	
-			</table>
-		</c:when>
-		<c:otherwise>
-			
-		</c:otherwise>
-	</c:choose>
-
-
-
-	<div><a href="#" onClick="window.open('http://www.hanatour.com');return false"><img src="/air/photo/hana.jpg" ></a></div>
-<div class="fb-like" style="top:575px;   position : absolute; margin:0px; padding:0px;" data-href="https://www.facebook.com/HanaTour.fb/?fref=ts" data-width="269px" data-layout="standard" data-action="like"  data-size="small" data-show-faces="true" data-share="true"></div>
  
- </div>
+ 
  
 </body>
 </html>

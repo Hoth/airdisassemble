@@ -8,13 +8,23 @@
 <script type="text/javascript">
 $(document).ready(
 	function(){
-		
-		$("a").click(function(){
-			
-			//alert("클릭했음요");
-			var target=$(this).attr("href");
+		 $("#search").click(function(){
+				
+			 alert("키워드:"+$("#keyword").val());
+			 var target="/air/getBlogList.do?keyword="+$("#keyword").val();
 			$("#frame").load(target);
-			event.preventDefault();
+			 event.preventDefault();
+		 });
+		 
+		$("#keyword").keydown(function(event) {
+			if(event.which==13){
+			  alert( "엔터 눌렀음" );
+			  alert("키워드:"+$("#keyword").val());
+				 var target="/air/getBlogList.do?keyword="+$("#keyword").val();
+				$("#frame").load(target);
+			  event.preventDefault();
+			}
+			
 		});
 			
 	}		

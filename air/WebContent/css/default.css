@@ -543,8 +543,9 @@ hr {
 	color: black;
 }
 
-#menu a:hover, #menu .current_page_item a {
-	text-decoration: none;
+#menu a:hover {
+	background: #ddbbbb;
+	color:white;
 }
 
 #menu .current_page_item a {

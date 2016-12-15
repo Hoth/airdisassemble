@@ -67,8 +67,8 @@ public class NaverBlog {
 				   itemList.add(item);
 			   }
 			   
-			   mav.addObject("ITEM",itemList);
-			   mav.setViewName("/user/recommend3.jsp");
+			   mav.addObject("ITEM5",itemList);
+			   mav.setViewName("/country/viewCountryList.jsp");
 			   return mav;
 	        } 
 

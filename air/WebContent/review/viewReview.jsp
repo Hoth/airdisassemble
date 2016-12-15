@@ -7,11 +7,11 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script type="text/javascript">
-	function button1_click(){
-			//alert("클릭했음요");
-			//var target=$(this).attr("href");
-			$("#frame").load("/air/viewReviewList.do");	
-	}		
+   function button1_click(){
+         //alert("클릭했음요");
+         //var target=$(this).attr("href");
+         $("#frame").load("/air/viewReviewList.do");   
+   }      
 
 </script>
 
@@ -22,6 +22,7 @@
 <body>
 <h3><font color="black">
 <h1 align=center>후 기<p>
+<img src="/air/photo/${r.r_Image}"><p>
 ${r.r_Num}번<p>
 ${r.r_Name}(은)는 ${r.c_Location}에 갔다와서<p>
 ${r.r_Context}(이)라고 말했다<p>

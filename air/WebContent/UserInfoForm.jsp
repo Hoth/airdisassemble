@@ -139,48 +139,50 @@ form .question input[type="text"]:valid ~ label {
 <script type="text/javascript">
 $(document).ready(
 	function(){
-		$(".age").click(
-			function(){
-				$("#txtAge").val("");
-				$("#txtAge").val($(this).val());
-			}		
-		);
-		
-		$(".gender").click(
-				function(){
-					$("#txtgender").val("");
-					$("#txtgender").val($(this).val());
-				}		
+		  $(".age").click(
+			         function(){
+			            
+			            $("#txtAge").val("");
+			            $("#txtAge").val($(this).next().text());
+			         }      
+			      );
+			      
+			      $(".gender").click(
+			            function(){
+			               $("#txtgender").val("");
+			               $("#txtgender").val($(this).next().text());
+			            }      
+			         );
+			      
+			      $(".day").click(
+			            function(){
+			               $("#txtday").val("");
+			               $("#txtday").val($(this).next().text());
+			            }      
+			         );
+			      $(".cost").click(
+			            function(){
+			               $("#txtcost").val("");
+			               $("#txtcost").val($(this).next().text());
+			            }      
+			         );
+			         
+			         $(".whom").click(
+			               function(){
+			                  $("#txtwhom").val("");
+			                  $("#txtwhom").val($(this).next().text());
+			               }      
+			            );
+			         
+			         $(".season").click(
+			               function(){
+			                  $("#txtseason").val("");
+			                  $("#txtseason").val($(this).next().text());
+			               }      
+			            );
+			   }      
 			);
-		
-		$(".day").click(
-				function(){
-					$("#txtday").val("");
-					$("#txtday").val($(this).val());
-				}		
-			);
-		$(".cost").click(
-				function(){
-					$("#txtcost").val("");
-					$("#txtcost").val($(this).val());
-				}		
-			);
-			
-			$(".whom").click(
-					function(){
-						$("#txtwhom").val("");
-						$("#txtwhom").val($(this).val());
-					}		
-				);
-			
-			$(".season").click(
-					function(){
-						$("#txtseason").val("");
-						$("#txtseason").val($(this).val());
-					}		
-				);
-	}		
-);
+
 </script>
 </head>
 
@@ -195,60 +197,62 @@ $(document).ready(
     
     <input type="text" id="txtAge" required/ value="나이"><p>
     
-			<input type="radio" name="age" class="age" value="10">10대 및 이하<p>
-			<input type="radio" name="age" class="age" value="20">20~23<p>
-			<input type="radio" name="age" class="age" value="25">24~26<p>
-			<input type="radio" name="age" class="age" value="29">27~29<p>
-			<input type="radio" name="age" class="age" value="30">30대<p>
-			<input type="radio" name="age" class="age" value="40">40대<p>   
-			<input type="radio" name="age" class="age" value="50">50대 이상<p>      
+		<input type="radio" name="age" class="age" value="10"><span>10대 및 이하</span><p>
+         <input type="radio" name="age" class="age" value="20"><span>20~23</span><p>
+         <input type="radio" name="age" class="age" value="25"><span>24~26</span><p>
+         <input type="radio" name="age" class="age" value="29"><span>27~29</span><p>
+         <input type="radio" name="age" class="age" value="30"><span>30대</span><p>
+         <input type="radio" name="age" class="age" value="40"><span>40대</span><p>   
+         <input type="radio" name="age" class="age" value="50"><span>50대</span><p>
 
  	 </div>
   
     <div class="question">
    	 <input type="text" id="txtgender" required/value="성별"><p>
 
-    	<input type="radio" name="gender" class="gender" value="man">남
-		<input type="radio" name="gender" class="gender" value="woman">여<p>
+    	<input type="radio" name="gender" class="gender" value="man"><span>남</span>
+		<input type="radio" name="gender" class="gender" value="woman"><span>여</span><p>
  	 </div>
   
     <div class="question">
     	<input type="text" id="txtday" required/value="여행기간"><p>
 
-			<input type="radio" name="day" class="day" value="551">당일치기~2박3일<p>
-			<input type="radio" name="day" class="day" value="552">~5박6일<p>
-			<input type="radio" name="day" class="day" value="553">일주일<p>
-			<input type="radio" name="day" class="day" value="554">이주일<p>
-			<input type="radio" name="day" class="day" value="555">한달이내<p>
-			<input type="radio" name="day" class="day" value="556">한달이상<p>   
+			<input type="radio" name="day" class="day" value="551"><span>당일치기~2박3일</span><p>
+			<input type="radio" name="day" class="day" value="552"><span>~5박6일</span><p>
+			<input type="radio" name="day" class="day" value="553"><span>일주일</span><p>
+			<input type="radio" name="day" class="day" value="554"><span>이주일</span><p>
+			<input type="radio" name="day" class="day" value="555"><span>한달이내</span><p>
+			<input type="radio" name="day" class="day" value="556"><span>한달이상</span><p>   
   	</div>
   
    <div class="question">
-   	<input type="text" id="txtcost" required/value="예상경비(1인당)"><p>
+   	<input type="text" id="txtcost" required/  value="예상경비(1인당)"><p>
    	
-		<input type="radio" name="cost" class="cost" value="49">50만원이하<p>
-		<input type="radio" name="cost" class="cost" value="50-99">50만원 이상~100만원 미만<p>
-		<input type="radio" name="cost" class="cost" value="100-199">100만원 이상~200만원 미만<p>
-		<input type="radio" name="cost" class="cost" value="200">200만원 이상<p>
+ 		<input type="radio" name="cost" class="cost" value="49"><span>50만원이하</span><p>
+      <input type="radio" name="cost" class="cost" value="50-99"><span>50만원 이상~100만원 미만</span><p>
+      <input type="radio" name="cost" class="cost" value="100-199"><span>100만원 이상~200만원 미만</span><p>
+      <input type="radio" name="cost" class="cost" value="200"><span>200만원 이상</span><p>
+
   	</div>
   
     <div class="question">
-    <input type="text" id="txtwhom" required/value="동행"><p>
+    <input type="text" id="txtwhom" required value="동행"><p>
    
-		<input type="radio" name="whom" class ="whom" value="771">가족<p>
-		<input type="radio" name="whom" class ="whom" value="772">동료<p>
-		<input type="radio" name="whom" class ="whom" value="773">연인<p>
-		<input type="radio" name="whom" class ="whom" value="774">친구1명<p>
-		<input type="radio" name="whom" class ="whom" value="775">친구2명 이상<p> 
-		<input type="radio" name="whom" class ="whom" value="776">혼자<p>    
+		  <input type="radio" name="whom" class ="whom" value="771"><span>가족</span><p>
+      <input type="radio" name="whom" class ="whom" value="772"><span>동료</span><p>
+      <input type="radio" name="whom" class ="whom" value="773"><span>연인</span><p>
+      <input type="radio" name="whom" class ="whom" value="774"><span>친구1명</span><p>
+      <input type="radio" name="whom" class ="whom" value="775"><span>친구2명 이상</span><p> 
+      <input type="radio" name="whom" class ="whom" value="776"><span>혼자</span><p>    
+ 
  	</div>
   
     <div class="question">
-        <input type="text" id="txtseason" required/value="계절"><p>
-			<input type="radio" name="season" class ="season" value="881">봄(3월~5월)<p>
-			<input type="radio" name="season" class ="season" value="882">여름(6월~8월)<p>
-			<input type="radio" name="season" class ="season" value="883">가을(9월~11월)<p>
-			<input type="radio" name="season" class ="season" value="884">겨울(11월~2월)<p>
+         <input type="text" id="txtseason" required value="계절"><p>
+         <input type="radio" name="season" class ="season" value="881"><span>봄(3월~5월)</span><p>
+         <input type="radio" name="season" class ="season" value="882"><span>여름(6월~8월)</span><p>
+         <input type="radio" name="season" class ="season" value="883"><span>가을(9월~11월)</span><p>
+         <input type="radio" name="season" class ="season" value="884"><span>겨울(11월~2월)</span><p>
  	 </div>
     
      <button onclick="sendData(event);"> Submit</button>
@@ -260,26 +264,27 @@ $(document).ready(
     <script>
         function sendData(event){
     
-            var ageval=$("#txtAge").val(); // 팝업의 벨루값을 가져와서
+            var ageval=$(".age").val(); // 팝업의 벨루값을 가져와서
             $("#age",opener.document).val(ageval); // 부모에게 전달
   
-            var genderval=$("#txtgender").val();
+            var genderval=$(".gender").val();
             $("#gender",opener.document).val(genderval);
             
-            var dayval=$("#txtday").val();
+            var dayval=$(".day").val();
             $("#day",opener.document).val(dayval);
             
-            var costval=$("#txtcost").val();
+            var costval=$(".cost").val();
             $("#cost",opener.document).val(costval);
             
-            var whomval=$("#txtwhom").val();
+            var whomval=$(".whom").val();
             $("#whom",opener.document).val(whomval);
             
-            var seasonval=$("#txtseason").val(); // 팝업의 벨루값을 가져와서
+            var seasonval=$(".season").val(); // 팝업의 벨루값을 가져와서
             $("#season",opener.document).val(seasonval); // 부모에게 전달
 
             
           var target="/air/generateDestination.do?age="+ageval+"&gender="+genderval+"&day="+dayval+"&cost="+costval+"&whom="+whomval+"&season="+seasonval;
+          alert("target:"+target);
           //alert(target);
 		$("#frame",opener.document).load(target);
 		alert("조회중입니다.");

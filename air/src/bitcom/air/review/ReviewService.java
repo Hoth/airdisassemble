@@ -1,5 +1,6 @@
 package bitcom.air.review;
 
+import java.io.File;
 import java.util.ArrayList;
 
 import org.springframework.stereotype.Controller;
@@ -35,17 +36,24 @@ public class ReviewService {
 		return mav;
 	}
 	@RequestMapping(value="/addReview.do")
-	public ModelAndView addReview(Review review,@RequestParam(value="file") MultipartFile file)throws Exception{
-		ModelAndView mav=new ModelAndView();
-		if(review.r_Title==null){
-			mav.addObject("ERROR","제목을 입력하세요.");
-			mav.setViewName("/forward:/addReviewForm.do");
-		}
-		ReviewDAO.insertReview(review);
-		mav.setViewName("forward:/viewReviewList.do");
-		return mav;
-		
-	}
+	   public ModelAndView addReview(Review review,@RequestParam(value="file") MultipartFile file)throws Exception{
+	      ModelAndView mav=new ModelAndView();
+	      if(review.r_Title==null){
+	         mav.addObject("ERROR","제목을 입력하세요.");
+	         mav.setViewName("/forward:/addReviewForm.do");
+	      }
+	      
+	      String uploadPath = "C:/Users/bit47/git/airdisassemble/air/WebContent/photo";
+	      File destFile=new File(uploadPath+"/"+file.getOriginalFilename());
+	      file.transferTo(destFile);
+	      review.r_Image = file.getOriginalFilename();
+	      ReviewDAO.insertReview(review);
+	      
+	      
+	      mav.setViewName("forward:/viewReviewList.do");
+	      return mav;
+	      
+	   }
 	@RequestMapping(value="/viewHot.do")
 	public ModelAndView viewHot() throws Exception{
 		ModelAndView mav = new ModelAndView();

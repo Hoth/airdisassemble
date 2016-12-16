@@ -60,7 +60,7 @@ $(document).ready(
 	<div style="border:1px solidgold; float:left;width:60%; padding-left:170px; margin:0px;" id="frame" class='left-box' class="slider-pro"  class='right-box' data-role="content"  >
 		
 	
-	</div>
+	</div >
 	
 	<%
     ArrayList<String> topN=bestlist_crawler.top();

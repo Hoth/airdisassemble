@@ -309,19 +309,19 @@ p {
  
  <div>
   <div class="card transition left">
-  <h2 class="transition">인기 여행지</h2>
-  <p>인기여행지가 궁금하지 않으신가여 흐흫흐흐흐흐흐.</p>
-  <div class="cta-container transition"><span class="cta"  id="veryveryvery"> 자신의 정보입력</a></div>
-  <div class="card_circle transition"></div>
+    <h2 class="transition">인기 여행지</h2>
+  <p> 인기여행지가 궁금하지 않으신가여 흐흫흐흐흐흐흐.</p>
+  <div class="cta-container transition"><span class="cta"  id="viewHot"> HOT HOT HOT!</a></div>
+  <div class="card_circle1 transition"></div>
 </div>
 
 <div>
  
  <div class="card transition center">
-  <h2 class="transition">자신의 정보입력</h2>
+ <h2 class="transition">자신의 정보입력</h2>
   <p>자신의 정보를 입력받아 최적의 여행지를 추천해드립니다.</p>
-  <div class="cta-container transition"><span class="cta"  id="viewHot"> HOT HOT HOT!</a></div>
-  <div class="card_circle1 transition"></div>
+  <div class="cta-container transition"><span class="cta"  id="veryveryvery">자신의 정보입력</a></div>
+  <div class="card_circle transition"></div>
 </div>
 
 <div>

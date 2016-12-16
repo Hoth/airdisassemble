@@ -8,7 +8,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>여행 어디까지 가봤니?</title>
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <link href="http://fonts.googleapis.com/css?family=Raleway:400,200,500,600,700,800,300" rel="stylesheet" />
@@ -30,9 +30,9 @@ $(document).ready(
 	
 		$("a").click(function(){
 			
-			//alert("클릭했음요");
+			
 			var target=$(this).attr("href");
-			$("#example3").load(target);
+			$("#frame").load(target);
 			event.preventDefault();
 		});
 	}		
@@ -44,14 +44,12 @@ $(document).ready(
 	<div id="menu-wrapper">
 		<div id="menu" class="container">
 			<ul>
-				<li class="current_page_item" ><a href="/air/start.do" >홈으로</a></li>				
+				<li><a href="/air/start.do">홈으로</a></li>				
 				<li><a href="/air/main.do">추천 여행지</a></li>
-				<li><a href="/air/viewReviewList.do">리뷰 </a></li>
-				<li><a href="/air/viewExchangeRate.do">환율보기</a></li>
-				<li><a href="/air/getCountryBasicListForm.do">나라정보검색</a></li>
-				<li><a href="/air/getCountrySafetyListForm.do">국가안전정보검색</a></li>					
-				<li><a href="/air/getNewsList.do">국제뉴스</a></li>		
+				<li><a href="/air/viewReviewList.do">리뷰 </a></li>		
+				<li><a href="/air/total.do">토탈 여행정보</a></li>
 				<li><a href="/air/viewReviewListAdmin.do">관리자 리뷰관리</a></li>
+				
 				
 			</ul>
 		</div>
@@ -59,13 +57,13 @@ $(document).ready(
 	<div id="header-wrapper">
 		<div id="header" class="container">
 			<div id="logo">
-				<h1><a href="#">공 중 분 해</a></h1>
-				<p>다슬이최고</p>
+				<h1><a href="#">여행 어디까지 가봤니?</a></h1>
+				<p>made by 공 중 분 해</p>
 			</div>
 		</div>
 	</div>
 	<div style="border:1px solidgold; float:left;width:60%; padding-left:170px; margin:0px;" id="frame" class='left-box' class="slider-pro"  class='right-box' data-role="content"  >
-		
+		<!-- 클레스 정보 확인 요망 -->
 	
 	</div >
 	

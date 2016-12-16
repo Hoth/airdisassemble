@@ -6,15 +6,11 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script type="text/javascript">
 $(document).ready(
+		
+		
 	function(){
 		
-		$("a").click(function(){
-			
-			//alert("클릭했음요");
-			var target=$(this).attr("href");
-			$("#frame").load(target);
-			event.preventDefault();
-		});
+		
 		 $("#search1").click(function(){
 			
 			 alert("키워드:"+$("#keyword").val());
@@ -62,8 +58,12 @@ $(document).ready(
 		*/	
 	}		
 );
+function button9_click(){
+    //alert("클릭했음요");
+    //var target=$(this).attr("href");
+    $("#frame").load("/air/total.do");   
+}
 </script>
-
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script type="text/javascript">
@@ -169,7 +169,7 @@ window.open("/air/UserInfoForm.jsp", "popup", "width=300, height=300");
 	</c:choose> --%>
 	
 	</div>
-	
+	<input type="button" class="myButton" value="뒤로가세영" onclick="button9_click()"/>
 	
 </body>
 </html>

@@ -131,4 +131,13 @@ public class UserService {
 		
 		return mav;
 	}
+	
+	@RequestMapping(value="/total.do")
+	public ModelAndView total() throws Exception{
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("/user/total.jsp");
+		
+		return mav;
+	}
+	
 }

@@ -28,6 +28,16 @@ window.open("/air/ERForm.jsp", "popup", "width=300, height=300");
 
 </script>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript">
+   function button5_click(){
+         //alert("클릭했음요");
+         //var target=$(this).attr("href");
+         $("#frame").load("/air/total.do");   
+   }      
+
+</script>
+
 <script type="text/javascript">
 	$(document).ready(
 	 function(){
@@ -78,6 +88,6 @@ window.open("/air/ERForm.jsp", "popup", "width=300, height=300");
 	</c:otherwise>
 </c:choose>
 
- 
+ <input type="button" class="myButton" value="뒤로가세영" onclick="button5_click()"/>
 </body>
 </html>

@@ -20,7 +20,7 @@ response.setHeader("cache-control","no-cache");
 $(document).ready(
    function(){
       
-      $("a").click(function(){
+      $(".rlink").click(function(){
          
          //alert("클릭했음요");
          var target=$(this).attr("href");
@@ -104,7 +104,7 @@ width:700px;
       <c:forEach items="${rv}" var="item">
          <tr>
             <td width="350"><img src="/air/photo/${item.r_Image}" width="300"></td>
-            <td><a href="viewReview.do?r_Num=${item.r_Num}">${item.r_Title}</a></td>
+            <td><span class="rlink" href="viewReview.do?r_Num=${item.r_Num}">${item.r_Title}</span></td>
             <td>${item.r_Name}</td>
          </tr>
       </c:forEach>
@@ -112,7 +112,7 @@ width:700px;
    
     
     
-   <a href= "/air/addReviewForm.do"><button class="myButton">리뷰 등록하기</button></a>
+   <span class="rlink" href= "/air/addReviewForm.do"><button class="myButton">리뷰 등록하기</button></span>
    <input type="button" class="myButton" value="진짜리뷰등록" onclick="popup_win2()">	
 </body>
 </html>

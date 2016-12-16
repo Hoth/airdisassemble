@@ -72,7 +72,7 @@ ArrayList<String> best=(ArrayList)request.getAttribute("best");
                      <li><a href="http://www.hanatour.com/asp/contents/vote_tour/<%=best.get(i)%>" rel="lightbox[album1]" title=<%=best.get(i+2)%>>
                          <%} %>
                          
-                         <img src=<%=best.get(i+1)%> width=140 /></a></li>
+                         <img src=<%=best.get(i+1)%> width=120 /></a></li>
                     <%} %>
                   </ul>
                </div>
@@ -88,7 +88,7 @@ ArrayList<String> best=(ArrayList)request.getAttribute("best");
                      <%}else{ %>
                      <li><a href="http://www.hanatour.com/asp/contents/vote_tour/<%=best.get(i)%>" rel="lightbox[album1]" title=<%=best.get(i+2)%>>
                          <%} %>
-                         <img src=<%=best.get(i+1)%> width=140 /></a></li>
+                         <img src=<%=best.get(i+1)%> width=120 /></a></li>
                     <%} %>
                   </ul>
                </div>   
@@ -104,7 +104,7 @@ ArrayList<String> best=(ArrayList)request.getAttribute("best");
                      <%}else{ %>
                      <li><a href="http://www.hanatour.com/asp/contents/vote_tour/<%=best.get(i)%>" rel="lightbox[album1]" title=<%=best.get(i+2)%>>
                          <%} %>
-                         <img src=<%=best.get(i+1)%> width=140 /></a></li>
+                         <img src=<%=best.get(i+1)%> width=120 /></a></li>
                     <%} %>   
                      
                   </ul>
@@ -121,7 +121,7 @@ ArrayList<String> best=(ArrayList)request.getAttribute("best");
                      <%}else{ %>
                      <li><a href="http://www.hanatour.com/asp/contents/vote_tour/<%=best.get(i)%>" rel="lightbox[album1]" title=<%=best.get(i+2)%>>
                          <%} %>
-                         <img src=<%=best.get(i+1)%> width=140 /></a></li>
+                         <img src=<%=best.get(i+1)%> width=120 /></a></li>
                     <%} %>   
                      
                   </ul>

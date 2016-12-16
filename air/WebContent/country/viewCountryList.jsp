@@ -3,23 +3,17 @@
     <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script type="text/javascript">
-$(document).ready(
-	function(){
-		
-		$("a").click(function(){
-			
-			alert("클릭했음요");
-			var target=$(this).attr("href");
-			$("#frame").load(target);
-			event.preventDefault();
-		});
-		
-	}		
-);
-</script>
+   function button6_click(){
+         //alert("클릭했음요");
+         //var target=$(this).attr("href");
+         $("#frame").load("/air/total.do");   
+   }      
 
+</script>
+ 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script type="text/javascript">
@@ -214,7 +208,7 @@ function popup_win1() { //크기 width400 height300 팝업창
 	<div><a href="#" onClick="window.open('http://www.hanatour.com');return false"><img src="/air/photo/hana.jpg" ></a></div>
 <div class="fb-like" style="top:575px;   position : absolute; margin:0px; padding:0px;" data-href="https://www.facebook.com/HanaTour.fb/?fref=ts" data-width="269px" data-layout="standard" data-action="like"  data-size="small" data-show-faces="true" data-share="true"></div>
  
-
+<input type="button" class="myButton" value="뒤로가세영" onclick="button6_click()"/>
 </div>
 
 

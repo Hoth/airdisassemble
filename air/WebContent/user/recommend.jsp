@@ -11,13 +11,7 @@ $(document).ready(
 		
 	function(){
 		
-		$("a").click(function(){
-			
-			alert("클릭했음요");
-			var target=$(this).attr("href");
-			$("#frame").load(target);
-			event.preventDefault();
-		});
+		
 		$("#viewHot").click(function(){
 			
 			 var target="/air/viewHot.do";

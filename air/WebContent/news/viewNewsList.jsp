@@ -37,6 +37,15 @@ table.type11 td {
 
 
 </head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript">
+   function button5_click(){
+         //alert("클릭했음요");
+         //var target=$(this).attr("href");
+         $("#example3").load("/air/total.do");   
+   }      
+
+</script>
 
 <body>
  <h1>국가 검색</h1>
@@ -80,5 +89,6 @@ table.type11 td {
 			검색 결과가 없습니다.
 		</c:otherwise>
 	</c:choose>
+	<input type="button" class="myButton" value="뒤로가세영" onclick="button5_click()"/>
 </body>
 </html>

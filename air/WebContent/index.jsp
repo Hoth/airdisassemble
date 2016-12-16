@@ -68,6 +68,7 @@ $(document).ready(
     %>
      <div style="border:1px solidgold; float:right;width:20%;  padding:0px; margin:0px;" class='right-box' id="rank" class="slider-pro"  class='right-box' data-role="content">
 		<table class="type01">
+			뜨ㅣ어쓰기<h2>실시간 인기 여행지</h1>
 			<tr>
 					<th>순위</th><th>도시</th>
 			</tr>

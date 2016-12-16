@@ -22,6 +22,7 @@ $(document).ready(
 			
 			 var target="/air/viewHot.do";
 			$("#frame").load(target);
+			$("#rank").load("/air/nulljsp.jsp");
 			 event.preventDefault();
 		 });
 		$("#viewStar").click(function(){

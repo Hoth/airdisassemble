@@ -7,6 +7,8 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script type="text/javascript">
 $(document).ready(
+		
+		
 	function(){
 		
 		$("a").click(function(){
@@ -16,37 +18,24 @@ $(document).ready(
 			$("#frame").load(target);
 			event.preventDefault();
 		});
-		$("#button1").click(function(){
+		$("#viewHot").click(function(){
 			
 			 var target="/air/viewHot.do";
 			$("#frame").load(target);
 			 event.preventDefault();
 		 });
-		$("#button2").click(function(){
+		$("#viewStar").click(function(){
 			
 			 var target="/air/viewStar.do";
 			$("#frame").load(target);
 			 event.preventDefault();
 		 });
-		 $("#search").click(function(){
-				
-			 alert("키워드:"+$("#keyword").val());
-			 var target="/air/getBlogList.do?keyword="+$("#keyword").val();
-			$("#frame").load(target);
-			 event.preventDefault();
-		 });
-		 
-		$("#keyword").keydown(function(event) {
-			if(event.which==13){
-			  alert( "엔터 눌렀음" );
-			  alert("키워드:"+$("#keyword").val());
-				 var target="/air/getBlogList.do?keyword="+$("#keyword").val();
-				$("#frame").load(target);
-			  event.preventDefault();
-			}
-			
-		});
-			 
+		$("#veryveryvery").click(function(){
+			popup_win1();
+			 //var target="/air/viewStar.do";
+			//$("#frame").load(target);
+			 //event.preventDefault();
+		 });	 
 	}		
 );
 </script>
@@ -71,6 +60,10 @@ window.open("/air/UserInfoForm.jsp", "popup", "width=600, height=1000, scrollbar
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript">
+
+
+</script>
 	<script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
@@ -81,27 +74,172 @@ window.open("/air/UserInfoForm.jsp", "popup", "width=600, height=1000, scrollbar
 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
+
+
+<style type="text/css">
+
+@import url('/air/photo');
+body {   font-family: Helvetica, san-serif;
+<%--
+ background: -webkit-linear-gradient(90deg, #00aaee 10%, #DD2476 90%); /* Chrome 10+, Saf5.1+ */
+  background:    -moz-linear-gradient(90deg, #00aaee 10%, #DD2476 90%); /* FF3.6+ */
+  background:     -ms-linear-gradient(90deg, #00aaee 10%, #DD2476 90%); /* IE10 */
+  background:      -o-linear-gradient(90deg, #00aaee 10%, #DD2476 90%); /* Opera 11.10+ */
+  background:         linear-gradient(90deg, #00aaee 10%, #DD2476 90%); /* W3C */ }
+.transition { transition: .3s cubic-bezier(.3, 0, 0, 1.3) }
+--%>
+ background:#ffdde5;
+ }
+ 
+.card {
+    background-color: #fff;
+    bottom: 0;
+    box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.3);
+  -webkit-box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.3);
+  -moz-box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.3);
+    height: 300px;
+    left: 0;
+    margin: auto;
+    overflow: hidden;
+    position: absolute;
+  
+    width: 300px;
+}
+.card:hover {
+    height: 450px;
+    width: 300px;
+}
+.card:hover .cta-container {
+    display: inline;
+    margin-top: 380px;
+}
+.card:hover .card_circle {
+    background-size: cover;
+    border-radius: 0;
+    margin-top: -130px;
+}
+.card:hover h2 {
+    background: #3487f7;
+    color: #fff;
+    margin-top: 100px;
+    padding: 5px;
+}
+.card:hover h2 small { color: #fff }
+.card:hover p { margin-top: 300px }
+.card_circle {
+    background: url('/air/photo/998.JPG') no-repeat center bottom;
+    background-color: #3487f7;
+    background-size: cover;
+    border-radius: 50%;
+    height: 400px;
+    margin-left: -75px;
+    margin-top: -270px;
+    position: absolute;
+    width: 450px;
+}
+.card_circle1 {
+    background: url('/air/photo/999.JPG') no-repeat center bottom;
+    background-color: #3487f7;
+    background-size: cover;
+    border-radius: 50%;
+    height: 400px;
+    margin-left: -75px;
+    margin-top: -200px;
+    position: absolute;
+    width: 450px;
+}
+.card_circle2 {
+    background: url('/air/photo/997.JPG') no-repeat center bottom;
+    background-color: #3487f7;
+    background-size: cover;
+    border-radius: 50%;
+    height: 400px;
+    margin-left: -75px;
+    margin-top: -270px;
+    position: absolute;
+    width: 450px;
+}
+h2 {
+    color: #3487f7;
+    font-family: 'Raleway', sans-serif;
+    font-size: 24px;
+    font-weight: 200;
+    margin-top: 150px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    z-index: 9999;
+}
+p {
+    color: rgba(0,0,0,.6);
+    font-family: 'Raleway', sans-serif;
+    font-size: 100%;
+    font-weight: normal;
+    margin-top: 200px;
+    position: absolute;
+    text-align: center;
+    z-index: 9999;
+}
+.cta-container {
+    display: none;
+    margin-top: 320px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    z-index: 9999;
+}
+.cta {
+    -moz-border-radius: 2px;
+    -moz-transition: 0.2s ease-out;
+    -ms-transition: 0.2s ease-out;
+    -o-transition: 0.2s ease-out;
+    -webkit-border-radius: 2px;
+    -webkit-transition: 0.2s ease-out;
+    background-clip: padding-box;
+    border: 2px solid #3487f7;
+    border-radius: 2px;
+    color: #3487f7;
+    display: inline-block;
+    font-family: 'Raleway', sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    height: 36px;
+    letter-spacing: 0.5px;
+    line-height: 36px;
+    margin-bottom: 15px;
+    padding: 0 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.2s ease-out;
+}
+.cta:hover {
+    background-color: #3487f7;
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    color: #fff;
+    -moz-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.left{
+  left: 300;
+  top: 300;
+}
+
+.right{
+  left: 700;
+  top: 300;
+}
+
+.center{
+  left: 1100;
+  top: 300;
+}
+
+</style>
+
 </head>
 <body>
 
-  <style>
-.left-box {
-
-  float: left;
-  width: 20%;
-  padding:1px;
-  
-}
-.right-box {
-
-  float: right;
-    width: 50%;
-    padding-left:200px;
-     padding-top:1px;
-    
-
-}
-</style>
   
 <div class='left-box'>
 
@@ -162,16 +300,44 @@ window.open("/air/UserInfoForm.jsp", "popup", "width=600, height=1000, scrollbar
 
  <br/>
  <p/>
-<input type="button" id="button1" class="myButton" value="HOT" >
-<input type="button" id="button2" class="myButton" value="VIEWSTAR">		
+
+		
 
  </form>
  
  </div>
  
+ <div>
+  <div class="card transition left">
+  <h2 class="transition">인기 여행지</h2>
+  <p>인기여행지가 궁금하지 않으신가여 흐흫흐흐흐흐흐.</p>
+  <div class="cta-container transition"><span class="cta"  id="veryveryvery"> 자신의 정보입력</a></div>
+  <div class="card_circle transition"></div>
+</div>
+
+<div>
  
+ <div class="card transition center">
+  <h2 class="transition">자신의 정보입력</h2>
+  <p>자신의 정보를 입력받아 최적의 여행지를 추천해드립니다.</p>
+  <div class="cta-container transition"><span class="cta"  id="viewHot"> HOT HOT HOT!</a></div>
+  <div class="card_circle1 transition"></div>
+</div>
+
+<div>
  
- 
- 
+ <div class="card transition right">
+  <h2 class="transition">별점 인기순</h2>
+  <p>여행을 다녀온 고객들의 평가를 기준으로 별점이 높은 지역을 보여드립니당</p>
+  <div class="cta-container transition"><span class="cta"  id="viewStar"> viewStar </span></div>
+  <div class="card_circle2 transition"></div>
+  
+  
+  
+</div>
+
+
+
+
 </body>
 </html>

@@ -7,7 +7,35 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 
-<title>Insert title here</title>
+<title> NEW LIST </title>
+<style type="text/css">
+table.type11 {
+    border-collapse: collapse;
+    text-align: left;
+    line-height: 1.5;
+    border-top: 1px solid #ccc;
+    border-left: 3px solid #369;
+  margin : 20px 10px;
+}
+table.type11 th {
+    padding: 10px;
+    font-weight: bold;
+    vertical-align: top;
+    color: #153d73;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+
+}
+table.type11 td {
+    padding: 10px;
+    vertical-align: top;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+</style>
+
+
+
 </head>
 
 <body>

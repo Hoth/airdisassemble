@@ -53,7 +53,7 @@ $(document).ready(
 		<div id="header" class="container">
 			<div id="logo">
 				<h1><a href="#">공 중 분 해</a></h1>
-				<p>다슬이최고</a></p>
+				<p>다슬이최고</p>
 			</div>
 		</div>
 	</div>

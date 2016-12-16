@@ -26,7 +26,7 @@ ArrayList<String> best=(ArrayList)request.getAttribute("best");
    
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script type="text/javascript">
-   function button1_click(){
+   function button3_click(){
          //alert("클릭했음요");
          //var target=$(this).attr("href");
          $("#frame").load("/air/main.do");   
@@ -47,7 +47,7 @@ ArrayList<String> best=(ArrayList)request.getAttribute("best");
          
             <h1>kim su jin mae rong</h1>
             <h2>김수진 똥멍청이 <br> <strong>스크롤해보세욘!</strong></h2>
-            <input type="button" class="myButton" value="이름바꾸셈 뒤로" onclick="button1_click()"/>
+            <input type="button" class="myButton" value="이름바꾸셈 뒤로" onclick="button3_click()"/>
             
             <div class="support-note"><!-- let's check browser support with modernizr -->
                <!--span class="no-cssanimations">CSS animations are not supported in your browser</span-->

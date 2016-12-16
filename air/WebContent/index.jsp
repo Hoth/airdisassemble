@@ -20,6 +20,13 @@ $(document).ready(
 	function(){
 		$("#frame").load("/air/start.do");
 		
+
+		$("#myButton").click(function(){
+					
+					$("#rank").load("/air/Search/nulljsp.jsp");
+					 event.preventDefault();
+				 });
+
 	
 		$("a").click(function(){
 			
@@ -67,8 +74,9 @@ $(document).ready(
     request.setAttribute("top",topN);
     %>
      <div style="border:1px solidgold; float:right;width:20%;  padding:0px; margin:0px;" class='right-box' id="rank" class="slider-pro"  class='right-box' data-role="content">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="button" id="myButton" class="myButton" value="표 숨기기" onclick="button1_click()"/>
 		<table class="type01">
-			뜨ㅣ어쓰기<h2>실시간 인기 여행지</h1>
+			<h2>실시간 인기 여행지</h1>
 			<tr>
 					<th>순위</th><th>도시</th>
 			</tr>

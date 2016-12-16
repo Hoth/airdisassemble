@@ -27,11 +27,24 @@ $(document).ready(
          $("#frame").load(target);
          event.preventDefault();
       });
-         
+     
    }      
 );
 </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript">
 
+
+
+
+function popup_win2() { //크기 width400 height300 팝업창
+	
+
+window.open("/air/addReviewForm.do", "popup", "width=600, height=1000, scrollbars=yes, toolbar=no, menubar=no, location=no");
+
+}
+
+</script>
 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
@@ -100,5 +113,6 @@ width:700px;
     
     
    <a href= "/air/addReviewForm.do"><button class="myButton">리뷰 등록하기</button></a>
+   <input type="button" class="myButton" value="진짜리뷰등록" onclick="popup_win2()">	
 </body>
 </html>

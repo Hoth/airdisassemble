@@ -69,17 +69,23 @@ public class ReviewService {
 	         mav.setViewName("/forward:/addReviewForm.do");
 	      }
 	      
-	      String uploadPath = "C:/Users/bitUser/git/airdisassemble/air/WebContent/photo";
+	      String uploadPath = "C:/Users/bit47/git/airdisassemble/air/WebContent/photo";
 	      File destFile=new File(uploadPath+"/"+file.getOriginalFilename());
 	      file.transferTo(destFile);
 	      review.r_Image = file.getOriginalFilename();
 	      ReviewDAO.insertReview(review);
 	      
 	      
-	      mav.setViewName("forward:/viewReviewList.do");
+	      mav.setViewName("/review/addsuccess.jsp");
 	      return mav;
 	      
 	   }
+	@RequestMapping(value="/addsuccess.do")
+	public ModelAndView addsuccess() throws Exception{
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("/review/addsuccess.jsp");
+		return mav;
+	}
 	@RequestMapping(value="/viewHot.do")
 	public ModelAndView viewHot() throws Exception{
 		ModelAndView mav = new ModelAndView();

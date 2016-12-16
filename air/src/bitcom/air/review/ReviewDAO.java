@@ -49,6 +49,20 @@ public class ReviewDAO {
 		sqlSession.close();
 		return rev;
 	}
+	public static ArrayList<Review> selectReviewList_Star() throws Exception{
+		SqlSession sqlSession = sqlMapper.openSession(true);
+		ArrayList<Review> reviewList = null;
+		reviewList = (ArrayList)sqlSession.selectList("selectReviewList_Star");
+		sqlSession.close();
+		return reviewList;
+	}
+	public static ArrayList<Review> selectReviewList_Star_Desc() throws Exception{
+		SqlSession sqlSession = sqlMapper.openSession(true);
+		ArrayList<Review> reviewList = null;
+		reviewList = (ArrayList)sqlSession.selectList("selectReviewList_Star_Desc");
+		sqlSession.close();
+		return reviewList;
+	}
 	public static void deleteReview(int r_Num) throws Exception{
 		SqlSession sqlSession = sqlMapper.openSession(true);
 		sqlSession.delete("deleteReview",r_Num);

@@ -22,7 +22,16 @@
 	  	select * from A_review
 	 ]]>
 	</select>
-
+	<select id="selectReviewList_Asc" resultMap="ReviewResultMap">
+	 <![CDATA[
+	  	select * from A_review order by r_Star asc
+	 ]]>
+	</select>
+	<select id="selectReviewList_Desc" resultMap="ReviewResultMap">
+	 <![CDATA[
+	  	select * from A_review order by r_Star Desc
+	 ]]>
+	</select>
 	<select id="selectReview" resultMap = "ReviewResultMap">
 	<![CDATA[
 		select * from A_review where r_Num = #{r_Num}

@@ -13,9 +13,35 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class ReviewService {
 	@RequestMapping(value="/viewReviewList.do")
-	public ModelAndView viewReviewList() throws Exception{
+	public ModelAndView viewReviewList(@RequestParam(value="order",defaultValue="1")int order) throws Exception{
 		ModelAndView mav = new ModelAndView();
-		ArrayList<Review> reviewList = ReviewDAO.selectReviewList();
+		ArrayList<Review> reviewList=null;
+		if(order==1){
+			reviewList= ReviewDAO.selectReviewList();
+		}else if(order==2){
+			reviewList= ReviewDAO.selectReviewList_Star();
+		}else
+			reviewList= ReviewDAO.selectReviewList_Star_Desc();
+		
+		mav.addObject("rv",reviewList);
+	
+		mav.setViewName("/review/viewReviewList.jsp");
+		return mav;
+	}
+
+	@RequestMapping(value="/viewReviewList_Star.do")
+	public ModelAndView viewReviewList_Star() throws Exception{
+		ModelAndView mav = new ModelAndView();
+		ArrayList<Review> reviewList = ReviewDAO.selectReviewList_Star();
+		mav.addObject("rv",reviewList);
+	
+		mav.setViewName("/review/viewReviewList.jsp");
+		return mav;
+	}
+	@RequestMapping(value="/viewReviewList_Star_Desc.do")
+	public ModelAndView viewReviewList_Star_Desc() throws Exception{
+		ModelAndView mav = new ModelAndView();
+		ArrayList<Review> reviewList = ReviewDAO.selectReviewList_Star();
 		mav.addObject("rv",reviewList);
 	
 		mav.setViewName("/review/viewReviewList.jsp");

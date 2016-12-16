@@ -75,7 +75,13 @@ width:700px;
       
       
       <table class=type11 align="center" border="1">
-      
+            <form action="/air/viewReviewList.do" method="post"  id="viewReview">
+      <select name="order" id="order">
+      <option value="1">등록일 순</option>
+      <option value="2">별점 높은 순</option>
+      <option value="3">별점 낮은 순</option>
+      </select>
+     </form> 
       <tr>
       <th scope="cols">대표사진</th>
       <th scope="cols">제목</th>

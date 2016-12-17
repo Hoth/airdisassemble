@@ -64,7 +64,7 @@
                <h3><span>Altare della Patria</span><span>What you've been dreaming of</span></h3>
                <h3><span>Piazza Navona</span><span>Where the fun begins</span></h3>
                <h3><span>venezia</span><span>Unforgettable eperiences</span></h3>
-               <h3><span>Moevenpick Mactan Island Cebu</span><span>When silence touches nature</span></h3>
+               <h3><span>Moevenpick Mactan Island </span><span>When silence touches nature</span></h3>
             </div>
          </section>
         </div>

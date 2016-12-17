@@ -17,7 +17,7 @@
 	font-size: 24px;
 	float:left;
 	position: relative;
-	margin-top:350px;
+	margin-top:450px;
 	z-index: 1000;
 }
 .cr-container label:before{
@@ -68,7 +68,7 @@
 }
 .cr-bgimg{
 	width: 800px;
-	height: 600px;
+	height: 500px;
 	position: absolute;
 	left: 0px;
 	top: 0px;

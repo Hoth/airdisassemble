@@ -6,6 +6,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
+<link href="/air/css/default.css" rel="stylesheet" type="text/css" media="all" />
 </head>
 <body>
 
@@ -17,7 +18,7 @@
 	
 	<c:choose>
 		<c:when test="${ITEM!=null}">
-			<table align="center" border="1">
+			<table align="center" border="1" class=type01>
 				<tr>
 					<td>번호</td>
 					<td>제목</td>

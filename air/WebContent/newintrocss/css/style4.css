@@ -9,7 +9,7 @@
 }
 .cr-container label{
 	font-style: italic;
-	width: 150px;
+	width: 200px;
 	height: 30px;
 	cursor: pointer;
 	color: #fff;
@@ -67,8 +67,8 @@
 	display: none;
 }
 .cr-bgimg{
-	width: 600px;
-	height: 500px;
+	width: 800px;
+	height: 600px;
 	position: absolute;
 	left: 0px;
 	top: 0px;
@@ -79,7 +79,7 @@
 	background-position: 0 0;
 }
 .cr-bgimg div{
-	width: 300px;
+	width: 200px;
 	height: 100%;
 	position: relative;
 	float: left;
@@ -88,7 +88,7 @@
 }
 .cr-bgimg div span{
 	position: absolute;
-	width: 100%;
+	width: 0.1%;
 	height: 100%;
 	top: 0px;
 	left: 0px;

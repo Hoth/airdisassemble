@@ -38,6 +38,14 @@ $(document).ready(
    }      
 );
 </script>
+<style>
+.soon{font-family:돋움;
+font-size:22pt;
+text-align:center;}
+.soon1{font-family:돋움;
+font-size:22pt;
+text-align:center;}
+</style>
 </head>
 <body>
 <div id="wrapper">
@@ -81,8 +89,8 @@ $(document).ready(
          
                <c:forEach items="${top}" varStatus="status"  var="top">
           <tr>
-                 <td>${status.count}</td>
-               <td>${top}</td>
+                 <td class="soon">${status.count}</td>
+               <td  class="soon1">${top}</td>
           </tr>
                </c:forEach>
       </table>

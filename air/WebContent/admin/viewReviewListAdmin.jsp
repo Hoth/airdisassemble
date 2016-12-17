@@ -14,7 +14,14 @@ response.setHeader("cache-control","no-cache");
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
    <link rel="stylesheet" type="text/css" href="/air/newintrocss/css/demo.css" />
         <link rel="stylesheet" type="text/css" href="/air/newintrocss/css/style4.css" />
-
+<style>
+.nono{font-family:돋움;
+font-size:22pt;}
+.nono1{font-family:돋움;
+font-size:22pt;}
+.nono2{font-family:돋움;
+font-size:22pt;}
+</style>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 </head>
@@ -30,10 +37,10 @@ response.setHeader("cache-control","no-cache");
 	<c:forEach items="${rv}"  var="rv">
 	<tr>		
 			   
-			   	  <td><a href="viewReviewAdmin.do?r_Num=${rv.r_Num}">${rv.r_Num }</a></td>
-					<td>${rv.r_Title}</td>    
+			   	  <td><a href="viewReviewAdmin.do?r_Num=${rv.r_Num}" class="nono">${rv.r_Num }</a></td>
+					<td class="nono1">${rv.r_Title}</td>    
 					<!-- /home/hosting_users/feelk22/photo -->
-			   	   <td>    <a href="deleteReview.do?r_Num=${rv.r_Num}">삭제</a>
+			   	   <td>    <a href="deleteReview.do?r_Num=${rv.r_Num} class="nono2"">삭제</a>
 			 	 </td>
 			 	 </tr>
 			</c:forEach>

@@ -35,7 +35,9 @@ public class AdminService {
 		ModelAndView mav = new ModelAndView();
 		// 삭제
 		ReviewDAO.deleteReview(r_Num);
-		mav.setViewName("/admin/viewReviewListAdmin.do");
+		System.out.println("1");
+		mav.setViewName("forward:/viewReviewListAdmin.do");
+		System.out.println("2");
 		return mav;
 	}
 }

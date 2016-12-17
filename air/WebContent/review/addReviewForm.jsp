@@ -7,11 +7,12 @@
 <head>
 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="(http://fonts.googleapis.com/earlyaccess/jejugothic.css" rel="stylesheet" />
 <title>Enroll Review</title>
 
 </head>
 
-<body>
+<body style = "font-family: 'Jeju Gothic', serif;">
 <form name="upload" method="post"  action="/air/addReview.do"  enctype="multipart/form-data" > 
 <table>
 <tr><td>이름 : <input type="text" name="r_Name"></td>

@@ -3,6 +3,7 @@
     <head>
       <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+        <link href="http://fonts.googleapis.com/earlyaccess/hanna.css" rel="stylesheet" />
         <title>Sliding Image Panels with CSS3</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
         <meta name="description" content="Sliding Image Panels with CSS3" />
@@ -12,7 +13,7 @@
         <link rel="stylesheet" type="text/css" href="/air/newintrocss/css/demo.css" />
         <link rel="stylesheet" type="text/css" href="/air/newintrocss/css/style4.css" />
     </head>
-    <body>
+    <body style = "font-family: 'Hanna', serif;">
         <div class="container">
          <!-- Codrops top bar -->
             

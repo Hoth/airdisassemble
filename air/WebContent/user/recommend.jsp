@@ -69,6 +69,7 @@ window.open("/air/UserInfoForm.jsp", "popup", "width=600, height=1000, scrollbar
 }(document, 'script', 'facebook-jssdk'));</script>
 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="http://fonts.googleapis.com/earlyaccess/hanna.css" rel="stylesheet" />
 <title>Insert title here</title>
 
 
@@ -190,7 +191,7 @@ h2 {
 
 .p {
     color: rgba(0,0,0,.6);
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Hanna', serif;
     font-size: 100%;
     font-weight: normal;
     margin-top: 200px;
@@ -252,7 +253,9 @@ h2 {
   left: 1100;
   top: 300;
 }
-
+.transition{
+ font-family: 'Hanna', serif;
+}
 </style>
 
 </head>

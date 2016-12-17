@@ -8,6 +8,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="http://fonts.googleapis.com/earlyaccess/hanna.css" rel="stylesheet" />
 <title>여행 어디까지 가봤니?</title>
 <meta name="keywords" content="" />
 <meta name="description" content="" />
@@ -39,15 +40,15 @@ $(document).ready(
 );
 </script>
 <style>
-.soon{font-family:돋움;
+.soon{font-family:'Hanna', serif;
 font-size:22pt;
 text-align:center;}
-.soon1{font-family:돋움;
+.soon1{font-family:'Hanna', serif;
 font-size:22pt;
 text-align:center;}
 </style>
 </head>
-<body>
+<body style = "font-family: 'Hanna', serif;">
 <div id="wrapper">
    <div id="menu-wrapper">
       <div id="menu" class="container">

@@ -47,6 +47,7 @@ window.open("/air/addReviewForm.do", "popup", "width=600, height=1000, scrollbar
 </script>
 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="(http://fonts.googleapis.com/earlyaccess/jejugothic.css" rel="stylesheet" />
 <title>Insert title here</title>
 
 <style type="text/css">
@@ -76,9 +77,9 @@ table.type11 td {
 .type11{
 width:700px;
 }
-.rlink{font-family:돋움;
+.rlink{font-family:'Jeju Gothic',serif;
 font-size:17pt;}
-.rlink2{font-family:돋움;
+.rlink2{font-family:'Jeju Gothic',serif;
 font-size:17pt;}
 </style>
 
@@ -87,7 +88,7 @@ font-size:17pt;}
 
 
 </head>
-<body>
+<body style = "font-family: 'Jeju Gothic', serif;">
 <p>리뷰리스트.</p>
    <div data-role="content">   </div>
       

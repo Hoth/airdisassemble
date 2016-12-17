@@ -5,6 +5,7 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
+<link href="http://fonts.googleapis.com/earlyaccess/hanna.css" rel="stylesheet" />
 <title>Material Design Hover &amp; Click Effects Demo Page</title>
 <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
    <link rel="stylesheet" type="text/css" href="/air/newintrocss/css/demo.css" />
@@ -103,23 +104,19 @@ transform: scale(2.5);
 .amber { background: #bbddbb; }
 
 .orange { background: #ccd4ee; }
-.news{font-family:돋움;
+.news{font-family: 'Hanna', serif;
 font-size:22pt;}
-.safety1{font-family:돋움;
+.safety1{font-family: 'Hanna', serif;
 font-size:22pt;}
-.cosearch{font-family:돋움;
+.cosearch{font-family: 'Hanna', serif;
 font-size:22pt;}
-.hinfo{font-family:돋움;
+.hinfo{font-family: 'Hanna', serif;
 font-size:22pt;}
-.oneeye{font-family:돋움;
+.oneeye{font-family: 'Hanna', serif;
 font-size:22pt;}
 </style>
 </head>
-
-
-
-<body>
-
+<body style = "font-family: 'Hanna', serif;">
 <h1 align="center" style="margin-top:150px;" class="oneeye">세계 각지의 모든 정보를 한눈에!!!!!</h1>
 <div class="wrapper" id="sujin">
 	<span class="ripplelink cyan" href="/air/viewExchangeRate.do"><h2 class="hinfo">환율 정보 보기</h2>></span> 

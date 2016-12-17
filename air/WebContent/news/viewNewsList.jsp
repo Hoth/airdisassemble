@@ -6,7 +6,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-
+<link href="(http://fonts.googleapis.com/earlyaccess/jejugothic.css" rel="stylesheet" />
 <title> NEW LIST </title>
 <style type="text/css">
 table.type11 {
@@ -47,7 +47,7 @@ table.type11 td {
 
 </script>
 
-<body>
+<body style = "font-family: 'Jeju Gothic', serif;">
  <h1>국가 검색</h1>
 <%-- 	<form action="/student1/getNewsList.do" method="post">
 		검색어<input type="text"  name="keyword"/>

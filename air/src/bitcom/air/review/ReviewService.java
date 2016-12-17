@@ -69,7 +69,7 @@ public class ReviewService {
 	         mav.setViewName("/forward:/addReviewForm.do");
 	      }
 	      
-	      String uploadPath = "C:/Users/bit-user/git/airdisassemble/air/WebContent/photo";
+	      String uploadPath = "C:/Users/bit47/git/airdisassemble/air/WebContent/photo";
 	      File destFile=new File(uploadPath+"/"+file.getOriginalFilename());
 	      file.transferTo(destFile);
 	      review.r_Image = file.getOriginalFilename();

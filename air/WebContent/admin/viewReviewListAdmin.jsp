@@ -25,26 +25,55 @@ font-size:22pt;}
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 </head>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(
+   function(){
+      
+      $(".rlink").click(function(){
+         
+         //alert("클릭했음요");
+         var target=$(this).attr("href");
+         $("#frame").load(target);
+         event.preventDefault();
+      });
+     
+   }      
+);
+</script>
+
+
 <body>
-	리뷰리스트.<p>
-	<div data-role="content">
-			<table class=type01 align="center" border="1">
-			<tr><th scope="cols">글번호</th>
-			<th scope="cols">제목</th>
-			<th scope="cols">삭제</th></tr>
-	
-	
-	<c:forEach items="${rv}"  var="rv">
-	<tr>		
-			   
-			   	  <td><a href="viewReviewAdmin.do?r_Num=${rv.r_Num}" class="nono">${rv.r_Num }</a></td>
-					<td class="nono1">${rv.r_Title}</td>    
-					<!-- /home/hosting_users/feelk22/photo -->
-			   	   <td>    <a href="deleteReview.do?r_Num=${rv.r_Num} class="nono2"">삭제</a>
-			 	 </td>
-			 	 </tr>
-			</c:forEach>
-			</ul>
+   리뷰리스트.<p>
+   <div data-role="content">
+         <table class=type01 align="center" border="1">
+         <tr><th scope="cols">글번호</th>
+         <th scope="cols">제목</th>
+         <th scope="cols">삭제</th></tr>
+   
+   
+   <c:forEach items="${rv}"  var="rv">
+   <tr>      
+            
+
+                 <td>${rv.r_Num}</td>
+               <td><span class="rlink" href="viewReviewAdmin.do?r_Num=${rv.r_Num}">${rv.r_Title}</span></td>    
+
+               
+                
+
+               <!-- /home/hosting_users/feelk22/photo -->
+
+                  <td>    <span class="rlink" href="deleteReview.do?r_Num=${rv.r_Num}">삭제</span>
+
+                
+
+              </td>
+              </tr>
+         </c:forEach>
+         </ul>
     </div>
 </body>
 </html>

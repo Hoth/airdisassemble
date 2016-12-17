@@ -72,7 +72,7 @@ $(document).ready(
     request.setAttribute("top",topN);
     %>
      <div style="border:1px solidgold; float:right;width:20%;  padding:0px; margin:0px;" class='right-box' id="rank" class="slider-pro"  class='right-box' data-role="content">
-    
+
       <table class="type01">
       <tr><td><p style="vertical-align:text-top; font-size:15px">실시간 인기 여행지</p></td><td style="padding-top:0; vertical-align:text-top;"><input type="button" id="myButton" class="myButton" value="숨기기" onclick="button1_click()"/></td></tr>
          <tr>

@@ -1,141 +1,72 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
-<head>
-
-
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width">
-
-<title>Slider Pro</title>
-<link rel="stylesheet" type="text/css" href="/air/dist/css/slider-pro.min.css" media="screen"/>
-<link rel="stylesheet" type="text/css" href="/air/dist/css/examples.css" media="screen"/>
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
-<link href="/air/css/default.css" rel="stylesheet" type="text/css" media="all" />
-<link href="/air/css/fonts.css" rel="stylesheet" type="text/css" media="all" />
-<script type="text/javascript" src="/air/libs/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="/air/dist/js/jquery.sliderPro.min.js"></script>
-
-<script type="text/javascript">
-</script>
-<style type = "text/css">
-.left-box {
-  float: left;
-  width: 20%;
-  padding:1px;
-}
-.right-box {
-  float: left;
-    width: 80%;
-    padding-left:200px;
-}
-</style>
-</head>
-
-
-
-<body>
-<p>
-  
-  
- 
-
-
-<div style="border:1px solidgold; float:left;width:50%;" class='left-box' id="example3" class="slider-pro" >
-		<div class="sp-slides">
-			<div class="sp-slide">
-				<img class="sp-image" src="/air/dist/css/images/blank.gif" 
-					data-src="/air/photo/k1.jpg"
-					data-small="/air/photo/k1.jpg"
-					data-medium="/air/photo/k1.jpg"
-					data-large="/air/photo/k1.jpg"
-					data-retina="/air/photo/k1.jpg"/>
-
-				
-			</div>
-
-	        <div class="sp-slide">
-	        	<img class="sp-image" src="/air/css/images/blank.gif" 
-	        		data-src="/air/photo/k2.jpg"
-					data-small="/air/photo/k2.jpg"
-					data-medium="/air/photo/k2.jpg"
-					data-large="/air/photo/k2.jpg"
-					data-retina="/air/photo/k2.jpg"/>
-
-				
-
-				
-				
-			</div>
-
-			<div class="sp-slide">
-				<img class="sp-image" src="/air/css/images/blank.gif" 
-					data-src="/air/photo/k3.jpg"
-					data-small="/air/photo/k3.jpg"
-					data-medium="/air/photo/k3.jpg"
-					data-large="/air/photo/k3.jpg"
-					data-retina="/air/photo/k3.jpg"/>
-
-				
-
-				
-			</div>
-
-			<div class="sp-slide">
-				<img class="sp-image" src="/air/css/images/blank.gif" 
-					data-src="/air/photo/k4.jpg"
-					data-small="/air/photo/k4.jpg"
-					data-medium="/air/photo/k4.jpg"
-					data-large="/air/photo/k4.jpg"
-					data-retina="/air/photo/k4.jpg"/>
-
-				
-			</div>
-
-			<div class="sp-slide">
-				<img class="sp-image" src="/air/css/images/blank.gif" 
-					data-src="/air/photo/k5.jpg"
-					data-small="/air/photo/k5.jpg"
-					data-medium="/air/photo/k5.jpg"
-					data-large="/air/photo/k5.jpg"
-					data-retina="/air/photo/k5.jpg"/>
-
-				
-			</div>
-
-			
-		</div>
-
-		<div class="sp-thumbnails">
-			<img class="sp-thumbnail" src="/air/photo/k1.jpg"/>
-			<img class="sp-thumbnail" src="/air/photo/k2.jpg"/>
-			<img class="sp-thumbnail" src="/air/photo/k3.jpg"/>
-			<img class="sp-thumbnail" src="/air/photo/k4.jpg"/>
-			<img class="sp-thumbnail" src="/air/photo/k5.jpg"/>
-		</div>
-    </div>
-    
-    <script>
-    
-	$( '#example3' ).sliderPro({
-		width: 960,
-		height: 500,
-		fade: true,
-		arrows: true,
-		buttons: false,
-		fullScreen: true,
-		shuffle: true,
-		smallSize: 500,
-		mediumSize: 1000,
-		largeSize: 3000,
-		thumbnailArrows: true,
-		autoplay: false
-	});
-    
-    </script>
-
-
-</body>
+    <head>
+      <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+        <title>Sliding Image Panels with CSS3</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="description" content="Sliding Image Panels with CSS3" />
+        <meta name="keywords" content="sliding, background-image, css3, panel, images, slider" />
+        <meta name="author" content="Codrops" />
+        <link rel="shortcut icon" href="../favicon.ico"> 
+        <link rel="stylesheet" type="text/css" href="/air/newintrocss/css/demo.css" />
+        <link rel="stylesheet" type="text/css" href="/air/newintrocss/css/style4.css" />
+    </head>
+    <body>
+        <div class="container">
+         <!-- Codrops top bar -->
+            
+         <header>
+            
+         </header>
+         <section class="cr-container">
+            
+            <input id="select-img-1" name="radio-set-1" type="radio" class="cr-selector-img-1" checked/>
+            <label for="select-img-1" class="cr-label-img-1">1</label>
+            
+            <input id="select-img-2" name="radio-set-1" type="radio" class="cr-selector-img-2" />
+            <label for="select-img-2" class="cr-label-img-2">2</label>
+            
+            <input id="select-img-3" name="radio-set-1" type="radio" class="cr-selector-img-3" />
+            <label for="select-img-3" class="cr-label-img-3">3</label>
+            
+            <input id="select-img-4" name="radio-set-1" type="radio" class="cr-selector-img-4" />
+            <label for="select-img-4" class="cr-label-img-4">4</label>
+            
+            <div class="clr"></div>   
+            <div class="cr-bgimg">
+               <div>
+                  <span>Slice 1 - Image 1</span>
+                  <span>Slice 1 - Image 2</span>
+                  <span>Slice 1 - Image 3</span>
+                  <span>Slice 1 - Image 4</span>
+               </div>
+               <div>
+                  <span>Slice 2 - Image 1</span>
+                  <span>Slice 2 - Image 2</span>
+                  <span>Slice 2 - Image 3</span>
+                  <span>Slice 2 - Image 4</span>
+               </div>
+               <div>
+                  <span>Slice 3 - Image 1</span>
+                  <span>Slice 3 - Image 2</span>
+                  <span>Slice 3 - Image 3</span>
+                  <span>Slice 3 - Image 4</span>
+               </div>
+               <div>
+                  <span>Slice 4 - Image 1</span>
+                  <span>Slice 4 - Image 2</span>
+                  <span>Slice 4 - Image 3</span>
+                  <span>Slice 4 - Image 4</span>
+               </div>
+            </div>
+            <div class="cr-titles">
+               <h3><span>Serendipity</span><span>What you've been dreaming of</span></h3>
+               <h3><span>Adventure</span><span>Where the fun begins</span></h3>
+               <h3><span>Nature</span><span>Unforgettable eperiences</span></h3>
+               <h3><span>Serenity</span><span>When silence touches nature</span></h3>
+            </div>
+         </section>
+        </div>
+    </body>
 </html>

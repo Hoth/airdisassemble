@@ -167,7 +167,7 @@ function popup_win1() { //크기 width400 height300 팝업창
 <h2>블로그 여행후기 검색</h2>
 <h1>국가검색</h1>
 	<form action="/air/getBlogList.do" method="post">
-		검색어<input type="text"  name="keyword" id="keyword"/>
+		검색어<input type="text"  class="form1" name="keyword" id="keyword"/>
 		<input type="submit" id="search1" class="myButton" value="검색"/>
 		  	</form>
 	

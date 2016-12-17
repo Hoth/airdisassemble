@@ -29,7 +29,7 @@ $("#myButton").click(function(){
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 <table class="type01">
 			
-			<tr><td><h4>실시간 인기 여행지</h4> </td><td><input type="button" id="myButton" class="myButton" value="표 숨기기" onclick="button1_click()"/></td></tr>
+			<tr><td><p style="vertical-align:text-top; font-size:15px">실시간 인기 여행지</p></td><td style="padding-top:0; vertical-align:text-top;"><input type="button" id="myButton" class="myButton" value="숨기기" onclick="button1_click()"/></td></tr>
 			<tr>
 					<th>순위</th><th>도시</th>
 			</tr>

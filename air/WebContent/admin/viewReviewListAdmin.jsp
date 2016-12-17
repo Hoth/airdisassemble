@@ -57,19 +57,19 @@ $(document).ready(
 	<c:forEach items="${rv}"  var="rv">
 	<tr>		
 			   
-<<<<<<< HEAD
+
 			   	  <td>${rv.r_Num}</td>
 					<td><span class="rlink" href="viewReviewAdmin.do?r_Num=${rv.r_Num}">${rv.r_Title}</span></td>    
-=======
-			   	  <td><a href="viewReviewAdmin.do?r_Num=${rv.r_Num}" class="nono">${rv.r_Num }</a></td>
-					<td class="nono1">${rv.r_Title}</td>    
->>>>>>> branch '1218' of https://github.com/Hoth/airdisassemble.git
+
+			   	
+				    
+
 					<!-- /home/hosting_users/feelk22/photo -->
-<<<<<<< HEAD
+
 			   	   <td>    <span class="rlink" href="deleteReview.do?r_Num=${rv.r_Num}">삭제</span>
-=======
-			   	   <td>    <a href="deleteReview.do?r_Num=${rv.r_Num} class="nono2"">삭제</a>
->>>>>>> branch '1218' of https://github.com/Hoth/airdisassemble.git
+
+			   	 
+
 			 	 </td>
 			 	 </tr>
 			</c:forEach>

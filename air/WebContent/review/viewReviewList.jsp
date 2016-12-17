@@ -76,6 +76,10 @@ table.type11 td {
 .type11{
 width:700px;
 }
+.rlink{font-family:돋움;
+font-size:17pt;}
+.rlink2{font-family:돋움;
+font-size:17pt;}
 </style>
 
    <link rel="stylesheet" type="text/css" href="/air/newintrocss/css/demo.css" />
@@ -106,7 +110,7 @@ width:700px;
          <tr>
             <td width="350"><img src="/air/photo/${item.r_Image}" width="300"></td>
             <td><span class="rlink" href="viewReview.do?r_Num=${item.r_Num}">${item.r_Title}</span></td>
-            <td>${item.r_Name}</td>
+            <td class="rlink2">${item.r_Name}</td>
          </tr>
       </c:forEach>
    

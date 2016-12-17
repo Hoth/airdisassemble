@@ -14,7 +14,14 @@ response.setHeader("cache-control","no-cache");
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
    <link rel="stylesheet" type="text/css" href="/air/newintrocss/css/demo.css" />
         <link rel="stylesheet" type="text/css" href="/air/newintrocss/css/style4.css" />
-
+<style>
+.nono{font-family:돋움;
+font-size:22pt;}
+.nono1{font-family:돋움;
+font-size:22pt;}
+.nono2{font-family:돋움;
+font-size:22pt;}
+</style>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 </head>
@@ -50,10 +57,19 @@ $(document).ready(
 	<c:forEach items="${rv}"  var="rv">
 	<tr>		
 			   
+<<<<<<< HEAD
 			   	  <td>${rv.r_Num}</td>
 					<td><span class="rlink" href="viewReviewAdmin.do?r_Num=${rv.r_Num}">${rv.r_Title}</span></td>    
+=======
+			   	  <td><a href="viewReviewAdmin.do?r_Num=${rv.r_Num}" class="nono">${rv.r_Num }</a></td>
+					<td class="nono1">${rv.r_Title}</td>    
+>>>>>>> branch '1218' of https://github.com/Hoth/airdisassemble.git
 					<!-- /home/hosting_users/feelk22/photo -->
+<<<<<<< HEAD
 			   	   <td>    <span class="rlink" href="deleteReview.do?r_Num=${rv.r_Num}">삭제</span>
+=======
+			   	   <td>    <a href="deleteReview.do?r_Num=${rv.r_Num} class="nono2"">삭제</a>
+>>>>>>> branch '1218' of https://github.com/Hoth/airdisassemble.git
 			 	 </td>
 			 	 </tr>
 			</c:forEach>

@@ -118,7 +118,7 @@ function popup_win1() { //크기 width400 height300 팝업창
 	<c:choose>
 
 		<c:when test="${ITEM!=null}">
-			<table class=type11 align="center" border="1">
+			<table class=type01 align="center" border="1">
 				<tr>
 					<th>번호</th>
 					<th>기본정보</th>
@@ -173,7 +173,7 @@ function popup_win1() { //크기 width400 height300 팝업창
 	
 	<c:choose>
 		<c:when test="${ITEM5!=null}">
-			<table align="center" border="1">
+			<table align="center" border="1" class=type01>
 				<tr>
 					<td>번호</td>
 					<td>제목</td>

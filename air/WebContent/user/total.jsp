@@ -103,6 +103,16 @@ transform: scale(2.5);
 .amber { background: #bbddbb; }
 
 .orange { background: #ccd4ee; }
+.news{font-family:돋움;
+font-size:22pt;}
+.safety1{font-family:돋움;
+font-size:22pt;}
+.cosearch{font-family:돋움;
+font-size:22pt;}
+.hinfo{font-family:돋움;
+font-size:22pt;}
+.oneeye{font-family:돋움;
+font-size:22pt;}
 </style>
 </head>
 
@@ -110,12 +120,12 @@ transform: scale(2.5);
 
 <body>
 
-<h1 align="center" style="margin-top:150px;">세계 각지의 모든 정보를 한눈에!!!!!</h1>
+<h1 align="center" style="margin-top:150px;" class="oneeye">세계 각지의 모든 정보를 한눈에!!!!!</h1>
 <div class="wrapper" id="sujin">
-	<span class="ripplelink cyan" href="/air/viewExchangeRate.do"><h2>환율 정보 보기</h2>></span> 
-	<span class="ripplelink lightgreen" href="/air/getCountryBasicListForm.do"><h2>나라 정보 검색</h2>></span> 
-	<span class="ripplelink amber" href="/air/getCountrySafetyListForm.do"><h2>국가 안전 정보 검색</h2>></span> 
-	<span class="ripplelink orange" href="/air/getNewsList.do"><h2>국제 뉴스</h2>></span>
+	<span class="ripplelink cyan" href="/air/viewExchangeRate.do"><h2 class="hinfo">환율 정보 보기</h2>></span> 
+	<span class="ripplelink lightgreen" href="/air/getCountryBasicListForm.do"><h2 class="cosearch">나라 정보 검색</h2>></span> 
+	<span class="ripplelink amber" href="/air/getCountrySafetyListForm.do"><h2 class="safety1">국가 안전 정보 검색</h2>></span> 
+	<span class="ripplelink orange" href="/air/getNewsList.do"><h2 class="news">국제 뉴스</h2>></span>
  </div>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
 <script>

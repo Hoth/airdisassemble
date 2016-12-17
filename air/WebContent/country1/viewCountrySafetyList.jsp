@@ -126,6 +126,7 @@ window.open("/air/UserInfoForm.jsp", "popup", "width=300, height=300");
 		검색어<input type="text"  name="keywordd" id="keywordd" class="form1"/>
 	<input type="button" id="search2" value="검색" class="myButton"/>
 	</form>
+	<br/><br/><br/><br/><br/><br/>
 	
 	<%--
 	<c:choose>
@@ -167,9 +168,9 @@ window.open("/air/UserInfoForm.jsp", "popup", "width=300, height=300");
 			검색 결과가 없습니다.
 		</c:otherwise>
 	</c:choose> --%>
-	
+		<input type="button" class="myButton" value="뒤로가세영" onclick="button9_click()"/>
 	</div>
-	<input type="button" class="myButton" value="뒤로가세영" onclick="button9_click()"/>
+	
 	
 </body>
 </html>

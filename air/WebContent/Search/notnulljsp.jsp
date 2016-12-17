@@ -20,16 +20,16 @@ $("#myButton").click(function(){
 </script>
 
 <body>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="button" id="myButton" class="myButton" value="표 숨기기" onclick="button1_click()"/>
+
 
 <%
     ArrayList<String> topN=bestlist_crawler.top();
     request.setAttribute("top",topN);
     %>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <h2>실시간 인기 여행지</h1>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 <table class="type01">
 			
-			
+			<tr><td><h4>실시간 인기 여행지</h4> </td><td><input type="button" id="myButton" class="myButton" value="표 숨기기" onclick="button1_click()"/></td></tr>
 			<tr>
 					<th>순위</th><th>도시</th>
 			</tr>

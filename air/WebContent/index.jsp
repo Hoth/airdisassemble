@@ -72,9 +72,9 @@ $(document).ready(
     request.setAttribute("top",topN);
     %>
      <div style="border:1px solidgold; float:right;width:20%;  padding:0px; margin:0px;" class='right-box' id="rank" class="slider-pro"  class='right-box' data-role="content">
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="button" id="myButton" class="myButton" value="표 숨기기" onclick="button1_click()"/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 		<table class="type01">
-			<h2>실시간 인기 여행지</h1>
+			<tr><td><h4>실시간 인기 여행지</h4> </td><td><input type="button" id="myButton" class="myButton" value="표 숨기기" onclick="button1_click()"/></td></tr>
 			<tr>
 					<th>순위</th><th>도시</th>
 			</tr>

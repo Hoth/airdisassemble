@@ -207,7 +207,9 @@ function popup_win1() { //크기 width400 height300 팝업창
 
 	<div><a href="#" onClick="window.open('http://www.hanatour.com');return false"><img src="/air/photo/hana.jpg" ></a></div>
 <div class="fb-like" style="top:575px;   position : absolute; margin:0px; padding:0px;" data-href="https://www.facebook.com/HanaTour.fb/?fref=ts" data-width="269px" data-layout="standard" data-action="like"  data-size="small" data-show-faces="true" data-share="true"></div>
- 
+ <br/>
+ <br/>
+ <br/>
 <input type="button" class="myButton" value="뒤로가세영" onclick="button6_click()"/>
 </div>
 

@@ -113,6 +113,16 @@ body {   font-family: Helvetica, san-serif;
     border-radius: 0;
     margin-top: -130px;
 }
+.card:hover .card_circle1 {
+    background-size: cover;
+    border-radius: 0;
+    margin-top: -130px;
+}
+.card:hover .card_circle2 {
+    background-size: cover;
+    border-radius: 0;
+    margin-top: -130px;
+}
 .card:hover h2 {
     background: #3487f7;
     color: #fff;
@@ -124,18 +134,20 @@ body {   font-family: Helvetica, san-serif;
 .card_circle {
     background: url('/air/photo/998.JPG') no-repeat center bottom;
     background-color: #3487f7;
-    background-size: cover;
+    background-size: 70%;
     border-radius: 50%;
     height: 400px;
     margin-left: -75px;
-    margin-top: -270px;
+    margin-top: -200px;
     position: absolute;
     width: 450px;
 }
 .card_circle1 {
     background: url('/air/photo/999.JPG') no-repeat center bottom;
     background-color: #3487f7;
-    background-size: cover;
+    background-size: 70%;
+    
+    
     border-radius: 50%;
     height: 400px;
     margin-left: -75px;
@@ -144,13 +156,13 @@ body {   font-family: Helvetica, san-serif;
     width: 450px;
 }
 .card_circle2 {
-    background: url('/air/photo/997.JPG') no-repeat center bottom;
+    background: url('/air/photo/9972.JPG') no-repeat center bottom;
     background-color: #3487f7;
-    background-size: cover;
+    background-size: 70%;
     border-radius: 50%;
     height: 400px;
     margin-left: -75px;
-    margin-top: -270px;
+    margin-top: -200px;
     position: absolute;
     width: 450px;
 }

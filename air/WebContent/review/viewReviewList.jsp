@@ -112,7 +112,7 @@ width:700px;
    
     
     
-   <span class="rlink" href= "/air/addReviewForm.do"><button class="myButton">리뷰 등록하기</button></span>
-   <input type="button" class="myButton" value="진짜리뷰등록" onclick="popup_win2()">	
+   <span class="rlink" href= "/air/addReviewForm.do"></span>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="button" class="myButton" value="진짜리뷰등록" onclick="popup_win2()">	
 </body>
 </html>

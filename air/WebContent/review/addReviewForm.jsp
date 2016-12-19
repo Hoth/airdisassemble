@@ -25,6 +25,25 @@
   -webkit-transition: all 0.25s cubic-bezier(0.53, 0.01, 0.35, 1.5);
   transition: all 0.25s cubic-bezier(0.53, 0.01, 0.35, 1.5);
 }
+html {
+  background-color: #ff4a56;
+}
+form {
+  position: relative;
+  display: inline-block;
+  max-width: 700px;
+  min-width: 500px;
+  box-sizing: border-box;
+  padding: 30px 25px;
+  background-color: white;
+  border-radius: 40px;
+  margin: 40px 0;
+  left: 50%;
+  -moz-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  -webkit-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+}
 form  input[type="text"] {
   appearance: none;
   background-color: none;

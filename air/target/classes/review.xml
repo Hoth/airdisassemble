@@ -5,16 +5,18 @@
 	
 	<mapper namespace="review">
 	<resultMap type="review" id="ReviewResultMap">
-	<result column="r_Num" property="r_Num"/>
+		<result column="r_Num" property="r_Num"/>
 		<result column="r_Name" property="r_Name"/>
-		<result column="c_Location" property="c_Location"/>
+		<result column="r_Age" property="r_Age"/>
+		<result column="r_Location" property="r_Location"/>
 		<result column="r_Title" property="r_Title"/>
 		<result column="r_Wdate" property="r_Wdate"/>
 		<result column="r_Star" property="r_Star"/>
 		<result column="r_Gender" property="r_Gender"/>
 		<result column="r_Image" property="r_Image"/>
 		<result column="r_Context" property="r_Context"/>
-		<result column="r_Tdate" property="r_Tdate"/>
+		<result column="r_Continent" property="r_Continent"/>
+		<result column="r_Season" property="r_Season"/>
 	</resultMap>
 	
 	<select id="selectReviewList" resultMap="ReviewResultMap">
@@ -40,8 +42,8 @@
 	
 	<insert id="insertReview" parameterType="Review">
 	<![CDATA[
-		insert into A_review (r_Name,r_Title,r_Gender,c_Location,r_Image,r_Context,r_Star,r_Tdate,r_Wdate)
-		values (#{r_Name},#{r_Title},#{r_Gender},#{c_Location},#{r_Image},#{r_Context},#{r_Star},#{r_Tdate},#{r_Wdate})  
+		insert into A_review (r_Name,r_Title,r_Gender,r_Age,r_Continent,r_Location,r_Image,r_Context,r_Star,r_Season,r_Wdate)
+		values (#{r_Name},#{r_Title},#{r_Gender},#{r_Age},#{r_Continent},#{r_Location},#{r_Image},#{r_Context},#{r_Star},#{r_Season},#{r_Wdate})  
 	]]>
 	</insert>
 	

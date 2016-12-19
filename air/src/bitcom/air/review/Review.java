@@ -4,14 +4,16 @@ public class Review {
 	
 	int r_Num;
 	String r_Name;
-	String c_Location;
+	String r_Age;
+	String r_Location;
+	String r_Continent;
 	String r_Title;
 	String r_Wdate;
 	String r_Star;
 	String r_Gender;
 	String r_Image;
 	String r_Context;
-	String r_Tdate;
+	String r_Season;
 	public int getR_Num() {
 		return r_Num;
 	}
@@ -24,11 +26,23 @@ public class Review {
 	public void setR_Name(String r_Name) {
 		this.r_Name = r_Name;
 	}
-	public String getC_Location() {
-		return c_Location;
+	public String getR_Location() {
+		return r_Location;
 	}
-	public void setC_Location(String c_Location) {
-		this.c_Location = c_Location;
+	public void setR_Location(String r_Location) {
+		this.r_Location = r_Location;
+	}
+	public String getR_Continent() {
+		return r_Continent;
+	}
+	public void setR_Continent(String r_Continent) {
+		this.r_Continent = r_Continent;
+	}
+	public String getR_Season() {
+		return r_Season;
+	}
+	public void setR_Season(String r_Season) {
+		this.r_Season = r_Season;
 	}
 	public String getR_Title() {
 		return r_Title;
@@ -66,18 +80,20 @@ public class Review {
 	public void setR_Context(String r_Context) {
 		this.r_Context = r_Context;
 	}
-	public String getR_Tdate() {
-		return r_Tdate;
+	public String getR_Age() {
+		return r_Age;
 	}
-	public void setR_Tdate(String r_Tdate) {
-		this.r_Tdate = r_Tdate;
+	public void setR_Age(String r_Age) {
+		this.r_Age = r_Age;
 	}
 	@Override
 	public String toString() {
-		return "Review [r_Num=" + r_Num + ", r_Name=" + r_Name + ", c_Location=" + c_Location + ", r_Title=" + r_Title
-				+ ", r_Wdate=" + r_Wdate + ", r_Star=" + r_Star + ", r_Gender=" + r_Gender + ", r_Image=" + r_Image
-				+ ", r_Context=" + r_Context + ", r_Tdate=" + r_Tdate + "]";
+		return "Review [r_Num=" + r_Num + ", r_Name=" + r_Name + ", r_Age="
+				+ r_Age + ", c_Location=" + r_Location + ", c_Continent="
+				+ r_Continent + ", r_Title=" + r_Title + ", r_Wdate=" + r_Wdate
+				+ ", r_Star=" + r_Star + ", r_Gender=" + r_Gender
+				+ ", r_Image=" + r_Image + ", r_Context=" + r_Context
+				+ ", r_Season=" + r_Season + "]";
 	}
-	
-	
+		
 }

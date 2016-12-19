@@ -47,7 +47,6 @@ window.open("/air/addReviewForm.do", "popup", "width=600, height=1000, scrollbar
 </script>
 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link href="(http://fonts.googleapis.com/earlyaccess/jejugothic.css" rel="stylesheet" />
 <title>Insert title here</title>
 
 <style type="text/css">
@@ -77,30 +76,35 @@ table.type11 td {
 .type11{
 width:700px;
 }
-.rlink{font-family:'Jeju Gothic',serif;
-font-size:17pt;}
-.rlink2{font-family:'Jeju Gothic',serif;
-font-size:17pt;}
 </style>
 
-   <link rel="stylesheet" type="text/css" href="/air/newintrocss/css/demo.css" />
-        <link rel="stylesheet" type="text/css" href="/air/newintrocss/css/style4.css" />
+
 
 
 </head>
-<body style = "font-family: 'Jeju Gothic', serif;">
-<p>리뷰리스트.</p>
+<body>
    <div data-role="content">   </div>
-      
-      
-      <table class=type11 align="center" border="1">
-            <form action="/air/viewReviewList.do" method="post"  id="viewReview">
-      <select name="order" id="order">
-      <option value="1">등록일 순</option>
-      <option value="2">별점 높은 순</option>
-      <option value="3">별점 낮은 순</option>
+      <table align="center" border="0">
+      <tr><td width="350"></td><td>
+      <select name="order" id="order" class="order" >
+      <option id="1" value="1">등록일 순</option>
+      <option id="2" value="2">별점 높은 순</option>
+      <option id="3" value="3">별점 낮은 순</option>
       </select>
-     </form> 
+      <input type="button" class="myButton" value="조회" onclick="go(event)">
+     </td><td>
+      <input type="button" class="myButton" value="리뷰등록" onclick="popup_win2()"></td></tr>
+      </table>
+      <script>
+      function go(event){
+    	  var orderval=$(".order").val();
+    	  var target="/air/viewReviewList.do?order="+orderval;
+    	  //alert("target:"+target);
+    	  $("#frame").load(target);
+      }
+      </script>
+      <table class=type11 align="center" border="1">
+       
       <tr>
       <th scope="cols">대표사진</th>
       <th scope="cols">제목</th>
@@ -111,7 +115,7 @@ font-size:17pt;}
          <tr>
             <td width="350"><img src="/air/photo/${item.r_Image}" width="300"></td>
             <td><span class="rlink" href="viewReview.do?r_Num=${item.r_Num}">${item.r_Title}</span></td>
-            <td class="rlink2">${item.r_Name}</td>
+            <td>${item.r_Name}</td>
          </tr>
       </c:forEach>
    
@@ -119,6 +123,7 @@ font-size:17pt;}
     
     
    <span class="rlink" href= "/air/addReviewForm.do"></span>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="button" class="myButton" value="진짜리뷰등록" onclick="popup_win2()">	
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+  <!-- <input type="button" class="myButton" value="진짜리뷰등록" onclick="popup_win2()">	 -->
 </body>
 </html>

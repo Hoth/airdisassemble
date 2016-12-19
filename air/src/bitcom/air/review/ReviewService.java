@@ -1,6 +1,8 @@
 package bitcom.air.review;
 
 import java.io.File;
+import java.io.FileWriter;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 
 import org.springframework.stereotype.Controller;
@@ -18,13 +20,12 @@ public class ReviewService {
 		ArrayList<Review> reviewList=null;
 		if(order==1){
 			reviewList= ReviewDAO.selectReviewList();
-		}else if(order==2){
+		}else if(order==3){
 			reviewList= ReviewDAO.selectReviewList_Star();
 		}else
 			reviewList= ReviewDAO.selectReviewList_Star_Desc();
 		
 		mav.addObject("rv",reviewList);
-	
 		mav.setViewName("/review/viewReviewList.jsp");
 		return mav;
 	}
@@ -34,7 +35,6 @@ public class ReviewService {
 		ModelAndView mav = new ModelAndView();
 		ArrayList<Review> reviewList = ReviewDAO.selectReviewList_Star();
 		mav.addObject("rv",reviewList);
-	
 		mav.setViewName("/review/viewReviewList.jsp");
 		return mav;
 	}
@@ -69,13 +69,35 @@ public class ReviewService {
 	         mav.setViewName("/forward:/addReviewForm.do");
 	      }
 	      
-	      String uploadPath = "C:/Users/bit47/git/airdisassemble/air/WebContent/photo";
+	      String uploadPath = "C:/Users/bit-user/git/airdisassemble/air/WebContent/photo";
 	      File destFile=new File(uploadPath+"/"+file.getOriginalFilename());
 	      file.transferTo(destFile);
 	      review.r_Image = file.getOriginalFilename();
 	      ReviewDAO.insertReview(review);
-	      
-	      
+	      String season=null;
+	      switch(review.r_Season){
+	      case "spring":{
+	    	  season="881";
+	      }
+	      case "summer":{
+	    	  season="882";
+	      }
+	      case "fall":{
+	    	  season="883";
+	      }
+	      case "winter":{
+	    	  season="884";
+	      }
+	      }
+	      String data="\'"+review.r_Gender+"\',"+"\'"+review.r_Age+"\',"+"\'"+season+"\',"+" ? ,"+"? , ? ,\'"+review.r_Continent+"\'\n";
+	      String data2="\'"+review.r_Continent+"\',\'"+review.r_Location+"\'\n";
+	      System.out.println(data);
+	      PrintWriter fw=new PrintWriter(new FileWriter("C:/data/data_continent.arff",true));
+	      fw.print(data);
+	      fw.close();
+	      PrintWriter fw2=new PrintWriter(new FileWriter("C:/data/data_country.arff",true));
+	      fw2.print(data2);
+	      fw2.close();
 	      mav.setViewName("/review/addsuccess.jsp");
 	      return mav;
 	      

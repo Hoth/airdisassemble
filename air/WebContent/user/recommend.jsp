@@ -8,10 +8,8 @@
 <script type="text/javascript">
 $(document).ready(
 		
-		
 	function(){
-		
-		
+	
 		$("#viewHot").click(function(){
 			
 			 var target="/air/viewHot.do";
@@ -39,13 +37,9 @@ $(document).ready(
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script type="text/javascript">
 
-
-
-
 function popup_win1() { //크기 width400 height300 팝업창
 	
-
-window.open("/air/UserInfoForm.jsp", "popup", "width=600, height=1000, scrollbars=yes, toolbar=no, menubar=no, location=no");
+window.open("/air/user/UserInfoForm.jsp", "popup", "width=600, height=1000, scrollbars=yes, toolbar=no, menubar=no, location=no");
 
 }
 
@@ -53,8 +47,7 @@ window.open("/air/UserInfoForm.jsp", "popup", "width=600, height=1000, scrollbar
 <html>
 <head>
 
-   <link rel="stylesheet" type="text/css" href="/air/newintrocss/css/demo.css" />
-        <link rel="stylesheet" type="text/css" href="/air/newintrocss/css/style4.css" />
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script type="text/javascript">
 
@@ -69,33 +62,23 @@ window.open("/air/UserInfoForm.jsp", "popup", "width=600, height=1000, scrollbar
 }(document, 'script', 'facebook-jssdk'));</script>
 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link href="http://fonts.googleapis.com/earlyaccess/hanna.css" rel="stylesheet" />
 <title>Insert title here</title>
 
 
 <style type="text/css">
-<%--body {
-	margin: 0px;
-	padding: 0px;
-	background: #ffdde5;	
-	font-family: 'Raleway', sans-serif;
-	font-size: 11pt;
-	font-weight: 400;
-	color: black;
-}--%>
 
 @import url('/air/photo');
-<%--body {   font-family: Helvetica, san-serif;
-
+body {   font-family: Helvetica, san-serif;
+<%--
  background: -webkit-linear-gradient(90deg, #00aaee 10%, #DD2476 90%); /* Chrome 10+, Saf5.1+ */
   background:    -moz-linear-gradient(90deg, #00aaee 10%, #DD2476 90%); /* FF3.6+ */
   background:     -ms-linear-gradient(90deg, #00aaee 10%, #DD2476 90%); /* IE10 */
   background:      -o-linear-gradient(90deg, #00aaee 10%, #DD2476 90%); /* Opera 11.10+ */
   background:         linear-gradient(90deg, #00aaee 10%, #DD2476 90%); /* W3C */ }
 .transition { transition: .3s cubic-bezier(.3, 0, 0, 1.3) }
-
+--%>
  background:#ffdde5;
- }--%>
+ }
  
 .card {
     background-color: #fff;
@@ -188,10 +171,9 @@ h2 {
     width: 100%;
     z-index: 9999;
 }
-
-.p {
+p {
     color: rgba(0,0,0,.6);
-    font-family: 'Hanna', serif;
+    font-family: 'Raleway', sans-serif;
     font-size: 100%;
     font-weight: normal;
     margin-top: 200px;
@@ -253,9 +235,7 @@ h2 {
   left: 1100;
   top: 300;
 }
-.transition{
- font-family: 'Hanna', serif;
-}
+
 </style>
 
 </head>
@@ -267,42 +247,65 @@ h2 {
 
 <c:choose>
 	<c:when test="${dest==null}">
-	<input type="button" class="myButton" value="자신의 정보입력" onclick="popup_win1()">	
+	<!-- <input type="button" class="myButton" value="자신의 정보입력" onclick="popup_win1()">	-->
 	</c:when>
 	
 	<c:otherwise>
-	
-	${age}세 
+	<c:choose>
+	<c:when test="${age=='10'}">
+	<font size="5">10</font>대
+	</c:when>
+	<c:when test="${age=='20'}">
+	<font size="5">20</font>대 초반
+	</c:when>
+	<c:when test="${age=='25'}">
+	<font size="5">20</font>대 중반
+	</c:when>
+	<c:when test="${age=='29'}">
+	<font size="5">20</font>대 후반
+	</c:when>
+	<c:when test="${age=='30'}">
+	<font size="5">30</font>대
+	</c:when>
+	<c:when test="${age=='40'}">
+	<font size="5">40</font>대
+	</c:when>
+	<c:when test="${age=='50'}">
+	<font size="5">50</font>대
+	</c:when>
+	</c:choose>
 	<c:choose>
 	<c:when test="${gender=='man'}">
-	<h2>남성</h2>이 가장 많이 여행하는 곳은
+	<font size="5"><b>남성</b></font>이<br> 가장 많이 여행하는 곳은
 	</c:when>
 	<c:when test="${gender=='woman'}">
-	<h2>여성</h2>이 가장 많이 여행하는 곳은
+	<font size="5"><b>여성</b></font>이<br> 가장 많이 여행하는 곳은
 	</c:when>
 	</c:choose>
 
 	<c:choose>
 	<c:when test="${dest=='991'}">
-	<h2>아시아</h2>입니다.
+	<font size="5"><b> 아시아</b></font>입니다.
 	</c:when>
 	<c:when test="${dest=='992'}">
-	<h2>유럽</h2>입니다.
+	<font size="5"><b> 유럽</b></font>입니다.
 	</c:when>
 	<c:when test="${dest=='993'}">
-	<h2>북아메리카</h2>입니다.
+	<font size="5"><b> 북아메리카</b></font>입니다.
 	</c:when>
 	<c:when test="${dest=='994'}">
-	<h2>남아메리카</h2>입니다.
+	<font size="5"><b> 남아메리카</b></font>입니다.
 	</c:when>
 	<c:when test="${dest=='995'}">
-	<h2>오세아니아</h2>입니다.
+	<font size="5"><b> 오세아니아</b></font>입니다.
 	</c:when>
 	<c:when test="${dest=='996'}">
-	<h2>아프리카</h2>입니다.
+	<font size="5"><b> 아프리카</b></font>입니다.
 	</c:when>
 	</c:choose>
-	가장 인기있는 도시 <h2>${country},${city}</h2> 
+	<br>
+	가장 인기있는 도시는 <br>
+	<font size="5"><b>${country},${city}</b></font>입니다.
 	
 	</c:otherwise>
 	
@@ -331,34 +334,44 @@ h2 {
  <div>
   <div class="card transition left">
     <h2 class="transition">인기 여행지</h2>
-  <p class="p"> 인기여행지가 궁금하지 않으신가여 흐흫흐흐흐흐흐.</p>
+  <p> 인기여행지가 궁금하지 않으신가여 흐흫흐흐흐흐흐.</p>
   <div class="cta-container transition"><span class="cta"  id="viewHot"> HOT HOT HOT!</a></div>
   <div class="card_circle1 transition"></div>
 </div>
 
+
+  <c:choose>
+	<c:when test="${dest==null}">
 <div>
- 
  <div class="card transition center">
  <h2 class="transition">자신의 정보입력</h2>
-  <p class="p">자신의 정보를 입력받아 최적의 여행지를 추천해드립니다.</p>
-  <div class="cta-container transition"><span class="cta"  id="veryveryvery">자신의 정보입력</a></div>
-  <div class="card_circle transition"></div>
-</div>
+  <p>자신의 정보를 입력받아 최적의 여행지를 추천해드립니다.!!</p>
+  <div class="cta-container transition"><span class="cta"  id="veryveryvery">자신의 정보입력</span></div>
+	<div class="card_circle1 transition"></div>
+	</div>
+	</div>
+	</c:when>
+	<c:otherwise>
+	<div>
+ <div class="card transition center">
+ <h2 class="transition">자신의 정보입력</h2>
+  <p>메롱</p>
+  
+	<div class="card_circle1 transition"></div>
+	</div>
+	</div>
+	</c:otherwise>
+	</c:choose>
 
 <div>
  
  <div class="card transition right">
   <h2 class="transition">별점 인기순</h2>
-  <p class="p">여행을 다녀온 고객들의 평가를 기준으로 별점이 높은 지역을 보여드립니당</p>
+  <p>여행을 다녀온 고객들의 평가를 기준으로 별점이 높은 지역을 보여드립니당</p>
   <div class="cta-container transition"><span class="cta"  id="viewStar"> viewStar </span></div>
   <div class="card_circle2 transition"></div>
   
-  
-  
 </div>
-
-
-
-
+</div>
 </body>
 </html>

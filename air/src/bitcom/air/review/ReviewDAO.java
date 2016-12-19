@@ -3,7 +3,6 @@ package bitcom.air.review;
 import java.io.IOException;
 import java.io.Reader;
 import java.util.ArrayList;
-
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -16,7 +15,6 @@ public class ReviewDAO {
 		try {
 			sqlReader=Resources.getResourceAsReader(resource);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}				
@@ -52,14 +50,14 @@ public class ReviewDAO {
 	public static ArrayList<Review> selectReviewList_Star() throws Exception{
 		SqlSession sqlSession = sqlMapper.openSession(true);
 		ArrayList<Review> reviewList = null;
-		reviewList = (ArrayList)sqlSession.selectList("selectReviewList_Star");
+		reviewList = (ArrayList)sqlSession.selectList("selectReviewList_Asc");
 		sqlSession.close();
 		return reviewList;
 	}
 	public static ArrayList<Review> selectReviewList_Star_Desc() throws Exception{
 		SqlSession sqlSession = sqlMapper.openSession(true);
 		ArrayList<Review> reviewList = null;
-		reviewList = (ArrayList)sqlSession.selectList("selectReviewList_Star_Desc");
+		reviewList = (ArrayList)sqlSession.selectList("selectReviewList_Desc");
 		sqlSession.close();
 		return reviewList;
 	}

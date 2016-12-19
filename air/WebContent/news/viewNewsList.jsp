@@ -42,7 +42,7 @@ table.type11 td {
    function button5_click(){
          //alert("클릭했음요");
          //var target=$(this).attr("href");
-         $("#example3").load("/air/total.do");   
+         $("#frame").load("/air/total.do");   
    }      
 
 </script>

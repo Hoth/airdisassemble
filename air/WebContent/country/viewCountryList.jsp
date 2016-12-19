@@ -175,20 +175,20 @@ function popup_win1() { //크기 width400 height300 팝업창
 	<c:choose>
 		<c:when test="${ITEM5!=null}">
 			<table align="center" border="1" class=type01>
-				<tr>
-					<td>번호</td>
-					<td>제목</td>
-					<td>링크</td>
+				<tr style="width:270px;">
+					<td style="width:30px;">번호</td>
+					<td style="width:170px;">제목</td>
+					<td style="width:70px;">링크</td>
 					
 							
 				</tr>
 				
 				<c:forEach items="${ITEM5}" var="item" 
 				 varStatus="i">
-				 <tr>
-				 	<td>${i.count}</td>
-				 	<td>${item.title}</td>
-				 	<td><a href="#" onclick="window.open('${item.link}')">자세히보기</a></td>
+				 <tr style="width:270px;">
+				 	<td style="width:30px;">${i.count}</td>
+				 	<td style="width:170px;">${item.title}</td>
+				 	<td style="width:70px;"><a href="#" onclick="window.open('${item.link}')">자세히보기</a></td>
 					 	
 				 	
 				 	

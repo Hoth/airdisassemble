@@ -17,6 +17,7 @@ ArrayList<String> best=(ArrayList)request.getAttribute("best");
         <meta name="keywords" content="photo booth, strips, photo strip, css3, rotation, scroll, thumbs, swipe, touch, jquery, mobile, lightbox" />
         <meta name="author" content="Codrops" />
         <link rel="shortcut icon" href="../favicon.ico"> 
+        <link rel="stylesheet" type="text/css" href="/air/pb/css/normalize.css" />
         <link rel="stylesheet" type="text/css" href="/air/pb/css/demo.css" />
       <link rel="stylesheet" type="text/css" href="/air/pb/css/lightbox.css"/>
       <link rel="stylesheet" type="text/css" href="/air/pb/css/style.css" />

@@ -70,7 +70,7 @@ text-align:center;}
       <div id="header" class="container2">
          <div id="logo">
             <h1><a href="#">여행 어디까지 가봤니?</a></h1>
-            <p>made by 공 중 분 해</p>
+            <p class="disabled">made by 공 중 분 해</p>
          </div>
       </div>
    </div>

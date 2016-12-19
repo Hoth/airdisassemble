@@ -171,7 +171,7 @@ h2 {
     width: 100%;
     z-index: 9999;
 }
-p{
+p:not(.disabled){
     color: rgba(0,0,0,.6);
     font-family: 'Raleway', sans-serif;
     font-size: 100%;

@@ -8,6 +8,11 @@
 <link href="(http://fonts.googleapis.com/earlyaccess/jejugothic.css" rel="stylesheet" />
 <title>Insert title here</title>
 <link href="/air/css/default.css" rel="stylesheet" type="text/css" media="all" />
+<style>
+#type01{
+width:500px;
+}
+</style>
 </head>
 <body style = "font-family: 'Jeju Gothic', serif;">
 
@@ -19,7 +24,7 @@
 	
 	<c:choose>
 		<c:when test="${ITEM!=null}">
-			<table align="center" border="1" class=type01>
+			<table align="center" border="1" class=type01 id=type01>
 				<tr>
 					<td>번호</td>
 					<td>제목</td>

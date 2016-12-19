@@ -29,6 +29,11 @@ function popup_win1() { //크기 width400 height300 팝업창
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link href="(http://fonts.googleapis.com/earlyaccess/jejugothic.css" rel="stylesheet" />
 <title>Insert title here</title>
+<style>
+#type01{
+width:500px;
+}
+</style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script type="text/javascript">
 	$(document).ready(
@@ -174,7 +179,7 @@ function popup_win1() { //크기 width400 height300 팝업창
 	
 	<c:choose>
 		<c:when test="${ITEM5!=null}">
-			<table align="center" border="1" class=type01>
+			<table align="center" border="1" class=type01 id=type01>
 				<tr style="width:270px;">
 					<td style="width:30px;">번호</td>
 					<td style="width:170px;">제목</td>

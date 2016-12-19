@@ -1,7 +1,7 @@
 .pb-wrapper {
 	position: fixed;
 	background: #fff url(../images/paper.jpg) repeat center bottom;
-	width: 250px;
+	width: 220px;
 	margin-top: 10px;
 	padding: 20px 10px 100px;
 	-webkit-backface-visibility: hidden;

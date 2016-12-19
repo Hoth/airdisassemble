@@ -40,6 +40,9 @@ $(document).ready(
 );
 </script>
 <style>
+.ppp{
+padding-top:0;
+}
 .soon{font-family:'Hanna', serif;
 font-size:22pt;
 text-align:center;}
@@ -80,10 +83,10 @@ text-align:center;}
     ArrayList<String> topN=bestlist_crawler.top();
     request.setAttribute("top",topN);
     %>
-     <div style="border:1px solidgold; float:right;width:20%;  padding:0px; margin:0px;" class='right-box' id="rank" class="slider-pro"  class='right-box' data-role="content">
+     <div style="border:1px solidgold;  float:right;width:20%;  padding:0px; margin:0px;" class='right-box' id="rank" class="slider-pro"  class='right-box' data-role="content" >
 
       <table class="type01">
-      <tr><td><p style="vertical-align:text-top; font-size:15px">실시간 인기 여행지</p></td><td style="padding-top:0; vertical-align:text-top;"><input type="button" id="myButton" class="myButton" value="숨기기" onclick="button1_click()"/></td></tr>
+      <tr><td><p style="vertical-align:text-top; font-size:15px" class="ppp">실시간 인기 여행지</p></td><td style="padding-top:0; vertical-align:text-top;"><input type="button" id="myButton" class="myButton" value="숨기기" onclick="button1_click()"/></td></tr>
          <tr>
                <th>순위</th><th>도시</th>
          </tr>

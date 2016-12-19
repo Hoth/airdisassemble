@@ -14,7 +14,7 @@ response.setHeader("cache-control","no-cache");
 
 
 <head>
-
+<link href="/air/newintrocss/css/demo.css" rel="stylesheet" type="text/css" media="all" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script type="text/javascript">
 $(document).ready(
@@ -83,6 +83,7 @@ width:700px;
 
 </head>
 <body>
+
    <div data-role="content">   </div>
       <table align="center" border="0">
       <tr><td width="350"></td><td>
@@ -125,5 +126,6 @@ width:700px;
    <span class="rlink" href= "/air/addReviewForm.do"></span>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
   <!-- <input type="button" class="myButton" value="진짜리뷰등록" onclick="popup_win2()">	 -->
+  
 </body>
 </html>

@@ -46,7 +46,7 @@ window.open("/air/user/UserInfoForm.jsp", "popup", "width=600, height=1000, scro
 </script>
 <html>
 <head>
-
+<link href="/air/newintrocss/css/demo.css" rel="stylesheet" type="text/css" media="all" />
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script type="text/javascript">
@@ -68,7 +68,7 @@ window.open("/air/user/UserInfoForm.jsp", "popup", "width=600, height=1000, scro
 <style type="text/css">
 
 @import url('/air/photo');
-body {   font-family: Helvetica, san-serif;
+.ff {   font-family: Helvetica, san-serif;
 <%--
  background: -webkit-linear-gradient(90deg, #00aaee 10%, #DD2476 90%); /* Chrome 10+, Saf5.1+ */
   background:    -moz-linear-gradient(90deg, #00aaee 10%, #DD2476 90%); /* FF3.6+ */
@@ -171,7 +171,7 @@ h2 {
     width: 100%;
     z-index: 9999;
 }
-p {
+p{
     color: rgba(0,0,0,.6);
     font-family: 'Raleway', sans-serif;
     font-size: 100%;
@@ -239,10 +239,8 @@ p {
 </style>
 
 </head>
-<body>
+<body class="ff">
 
-  
-<div class='left-box'>
 
 
 <c:choose>
@@ -328,11 +326,9 @@ p {
 		
 
  </form>
- 
- </div>
- 
- <div>
-  <div class="card transition left">
+
+ <div style="display: inline-block;">
+  <div class="card transition left" style="overflow:hidden;">
     <h2 class="transition">인기 여행지</h2>
   <p> 인기여행지가 궁금하지 않으신가여 흐흫흐흐흐흐흐.</p>
   <div class="cta-container transition"><span class="cta"  id="viewHot"> HOT HOT HOT!</a></div>
@@ -342,8 +338,8 @@ p {
 
   <c:choose>
 	<c:when test="${dest==null}">
-<div>
- <div class="card transition center">
+<div style="display: inline-block;">
+ <div class="card transition center" style="overflow:hidden;">
  <h2 class="transition">자신의 정보입력</h2>
   <p>자신의 정보를 입력받아 최적의 여행지를 추천해드립니다.!!</p>
   <div class="cta-container transition"><span class="cta"  id="veryveryvery">자신의 정보입력</span></div>
@@ -353,7 +349,7 @@ p {
 	</c:when>
 	<c:otherwise>
 	<div>
- <div class="card transition center">
+  <div class="card transition center">
  <h2 class="transition">자신의 정보입력</h2>
   <p>메롱</p>
   
@@ -361,17 +357,27 @@ p {
 	</div>
 	</div>
 	</c:otherwise>
-	</c:choose>
+	</c:choose> 
+
 
 <div>
  
- <div class="card transition right">
+ <div class="card transition right" style="overflow:hidden;">
   <h2 class="transition">별점 인기순</h2>
+
   <p>여행을 다녀온 고객들의 평가를 기준으로 별점이 높은 지역을 보여드립니당</p>
   <div class="cta-container transition"><span class="cta"  id="viewStar"> viewStar </span></div>
+  
   <div class="card_circle2 transition"></div>
   
 </div>
 </div>
+
+</div>
+
+
+
+
+
 </body>
 </html>

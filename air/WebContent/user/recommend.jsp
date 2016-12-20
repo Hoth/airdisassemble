@@ -1,9 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>    
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<!DOCTYPE html>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script type="text/javascript">
 $(document).ready(
@@ -45,204 +43,58 @@ window.open("/air/user/UserInfoForm.jsp", "popup", "width=600, height=1000, scro
 
 </script>
 <html>
-<head>
-<link href="/air/newintrocss/css/demo.css" rel="stylesheet" type="text/css" media="all" />
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script type="text/javascript">
-
-
-</script>
-	<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v2.8";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
-
-
-<style type="text/css">
-
-@import url('/air/photo');
-.ff {   font-family: Helvetica, san-serif;
-<%--
- background: -webkit-linear-gradient(90deg, #00aaee 10%, #DD2476 90%); /* Chrome 10+, Saf5.1+ */
-  background:    -moz-linear-gradient(90deg, #00aaee 10%, #DD2476 90%); /* FF3.6+ */
-  background:     -ms-linear-gradient(90deg, #00aaee 10%, #DD2476 90%); /* IE10 */
-  background:      -o-linear-gradient(90deg, #00aaee 10%, #DD2476 90%); /* Opera 11.10+ */
-  background:         linear-gradient(90deg, #00aaee 10%, #DD2476 90%); /* W3C */ }
-.transition { transition: .3s cubic-bezier(.3, 0, 0, 1.3) }
---%>
- background:#ffdde5;
- }
- 
-.card {
-    background-color: #fff;
-    bottom: 0;
-    box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.3);
-  -webkit-box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.3);
-  -moz-box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.3);
-    height: 300px;
-    left: 0;
-    margin: auto;
-    overflow: hidden;
-    position: absolute;
-  
-    width: 300px;
-}
-.card:hover {
-    height: 450px;
-    width: 300px;
-}
-.card:hover .cta-container {
-    display: inline;
-    margin-top: 380px;
-}
-.card:hover .card_circle {
-    background-size: cover;
-    border-radius: 0;
-    margin-top: -130px;
-}
-.card:hover .card_circle1 {
-    background-size: cover;
-    border-radius: 0;
-    margin-top: -130px;
-}
-.card:hover .card_circle2 {
-    background-size: cover;
-    border-radius: 0;
-    margin-top: -130px;
-}
-.card:hover h2 {
-    background: #3487f7;
-    color: #fff;
-    margin-top: 100px;
-    padding: 5px;
-}
-.card:hover h2 small { color: #fff }
-.card:hover p { margin-top: 300px }
-.card_circle {
-    background: url('/air/photo/998.JPG') no-repeat center bottom;
-    background-color: #3487f7;
-    background-size: 70%;
-    border-radius: 50%;
-    height: 400px;
-    margin-left: -75px;
-    margin-top: -200px;
-    position: absolute;
-    width: 450px;
-}
-.card_circle1 {
-    background: url('/air/photo/999.JPG') no-repeat center bottom;
-    background-color: #3487f7;
-    background-size: 70%;
-    
-    
-    border-radius: 50%;
-    height: 400px;
-    margin-left: -75px;
-    margin-top: -200px;
-    position: absolute;
-    width: 450px;
-}
-.card_circle2 {
-    background: url('/air/photo/9972.JPG') no-repeat center bottom;
-    background-color: #3487f7;
-    background-size: 70%;
-    border-radius: 50%;
-    height: 400px;
-    margin-left: -75px;
-    margin-top: -200px;
-    position: absolute;
-    width: 450px;
-}
-h2 {
-    color: #3487f7;
-    font-family: 'Raleway', sans-serif;
-    font-size: 24px;
-    font-weight: 200;
-    margin-top: 150px;
-    position: absolute;
-    text-align: center;
-    width: 100%;
-    z-index: 9999;
-}
-p:not(.disabled){
-    color: rgba(0,0,0,.6);
-    font-family: 'Raleway', sans-serif;
-    font-size: 100%;
-    font-weight: normal;
-    margin-top: 200px;
-    position: absolute;
-    text-align: center;
-    z-index: 9999;
-}
-.cta-container {
-    display: none;
-    margin-top: 320px;
-    position: absolute;
-    text-align: center;
-    width: 100%;
-    z-index: 9999;
-}
-.cta {
-    -moz-border-radius: 2px;
-    -moz-transition: 0.2s ease-out;
-    -ms-transition: 0.2s ease-out;
-    -o-transition: 0.2s ease-out;
-    -webkit-border-radius: 2px;
-    -webkit-transition: 0.2s ease-out;
-    background-clip: padding-box;
-    border: 2px solid #3487f7;
-    border-radius: 2px;
-    color: #3487f7;
-    display: inline-block;
-    font-family: 'Raleway', sans-serif;
-    font-size: 17px;
-    font-weight: 400;
-    height: 36px;
-    letter-spacing: 0.5px;
-    line-height: 36px;
-    margin-bottom: 15px;
-    padding: 0 2rem;
-    text-decoration: none;
-    text-transform: uppercase;
-    transition: 0.2s ease-out;
-}
-.cta:hover {
-    background-color: #3487f7;
-    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    color: #fff;
-    -moz-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    -webkit-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.left{
-  left: 300;
-  top: 300;
-}
-
-.right{
-  left: 700;
-  top: 300;
-}
-
-.center{
-  left: 1100;
-  top: 300;
-}
-
-</style>
-
-</head>
-<body class="ff">
-
-
-
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<title>Hover Effect Ideas | Set 1</title>
+		<meta name="description" content="Hover Effect Ideas: Inspiration for subtle hover effects" />
+		<meta name="keywords" content="hover effect, inspiration, grid, thumbnail, transition, subtle, web design" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="../favicon.ico">
+		<link href='http://fonts.googleapis.com/css?family=Raleway:400,800,300' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="/air/sample/css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="/air/sample/css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="/air/sample/css/set1.css" />
+		<!--[if IE]>
+  		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<div class="container">
+			<!-- Top Navigation -->
+			
+			<header class="codrops-header">
+				<span>머라머라</span>
+				
+			</header>
+			<div class="content">
+				<h2>머라적죠?</h2>
+				<div class="grid">
+					<figure class="effect-lily" id="viewHot">
+						<img src="/air/sample/img/12.jpg" alt="img12"/>
+						<figcaption>
+							<div>
+								<h2>핫한 여행지</span></h2>
+								<p>실시간 핫한 여행지를 확인하세요!</p>
+							</div>
+							<a href="#">View more</a>
+						</figcaption>			
+					</figure>
+					<figure class="effect-lily" id="veryveryvery">
+						<img src="/air/sample/img/1.jpg" alt="img1"/>
+						<figcaption>
+							<div>
+								<h2>맞춤여행지</h2>
+								<p>자신의 정보를 입력하세요</p>
+							</div>
+							<a href="#">View more</a>
+						</figcaption>			
+					</figure>
+				</div>
+				
+			</div>
+			
 <c:choose>
 	<c:when test="${dest==null}">
 	<!-- <input type="button" class="myButton" value="자신의 정보입력" onclick="popup_win1()">	-->
@@ -308,76 +160,6 @@ p:not(.disabled){
 	</c:otherwise>
 	
 </c:choose>
-
-<p/>
-
-<!-- <a href="/air/generateDestination.do">생성해보자</a> -->
-<form action="/air/generateDestination.do" method="post">
- <input type="hidden" name="age" id="age"/><p>
- <input type="hidden" name="gender" id="gender" /><p>
- <input type="hidden" name="day" id="day"/><p>
- <input type="hidden" name="cost" id="cost"/><p>
- <input type="hidden" name="whom" id="whom"/><p>
- <input type="hidden" name="season" id="season" /><p>
-
- <br/>
- <p/>
-
-		
-
- </form>
-
- <div style="display: inline-block;">
-  <div class="card transition left" style="overflow:hidden;">
-    <h2 class="transition">인기 여행지</h2>
-  <p> 인기여행지가 궁금하지 않으신가여 흐흫흐흐흐흐흐.</p>
-  <div class="cta-container transition"><span class="cta"  id="viewHot"> HOT HOT HOT!</a></div>
-  <div class="card_circle1 transition"></div>
-</div>
-
-
-  <c:choose>
-	<c:when test="${dest==null}">
-<div style="display: inline-block;">
- <div class="card transition center" style="overflow:hidden;">
- <h2 class="transition">자신의 정보입력</h2>
-  <p>자신의 정보를 입력받아 최적의 여행지를 추천해드립니다.!!</p>
-  <div class="cta-container transition"><span class="cta"  id="veryveryvery">자신의 정보입력</span></div>
-	<div class="card_circle1 transition"></div>
-	</div>
-	</div>
-	</c:when>
-	<c:otherwise>
-	<div>
-  <div class="card transition center">
- <h2 class="transition">자신의 정보입력</h2>
-  <p>메롱</p>
-  
-	<div class="card_circle1 transition"></div>
-	</div>
-	</div>
-	</c:otherwise>
-	</c:choose> 
-
-
-<div>
- 
- <div class="card transition right" style="overflow:hidden;">
-  <h2 class="transition">별점 인기순</h2>
-
-  <p>여행을 다녀온 고객들의 평가를 기준으로 별점이 높은 지역을 보여드립니당</p>
-  <div class="cta-container transition"><span class="cta"  id="viewStar"> viewStar </span></div>
-  
-  <div class="card_circle2 transition"></div>
-  
-</div>
-</div>
-
-</div>
-
-
-
-
-
-</body>
+		</div>
+	</body>
 </html>

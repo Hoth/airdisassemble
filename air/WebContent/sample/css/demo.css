@@ -9,11 +9,11 @@
 		url('../fonts/codropsicons/codropsicons.svg#codropsicons') format('svg');
 }
 
-*, *:after, *:before { -webkit-box-sizing: border-box; box-sizing: border-box; }
+*:not(.dis .container2), *:after, *:before { -webkit-box-sizing: border-box; box-sizing: border-box; }
 .clearfix:before, .clearfix:after { display: table; content: ''; }
 .clearfix:after { clear: both; }
 
-body {
+body:not(.dis) {
 	background: url(bg01.png) repeat;
 	
 	font-weight: 400;
@@ -21,7 +21,7 @@ body {
 	font-family: 'Raleway', Arial, sans-serif;
 }
 
-a {
+a:not(.disabled) {
 	outline: none;
 	color: #3498db;
 	text-decoration: none;

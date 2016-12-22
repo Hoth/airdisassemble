@@ -156,6 +156,11 @@ width:500px;
 				 
 				 	
 			</table>
+				<br/>
+					<br/>
+						<br/>
+							<br/>
+								<br/>
 		</c:when>
 		
 		 <c:otherwise>
@@ -203,6 +208,11 @@ width:500px;
 				 
 				 	
 			</table>
+				<br/>
+					<br/>
+						<br/>
+							<br/>
+								<br/>
 		</c:when>
 		<c:otherwise>
 			

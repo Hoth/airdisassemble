@@ -53,6 +53,7 @@ window.open("/air/user/UserInfoForm.jsp", "popup", "width=600, height=1000, scro
 		<meta name="author" content="Codrops" />
 		<link rel="shortcut icon" href="../favicon.ico">
 		<link href='http://fonts.googleapis.com/css?family=Raleway:400,800,300' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="/air/newintrocss/css/demo.css" />
 		<link rel="stylesheet" type="text/css" href="/air/sample/css/normalize.css" />
 		<link rel="stylesheet" type="text/css" href="/air/sample/css/demo.css" />
 		<link rel="stylesheet" type="text/css" href="/air/sample/css/set1.css" />

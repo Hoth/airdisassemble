@@ -22,7 +22,7 @@
 }
 
 html {
-  background-color: #ff4a56;
+  background-color: #FFD9EC;
 }
 
 form {

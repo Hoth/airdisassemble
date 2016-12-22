@@ -7,6 +7,70 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <title>환율 정보</title>
 </head>
+<style type="text/css">
+.transition, form button,  form  input[type="text"] {
+  -moz-transition: all 0.25s cubic-bezier(0.53, 0.01, 0.35, 1.5);
+  -o-transition: all 0.25s cubic-bezier(0.53, 0.01, 0.35, 1.5);
+  -webkit-transition: all 0.25s cubic-bezier(0.53, 0.01, 0.35, 1.5);
+  transition: all 0.25s cubic-bezier(0.53, 0.01, 0.35, 1.5);
+}
+html {
+  background-color: #ffdde5;
+}
+form {
+  position: relative;
+  display: inline-block;
+  max-width: 200px;
+  min-width: 200px;
+  box-sizing: border-box;
+  padding: 30px 25px;
+  background-color: white;
+  border-radius: 40px;
+  margin: 40px 0;
+  margin-bottom:20px;
+  left: 50%;
+  -moz-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  -webkit-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+}
+
+form select{
+ margin-top: 20px;
+  background-color: white;
+  border: 1px solid #ff4a56;
+  line-height: 0;
+  font-size: 14px;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 7px 7px;
+  border-radius: 60px;
+}
+
+button {
+  margin-top: 10px;
+  margin-left:150px;
+  background-color: white;
+  border: 1px solid #ff4a56;
+  line-height: 0;
+  font-size: 15px;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 12px 10px;
+  border-radius: 60px;
+  color: #6f6f6f;
+  font-weight: 100;
+  letter-spacing: 0.01em;
+  position: relative;
+  z-index: 1;
+}
+button:hover, form button:focus {
+  color: white;
+  background-color: #ff4a56;
+}
+
+
+</style>
 <body>
 <form name="pop">
        <form name="popup">
@@ -58,11 +122,11 @@
 </select><p>
 
     
-  
+
 
     </form>
- 
-    <a href="javascript:sendData();"><button>환율정보 보기</button></a>
+
+ <a href="javascript:sendData();"><button>환율정보 보기</button></a>
  
     <script>
         function sendData(){

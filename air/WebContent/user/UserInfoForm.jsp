@@ -263,7 +263,7 @@ $(document).ready(
  
     <script>
         function sendData(event){
-    		alert("sendData");
+    
             var ageval=$(".age").val(); // 팝업의 벨루값을 가져와서
             $("#age",opener.document).val(ageval); // 부모에게 전달
   

@@ -1,175 +1,117 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-   pageEncoding="UTF-8"%>
-   
-<!doctype html>
-<html lang="ko">
-<head>
-<meta charset="utf-8">
-<link href="http://fonts.googleapis.com/earlyaccess/hanna.css" rel="stylesheet" />
-<title>Material Design Hover &amp; Click Effects Demo Page</title>
-<link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
-   <link rel="stylesheet" type="text/css" href="/air/newintrocss/css/demo.css" />
-        <link rel="stylesheet" type="text/css" href="/air/newintrocss/css/style4.css" />
-<style>
-body {
-  margin: 0;
-  padding: 0;
-}
-
-.wrapper {
-  display: block;
-  width: 99.6%;
-  margin: 0.2%;
-}
-
-.wrapper:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.ripplelink {
-  display: block;
-  float: left;
-  width: 49.6%;
-  margin: 0.2%;
-  height: 10em;
-  line-height: 10em;
-  text-align: center;
-  color: black;
-  text-decoration: none;
-  position: relative;
-  overflow: hidden;
-  -webkit-transition: all 0.2s ease;
-  -moz-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-  z-index: 0;
-}
-
-.ripplelink:hover {
-  z-index: 1000;
-  box-shadow: rgba(0, 0, 0, 0.3) 0 16px 16px 0;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 16px 16px 0;
-  -moz-box-shadow: rgba(0, 0, 0, 0.3) 0 16px 16px 0;
-}
-
-.ink {
-  display: block;
-  position: absolute;
-  background: rgba(255, 255, 255, 0.3);
-  border-radius: 100%;
-  -webkit-transform: scale(0);
-  -moz-transform: scale(0);
-  -o-transform: scale(0);
-  transform: scale(0);
-}
-
-.animate {
-  -webkit-animation: ripple 0.65s linear;
-  -moz-animation: ripple 0.65s linear;
-  -ms-animation: ripple 0.65s linear;
-  -o-animation: ripple 0.65s linear;
-  animation: ripple 0.65s linear;
-}
- @-webkit-keyframes 
-ripple {  100% {
-opacity: 0;
--webkit-transform: scale(2.5);
-}
-}
-@-moz-keyframes 
-ripple {  100% {
-opacity: 0;
--moz-transform: scale(2.5);
-}
-}
-@-o-keyframes 
-ripple {  100% {
-opacity: 0;
--o-transform: scale(2.5);
-}
-}
-@keyframes 
-ripple {  100% {
-opacity: 0;
-transform: scale(2.5);
-}
-}
-
-.cyan { background: #ffdddd; }
-
-.lightgreen { background:  #cceeee; }
-
-.amber { background: #bbddbb; }
-
-.orange { background: #ccd4ee; }
-.news{font-family: 'Hanna', serif;
-font-size:22pt;}
-.safety1{font-family: 'Hanna', serif;
-font-size:22pt;}
-.cosearch{font-family: 'Hanna', serif;
-font-size:22pt;}
-.hinfo{font-family: 'Hanna', serif;
-font-size:22pt;}
-.oneeye{font-family: 'Hanna', serif;
-font-size:22pt;}
-</style>
-</head>
-<body style = "font-family: 'Hanna', serif;">
-<h1 align="center" style="margin-top:150px;" class="oneeye">세계 각지의 모든 정보를 한눈에!!!!!</h1>
-<div class="wrapper" id="sujin">
-	<span class="ripplelink cyan" href="/air/viewExchangeRate.do"><h2 class="hinfo">환율 정보 보기</h2>></span> 
-	<span class="ripplelink lightgreen" href="/air/getCountryBasicListForm.do"><h2 class="cosearch">나라 정보 검색</h2>></span> 
-	<span class="ripplelink amber" href="/air/getCountrySafetyListForm.do"><h2 class="safety1">국가 안전 정보 검색</h2>></span> 
-	<span class="ripplelink orange" href="/air/getNewsList.do"><h2 class="news">국제 뉴스</h2>></span>
- </div>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
-<script>
-/*jQuery*/
-
-$(function(){
-	var ink, d, x, y;
-	$(".ripplelink").click(function(e){
-    if($(this).find(".ink").length === 0){
-        $(this).prepend("<span class='ink'></span>");
-    }
-         
-    ink = $(this).find(".ink");
-    ink.removeClass("animate");
-     
-    if(!ink.height() && !ink.width()){
-        d = Math.max($(this).outerWidth(), $(this).outerHeight());
-        ink.css({height: d, width: d});
-    }
-     
-    x = e.pageX - $(this).offset().left - ink.width()/2;
-    y = e.pageY - $(this).offset().top - ink.height()/2;
-     
-    ink.css({top: y+'px', left: x+'px'}).addClass("animate");
-    
-    
-    var target=$(this).attr("href");
-   
-	$("#frame").load(target);
-	
-    
-});
-});
-</script>
+    pageEncoding="UTF-8"%>
+    <!DOCTYPE html>
+    <html>
+	<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-36251023-1']);
-  _gaq.push(['_setDomainName', 'jqueryscript.net']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
+$(document).ready(
+		
+	function(){
+	
+		$("#nation").click(function(){
+			
+			 var target="/air/getCountryBasicListForm.do";
+			$("#frame").load(target);
+			 event.preventDefault();
+		 });
+		$("#exchange").click(function(){
+			
+			 var target="/air/viewExchangeRate.do";
+			$("#frame").load(target);
+			 event.preventDefault();
+		 });
+		$("#news").click(function(){
+			
+			 var target="/air/getNewsListForm.do";
+			$("#frame").load(target);
+			 event.preventDefault();
+		 });
+		$("#safety").click(function(){
+			 var target="/air/getCountrySafetyListForm.do";
+				$("#frame").load(target);
+				 event.preventDefault();
+			 
+			
+			 //var target="/air/viewStar.do";
+			//$("#frame").load(target);
+			 //event.preventDefault();
+		 });	 
+	}		
+);
 </script>
-</body>
+	
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<title>Hover Effect Ideas | Set 1</title>
+		<meta name="description" content="Hover Effect Ideas: Inspiration for subtle hover effects" />
+		<meta name="keywords" content="hover effect, inspiration, grid, thumbnail, transition, subtle, web design" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="../favicon.ico">
+		<link href='http://fonts.googleapis.com/css?family=Raleway:400,800,300' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="/air/sample/css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="/air/sample/css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="/air/sample/css/set1.css" />
+		<!--[if IE]>
+  		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<div class="container">
+			<!-- Top Navigation -->
+			
+			<header class="codrops-header">
+				<span>머라머라</span>
+				
+			</header>
+			<div class="content">
+				<h2>머라적죠?</h2>
+				<div class="grid">
+					<figure class="effect-lily" id="exchange">
+						<img src="/air/sample/img/1.jpg" alt="img1"/>
+						<figcaption>
+							<div>
+								<h2>환율정보</span></h2>
+								<p>실시간 환율을 확인하세요!</p>
+							</div>
+							<a href="#">View more</a>
+						</figcaption>			
+					</figure>
+					<figure class="effect-lily" id="nation">
+						<img src="/air/sample/img/1.jpg" alt="img1"/>
+						<figcaption>
+							<div>
+								<h2>나라정보</h2>
+								<p>뭐라고좀 적어줘</p>
+							</div>
+							<a href="#">View more</a>
+						</figcaption>			
+					</figure>
+				</div>
+				<div class="grid">
+					<figure class="effect-lily" id="safety">
+						<img src="/air/sample/img/1.jpg" alt="img1"/>
+						<figcaption>
+							<div>
+								<h2>국가 안전 정보검색 </span></h2>
+								<p>국정!</p>
+							</div>
+							<a href="#">View more</a>
+						</figcaption>			
+					</figure>
+					<figure class="effect-lily" id="news">
+						<img src="/air/sample/img/1.jpg" alt="img1"/>
+						<figcaption>
+							<div>
+								<h2>국가뉴스</h2>
+								<p>자신의 정보를 입력하세요</p>
+							</div>
+							<a href="#">View more</a>
+						</figcaption>			
+					</figure>
+				</div>
+			</div>
+			</div>
+	</body>
 </html>

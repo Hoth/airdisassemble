@@ -76,7 +76,7 @@ function getTarget(target){
 				<h2>머라적죠?</h2>
 				<div class="grid">
 					<figure class="effect-lily" id="viewHot">
-						<img src="/air/sample/img/12.jpg" alt="img12"/>
+						<img src="/air/sample/img/r1.jpg" alt="imgr1"/>
 						<figcaption>
 							<div>
 								<h2>핫한 여행지</span></h2>
@@ -86,7 +86,7 @@ function getTarget(target){
 						</figcaption>			
 					</figure>
 					<figure class="effect-lily" id="veryveryvery">
-						<img src="/air/sample/img/1.jpg" alt="img1"/>
+						<img src="/air/sample/img/r2.jpg" alt="imgr2"/>
 						<figcaption>
 							<div>
 								<h2>맞춤여행지</h2>

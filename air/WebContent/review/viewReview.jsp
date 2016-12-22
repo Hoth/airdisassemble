@@ -21,15 +21,19 @@
 </head>
 <body>
 <h3><font color="black">
-${r.r_Num}번<p>
-${r.r_Name}님의 후기<p> 
-여행 국가 : ${r.c_Location}<p>
-여행 계절 : ${r.r_Season}<p>
-별점 : ${r.r_Star}<p>
-내용 <p>
-${r.r_Context}<p>
-<input type="button" class="myButton" value="리스트로" onclick="button1_click()"/>
-</font></h3>
-
+ -<h1 align=center>후 기<p>
+ -<img src="/air/photo/${r.r_Image}"><p>
+  ${r.r_Num}번<p>
+ -${r.r_Name}(은)는 ${r.r_Location}에 갔다와서<p>
+ -${r.r_Context}(이)라고 말했다<p>
+ -
+ +${r.r_Name}님의 후기<p> 
+ +여행 국가 : ${r.r_Location}<p>
+ +여행 계절 : ${r.r_Season}<p>
+ +별점 : ${r.r_Star}<p>
+ +내용 <p>
+ +${r.r_Context}<p>
+  <input type="button" class="myButton" value="리스트로" onclick="button1_click()"/>
+  </font></h3>
 </body>
 </html>

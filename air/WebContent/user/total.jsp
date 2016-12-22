@@ -62,14 +62,14 @@ $(document).ready(
          <!-- Top Navigation -->
          
          <header class="codrops-header">
-            <span>머라머라</span>
+            
             
          </header>
          <div class="content">
-            <h2>머라적죠?</h2>
+            <h2>여행에 관련된 모든정보를 한눈에!</h2>
             <div class="grid">
                <figure class="effect-lily" id="exchange">
-                  <img src="/air/sample/img/1.jpg" alt="img1"/>
+                  <img src="/air/sample/img/a.jpg" alt="imga"/>
                   <figcaption>
                      <div>
                         <h2>환율정보</span></h2>
@@ -79,7 +79,7 @@ $(document).ready(
                   </figcaption>         
                </figure>
                <figure class="effect-lily" id="nation">
-                  <img src="/air/sample/img/1.jpg" alt="img1"/>
+                  <img src="/air/sample/img/b.jpg" alt="imgb"/>
                   <figcaption>
                      <div>
                         <h2>나라정보</h2>
@@ -91,7 +91,7 @@ $(document).ready(
             </div>
             <div class="grid">
                <figure class="effect-lily" id="safety">
-                  <img src="/air/sample/img/1.jpg" alt="img1"/>
+                  <img src="/air/sample/img/c.jpg" alt="imgc"/>
                   <figcaption>
                      <div>
                         <h2>국가 안전 정보검색 </span></h2>
@@ -101,7 +101,7 @@ $(document).ready(
                   </figcaption>         
                </figure>
                <figure class="effect-lily" id="news">
-                  <img src="/air/sample/img/1.jpg" alt="img1"/>
+                  <img src="/air/sample/img/d.jpg" alt="imgd"/>
                   <figcaption>
                      <div>
                         <h2>국가뉴스</h2>

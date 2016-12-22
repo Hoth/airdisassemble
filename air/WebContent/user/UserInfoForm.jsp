@@ -289,6 +289,7 @@ $(document).ready(
 		$("#frame",opener.document).load(target);
 		alert("조회중입니다.");
 		//	event.preventDefault();
+		$(opener.location).attr("href", "javascript:getTarget('"+target+"');");
             self.close();
         }
     </script>

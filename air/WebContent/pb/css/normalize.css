@@ -1,3 +1,4 @@
+
 /*! normalize.css 2012-03-11T12:53 UTC - http://github.com/necolas/normalize.css */
 
 /* =============================================================================
@@ -124,7 +125,7 @@ a:active {
  * Addresses font sizes within 'section' and 'article' in FF4+, Chrome, S5
  */
 
-h1 {
+h1:not(.disabled) {
     font-size: 2em;
     margin: 0.67em 0;
 }
@@ -196,7 +197,7 @@ mark {
  * Addresses margins set differently in IE6/7
  */
 
-p,
+p:not(.disabled),
 pre {
     margin: 1em 0;
 }
@@ -345,10 +346,10 @@ svg:not(:root) {
 
 figure {
     margin: 0;
-	-webkit-margin-before: 0;
-	-webkit-margin-after: 0;
-	-webkit-margin-start: 0;
-	-webkit-margin-end: 0;
+   -webkit-margin-before: 0;
+   -webkit-margin-after: 0;
+   -webkit-margin-start: 0;
+   -webkit-margin-end: 0;
 }
 
 
@@ -510,4 +511,4 @@ table {
 /* Addition */
 /* apply a natural box layout model to all elements */
 /* See Paul Irish: http://paulirish.com/2012/box-sizing-border-box-ftw/ */
- * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+ *:not(.disabled) { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }

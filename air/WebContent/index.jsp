@@ -51,7 +51,7 @@ font-size:22pt;
 text-align:center;}
 </style>
 </head>
-<body style = "font-family: 'Hanna', serif;">
+<body style = "font-family: 'Hanna', serif;"  class="dis">
 <div id="wrapper">
    <div id="menu-wrapper">
       <div id="menu" class="container">
@@ -66,10 +66,10 @@ text-align:center;}
          </ul>
       </div>
       <!-- end #menu --> 
-   <div id="header-wrapper">
+   <div id="header-wrapper" class="dis">
       <div id="header" class="container2">
          <div id="logo">
-            <h1><a href="#">여행 어디까지 가봤니?</a></h1>
+            <h1 class="disabled"><a href="#" class="disabled">여행 어디까지 가봤니?</a></h1>
             <p class="disabled">made by 공 중 분 해</p>
          </div>
       </div>

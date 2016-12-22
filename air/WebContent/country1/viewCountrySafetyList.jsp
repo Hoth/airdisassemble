@@ -82,7 +82,7 @@ window.open("/air/UserInfoForm.jsp", "popup", "width=300, height=300");
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
+  <link rel="stylesheet" type="text/css" href="/air/newintrocss/css/demo.css" />
 <title>Insert title here</title>
 </head>
 

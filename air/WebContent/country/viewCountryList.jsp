@@ -26,6 +26,7 @@ function popup_win1() { //크기 width400 height300 팝업창
 </script>
 <html>
 <head>
+  <link rel="stylesheet" type="text/css" href="/air/newintrocss/css/demo.css" />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link href="(http://fonts.googleapis.com/earlyaccess/jejugothic.css" rel="stylesheet" />
 <title>Insert title here</title>

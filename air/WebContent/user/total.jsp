@@ -23,7 +23,7 @@ $(document).ready(
 		 });
 		$("#news").click(function(){
 			
-			 var target="/air/getNewsListForm.do";
+			 var target="/air/getNewsList.do";
 			$("#frame").load(target);
 			 event.preventDefault();
 		 });
@@ -50,6 +50,7 @@ $(document).ready(
 		<meta name="author" content="Codrops" />
 		<link rel="shortcut icon" href="../favicon.ico">
 		<link href='http://fonts.googleapis.com/css?family=Raleway:400,800,300' rel='stylesheet' type='text/css'>
+			<link rel="stylesheet" type="text/css" href="/air/newintrocss/css/demo.css" />
 		<link rel="stylesheet" type="text/css" href="/air/sample/css/normalize.css" />
 		<link rel="stylesheet" type="text/css" href="/air/sample/css/demo.css" />
 		<link rel="stylesheet" type="text/css" href="/air/sample/css/set1.css" />
